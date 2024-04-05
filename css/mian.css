@@ -1,0 +1,269 @@
+/*mian.css*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topMain {
+    padding-bottom: 30%;
+    padding: 0px 25px;
+    margin: 20px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1rem;
+}
+
+.flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-leftcenter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.content-menu {
+    padding: 20px 0;
+    background-color: rgb(230, 230, 230);
+}
+
+.middle-start {
+    display: flex;
+    justify-content:flex-start;
+
+    margin: 30px 0px;
+}
+
+.middle-end {
+    display: flex;
+    justify-content: flex-end;
+
+    margin: 30px 0px;
+}
+
+.middleImg {
+    width: 68%;
+}
+
+.infoImg{
+    background-image: url("https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_01.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.bookingImg{
+    background-image: url("https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_03.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.courseImg {
+    background-image: url("https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_04.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.middleText {
+    height: 150px;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 20px;
+}
+
+.textalign-right{
+    text-align: right;
+    margin-right: 20px;
+}
+
+.textalign-center {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.margin-top {
+    margin-top: 80px;
+}
+
+.margin-bottom {
+    margin-bottom: 30px;
+}
+
+.storybox {
+    width: 21%;
+    padding-bottom: 15%;
+    border: 5px double white;
+
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1px;
+
+    border-radius: 3px;
+    opacity: 40%;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.storybox:hover {
+    opacity: 100%;
+}
+
+.story1 {
+    background-image: url("https://cdn.pixabay.com/photo/2015/11/02/04/14/korea-1017901_1280.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.story2 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5670");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story3 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5677");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story4 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5694");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story5 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5707");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story6 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5720");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story7 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5725");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story8 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5736");
+    background-size: 250%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story9 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5741");
+    background-size: 250%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story10 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5753");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story11 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5758");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story12 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5764");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story13 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5769");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story14 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5774");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story14 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5774");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story15 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5775");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story16 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5785");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story17 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5796");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story18 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5804");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story19 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5808");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story20 {
+    background-image: url("https://royal.cha.go.kr/afile/preview/5724");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
