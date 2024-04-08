@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/info.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="topMenu">
+                <img src="https://royal.cha.go.kr/resource/templete/royal/img/common/logo.svg" alt="궁능유적본부" width="125px">
+                <div class="flex-center"><a href="./main.html">main</a></div>
+                <div class="flex-center"><a href="./info.html">소개·역사</a></div>
+                <div class="flex-center">관람안내</div>
+                <div class="flex-center">행사마당</div>
+                <div class="flex-center">예약하기</div>
+                <select id="language">
+                    <option value="kor" selected>KOR</option>
+                    <option value="ENG">ENG</option>
+                    <option value="JPN">JPN</option>
+                    <option value="CHN">CHN</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- 내용이 스크롤에 따라 나오게끔 애니메이션 걸어주기-->
+        <div class="mianImg">
+            <h1>경복궁 소개</h1>
+        </div>
+
+        <div class="info-content">
+            <img src="https://royal.cha.go.kr/imgs/images/2023/12/27/20231227133939229_DM4TC9DV.png" width="110px" style="text-align: center;">
+            <h4>
+                경복궁(景福宮)은 1392년 조선 건국 후 <br>
+                1395년(태조 4)에 창건한 조선왕조 제일의 법궁(法宮)이다.
+            </h4>
+
+            <p style="text-align: justify;">
+                경복궁은 백악산(북악산)을 주산으로 넓은 지형에 건물을 배치하였고 정문인 광화문 앞으로 넓은 육조거리가 펼쳐진 한양의 중심이었다. ‘경복’의 이름은 ‘새 왕조가 큰 복을 누려 번영할 것’이라는 의미가 담겨있으며, 이곳에서 세종 대에 훈민정음이 창제되어 반포되기도 하였다.
+                <br><br>경복궁은 1592년(선조 25) 임진왜란으로 소실되었는데 그 후 복구되지 못하였다가 270여년이 지난 1867년(고종 4)에 다시 지어졌다. 고종 대에 들어 건청궁과 태원전, 집옥재 등이 조성되었으며, 특히 건청궁 옥호루는 1895년 을미사변으로 명성황후가 시해되는 비운의 장소이기도 하다.
+                <br><br>1910년 경술국치 후 경복궁은 계획적으로 훼손되기 시작하여 1915년 조선물산공진회를 개최한다는 명분으로 대부분의 전각들이 철거되었고, 1926년에는 조선총독부 청사를 지어 경복궁의 경관을 훼손하였다. 이후 1990년대부터 본격적으로 경복궁 복원공사가 진행되었고, 1995년부터 1997년까지 조선총독부 청사를 철거하였으며 흥례문 일원, 침전 권역, 건청궁과 태원전, 그리고 광화문 등이 복원되어 현재에 이르고 있다.
+            </p>
+        
+            <table>
+                <tr>
+                    <th>연도</th>
+                    <th>내용</th>
+                </tr>
+                <tr>
+                    <td>1395년(태조 4)</td>
+                    <td>경복궁 창건</td>
+                </tr>
+                <tr>
+                    <td>1426년(세종 8)</td>
+                    <td>광화문, 건춘문, 영추문 지음</td>
+                </tr>
+                <tr>
+                    <td>1446년(세종 28)</td>
+                    <td>훈민정음 반포</td>
+                </tr>
+                <tr>
+                    <td>1475년(성종 6)</td>
+                    <td>북문의 이름을 신무문이라 함</td>
+                </tr>
+                <tr>
+                    <td>1592년(선조 25)</td>
+                    <td>임진왜란으로 소실</td>
+                </tr>
+                <tr>
+                    <td>1865년(고종 2)</td>
+                    <td>중건 시작</td>
+                </tr>
+                <tr>
+                    <td>1867년(고종 4)</td>
+                    <td>중건 완료</td>
+                </tr>
+                <tr>
+                    <td>1873년(고종 10)</td>
+                    <td>건청궁 지음</td>
+                </tr>
+                <tr>
+                    <td>1895년(고종 32)</td>
+                    <td>건청궁 옥호루에서 을미사변 발생</td>
+                </tr>
+                <tr>
+                    <td>1896년(고종 33)</td>
+                    <td>고종이 거처를 러시아공사관으로 옮김</td>
+                </tr>
+                <tr>
+                    <td>1915년</td>
+                    <td>조산물산공진회 개최로 전각 철거</td>
+                </tr>
+                <tr>
+                    <td>1926년</td>
+                    <td>조선총독부 청사 지음</td>
+                </tr>
+                <tr>
+                    <td>1990년~</td>
+                    <td>복원공사 시작</td>
+                </tr>
+                <tr>
+                    <td>1994년~</td>
+                    <td>강녕전과 교태전 일원 복원</td>
+                </tr>
+                <tr>
+                    <td>1995년~1997년</td>
+                    <td>조선총독부 청사 철거</td>
+                </tr>
+                <tr>
+                    <td>2001년~2021년</td>
+                    <td>흥례문 일원, 광화문 일원, 흥복전, 취향교 복원 및 향원정 보수</td>
+                </tr>
+                <tr>
+                    <td>2023년</td>
+                    <td>동궁 내 계조당 복원</td>
+                </tr>
+            </table>
+        </div>
+
+        <fieldset>
+            <p><i class="researchIcon fa-regular fa-circle-question"></i>이 페이지의 정보와 사용편의성에 만족하시나요?</p>
+            <label><input type="radio" name="reserach"> 매우 만족</label>
+            <label><input type="radio" name="reserach"> 만족</label>
+            <label><input type="radio" name="reserach"> 보통</label>
+            <label><input type="radio" name="reserach"> 불만족</label>
+            <label><input type="radio" name="reserach"> 매우 불만족</label>
+            <div>
+                <input type="text" class="reserachText" placeholder="여러분의 소중한 의견을 남겨주세요.(최대 1500자)"></input>
+                <!-- text 상자 focus 되면 border 색상이 생기게끔 -->
+                <button type=button" class="reserachButton">등록</button>
+            </div>
+        </fieldset>
+
+        <footer>
+            <a href="https://royal.cha.go.kr/ROYAL/main/index.do">
+                <img class="footerlogo1" src="https://royal.cha.go.kr/resource/templete/royal/img/common/ft_logo.svg" width="150px">
+            </a>
+            <div class="footertext">
+                <div>관리소별 연락처<i class="fa-solid fa-chevron-down"></i></div>
+                <p>ⓒ Cultural Heritage Administration Royal Palaces and Tombs Center. All rights reserved.</p>
+            </div>
+            <a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
+                <img class="footerlogo2" src="https://royal.cha.go.kr/resource/templete/royal/img/common/img_web.png" width="100px">
+            </a>
+        </footer>
+
+    </div>
+</body>
+</html>

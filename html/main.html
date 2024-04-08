@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="../css/mian.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -14,7 +17,7 @@
             <div class="topMenu">
                 <img src="https://royal.cha.go.kr/resource/templete/royal/img/common/logo.svg" alt="궁능유적본부" width="125px">
                 <div class="flex-center"><a href="./main.html">main</a></div>
-                <div class="flex-center">소개·역사</div>
+                <div class="flex-center"><a href="./info.html">소개·역사</a></div>
                 <div class="flex-center">관람안내</div>
                 <div class="flex-center">행사마당</div>
                 <div class="flex-center">예약하기</div>
@@ -24,14 +27,14 @@
                     <option value="JPN">JPN</option>
                     <option value="CHN">CHN</option>
                 </select>
-                <!-- 스크롤했을 때 배경색상 검은색으로 보이게 -->
                 <!-- 궁능 로고 폰트색상 하얀색으로 -->
             </div>
         </header>
 
+        <!-- 내용이 스크롤에 따라 나오게끔 애니메이션 걸어주기-->
+
         <div class="GyeongbokgungImg">
-            <!-- 움직이는 이미지가 있다면 그걸로 변경 -->
-            <!-- 이미지가 서서히 밝아지는 애니메이션 추가 -->
+            <!-- 이미지 슬라이더 자동으로 넘어가게+수동으로 넘어가게 -->
         </div>
 
         <div class="help">
@@ -118,7 +121,6 @@
         </div>
 
         <footer>
-            <!-- 각 이미지 로고에 여백 좀 주기 글자랑 너무 붙음 -->
             <a href="https://royal.cha.go.kr/ROYAL/main/index.do">
                 <img class="footerlogo1" src="https://royal.cha.go.kr/resource/templete/royal/img/common/ft_logo.svg" width="150px">
             </a>
@@ -133,5 +135,6 @@
     </div>
 
     <script src="../js/main.js"></script>
+    
 </body>
 </html>
