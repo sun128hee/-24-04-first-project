@@ -6,15 +6,44 @@
     box-sizing: border-box;
 }
 
-.topMain {
-    padding-bottom: 30%;
-    padding: 0px 25px;
-    margin: 20px;
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
+header {
+    width: 100%;
+    padding: 15px 20px;
+    position: fixed;
+    z-index: 1;
+
+    background-color: rgb(0, 0, 0, 0);
+    color: white;
+}
+
+.headerBackgroundColor {
+    background-color: white;
+}
+
+.topMenu{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 
-    font-size: 1rem;
+    font-size: 1.1rem;
+}
+
+#language {
+    width: 60px;
+    background-color: white;
+    border: 0px;
+    border-radius: 15px;
+
+    text-align: center;
+    font-size: 0.7rem;
+    color: gray;
+
+    opacity: 90%;
 }
 
 .flex-center {
@@ -24,10 +53,69 @@
     align-items: center;
 }
 
-.flex-leftcenter {
+.GyeongbokgungImg {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://cdn.pixabay.com/photo/2015/02/14/08/26/gwanghwamun-636113_1280.jpg");
+    background-size: cover;
+
+    animation-name: mainImgbright;
+    animation-duration: 5s;
+}
+
+.sanggwabangImg {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://www.chf.or.kr/jnrepo/upload/jnPrgPopupBanner/202404/b6c34ff9e5354ec4a93bb755370ade07_1711981922512.png");
+    background-size: cover;
+}
+
+.nighttourImg {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://www.chf.or.kr/jnrepo/upload/jnPrgPopupBanner/202404/b6c34ff9e5354ec4a93bb755370ade07_1711981922512.png");
+    background-size: cover;
+}
+
+@keyframes mainImgbright {
+    0%{
+        background-color: rgb(0, 0, 0, 1);
+        background-blend-mode: multiply;}
+
+    100%{
+        background-color: rgba(0, 0, 0, 0.1);
+        background-blend-mode: multiply;
+    }
+}
+
+.help {
+    margin: 60px 80px;
+
+
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
+}
+
+.helpText {
+    width: 20%;
+}
+
+.help > a {
+    width: 120px;
+    height: 120px;
+
+    background-color: rgb(120, 127, 151);
+    border-radius: 100px;
+
+    color: white;
+    text-align: center;
+}
+
+.helpIcon {
+    font-size: 40px;
+    margin: 18px;
 }
 
 .content-menu {
@@ -99,26 +187,19 @@
     margin-bottom: 30px;
 }
 
+.margin-bottom5 {
+    margin-bottom: 10px;
+}
+
 .storybox {
-    width: 21%;
-    padding-bottom: 15%;
-    border: 5px double white;
+    width: 210px;
+    height: 200px;
 
     color: white;
-    font-size: 1.5rem;
+    margin: 4px;
     text-align: center;
-    margin: 1px;
 
-    border-radius: 3px;
-    opacity: 40%;
-}
-
-.fixed {
-    position: fixed;
-}
-
-.storybox:hover {
-    opacity: 100%;
+    border-radius: 1.5%;
 }
 
 .story1 {
@@ -266,4 +347,73 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.addBackColor {
+    background-color: rgb(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+
+.addBorder {
+    border: 5px double rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.storybox > p {
+    width: 150px;
+    font-size: 0.7rem;
+    text-align: justify;
+
+    margin: 0 auto;
+}
+
+.storybox > h4 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.transition {
+    transition-duration: 0.1s;
+}
+
+footer {
+    margin-top: 80px;
+    padding:50px 30px;
+
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footertext {
+    width: 70%;
+}
+
+.footertext > p {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.footertext > div {
+    width: 150px;
+    background-color: #668BAE;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 5px;
+
+    text-align: center;
+    color: white;
+    
+    font-size: 0.9rem;
+}
+
+.footerlogo1 {
+    margin-right: 15px;
+}
+
+.footerlogo2 {
+    margin-left: 15px;
 }
