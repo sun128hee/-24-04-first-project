@@ -15,19 +15,23 @@
         <header>
             <!-- fontsize rem 적용하는 방법 찾기 -->
             <div class="topMenu">
-                <img src="https://royal.cha.go.kr/resource/templete/royal/img/common/logo.svg" alt="궁능유적본부" width="125px">
-                <div class="flex-center"><a href="./main.html">main</a></div>
-                <div class="flex-center"><a href="./info.html">소개·역사</a></div>
-                <div class="flex-center">관람안내</div>
-                <div class="flex-center">행사마당</div>
-                <div class="flex-center">예약하기</div>
+                <a href="./main.html"><img src="../자료/경복궁3_logo.png" alt="경복궁 main으로" height="60px"></a>
+                <label for="main"></label>
+                <div id="main" class="menubox flex-center"><a href="./main.html">main</a></div>
+                <label for="info"></label>
+                <div id="info" class="menubox flex-center"><a href="./info.html">소개·역사</a></div>
+                <label for="tour"></label>
+                <div id="tour" class="menubox flex-center">관람안내</div>
+                <label for="event"></label>
+                <div id="event" class="menubox flex-center">행사마당</div>
+                <label for="booking"></label>
+                <div id="booking" class="menubox flex-center">예약하기</div>
                 <select id="language">
                     <option value="kor" selected>KOR</option>
                     <option value="ENG">ENG</option>
                     <option value="JPN">JPN</option>
                     <option value="CHN">CHN</option>
                 </select>
-                <!-- 궁능 로고 폰트색상 하얀색으로 -->
             </div>
         </header>
 
@@ -51,7 +55,7 @@
                 <p>행사안내</p>
             </a>
             <a href="">
-                <i class="helpIcon fa-solid fa-circle-exclamation"></i>
+                <i class="helpIcon fa-solid fa-headset"></i></i>
                 <p>해설안내</p>
             </a>
             <a href="">
@@ -91,7 +95,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="content-story">
             <div class="textalign-center margin-top margin-bottom">
                 <p class="margin-bottom5">경복궁이 품고 있는 다양한 이야기를 살펴보세요.</p>
                 <h1>경복궁 이야기</h1>
@@ -125,7 +129,59 @@
                 <img class="footerlogo1" src="https://royal.cha.go.kr/resource/templete/royal/img/common/ft_logo.svg" width="150px">
             </a>
             <div class="footertext">
-                <div>관리소별 연락처<i class="fa-solid fa-chevron-down"></i></div>
+                <div id="telBox"><label for="telBox">관리소별 연락처 <i class="fa-solid fa-chevron-down"></i></label></div>
+                <table class="telBoxTable">
+                    <tr>
+                        <th>기관</th>
+                        <th>주소</th>
+                        <th>연락처</th>
+                    </tr>
+                    <tr>
+                        <td>경복궁관리소</td>
+                        <td>[03045] 서울 종로구 사직로 161</td>
+                        <td>02-3700-3900</td>
+                    </tr>
+                    <tr>
+                        <td>창덕궁관리소</td>
+                        <td>[03072] 서울 종로구 율곡로 99번지</td>
+                        <td>02-3668-2300</td>
+                    </tr>
+                    <tr>
+                        <td>창경궁관리소</td>
+                        <td>[03072] 서울 종로구 창경궁로 185</td>
+                        <td>02-762-4868</td>
+                    </tr>
+                    <tr>
+                        <td>덕수궁관리소</td>
+                        <td>[04519] 서울 중구 세종대로 99</td>
+                        <td>02-771-9951</td>
+                    </tr>
+                    <tr>
+                        <td>종묘관리소</td>
+                        <td>[03135] 서울 종로구 종로157</td>
+                        <td>02-765-0195</td>
+                    </tr>
+                    <tr>
+                        <td>세종대왕유적관리소</td>
+                        <td>[12642] 경기 여주시 세종대왕면 영릉로 269-10</td>
+                        <td>031-880-4700</td>
+                    </tr>
+                    <tr>
+                        <td>조선왕릉동부지구관리소</td>
+                        <td>[11910] 경기 구리시 동구릉로 197</td>
+                        <td>031-563-2909</td>
+                    </tr>
+                    <tr>
+                        <td>조선왕릉중부지구관리소</td>
+                        <td>[01794] 서울 노원구 화랑로 681</td>
+                        <td>02-972-0370</td>
+                    </tr>
+                    <tr>
+                        <td>조선왕릉서부지구관리소	</td>
+                        <td>[10548] 경기 고양시 덕양구 서오릉로 334-32</td>
+                        <td>02-359-0090</td>
+                    </tr>
+                </table>
                 <p>ⓒ Cultural Heritage Administration Royal Palaces and Tombs Center. All rights reserved.</p>
             </div>
             <a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank">

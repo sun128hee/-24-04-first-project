@@ -1,23 +1,5 @@
 /*info.css*/
 
-body {
-    background-color: black;
-
-    animation-name: bodyBright;
-    animation-duration: 3s;
-    animation-fill-mode: both;
-}
-
-@keyframes bodyBright {
-    0%{
-        background-color: black;
-    }
-
-    100%{
-        background-color: white;
-    }
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -29,18 +11,36 @@ a {
     color: inherit;
 }
 
+body {
+    background-color: black;
+
+    animation-name: bodybright;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+
+@keyframes bodybright {
+    0% {background-color: black;}
+    100% {background-color: white;}
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 header {
     width: 100%;
-    padding: 15px 20px;
+    padding: 15px 3%;
     position: fixed;
     z-index: 1;
 
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgb(0, 0, 0, 0);
     color: white;
-}
 
-.headerBackgroundColor {
-    background-color: white;
+    animation-name: bright;
+    animation-duration: 5s;
+    animation-fill-mode: both;
 }
 
 .topMenu{
@@ -52,16 +52,24 @@ header {
 }
 
 #language {
-    width: 60px;
+    width: 80px;
+    height: 30px;
     background-color: white;
     border: 0px;
     border-radius: 15px;
+
+    margin-top: 13px;
 
     text-align: center;
     font-size: 0.7rem;
     color: gray;
 
     opacity: 90%;
+}
+
+.menubox {
+    width: 12%;
+    height: 60px;
 }
 
 .flex-center {
@@ -73,11 +81,11 @@ header {
 
 .mianImg {
     width: 100%;
-    height: 500px;
-    background-image: url(../../자료/img_intro_gbg.png);
+    height: 50vh;
+    background-image: url(../자료/img_intro_gbg.png);
     background-size: cover;
 
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: overlay;
 
     color: white;
@@ -96,14 +104,64 @@ header {
         background-blend-mode: multiply;}
 
     100%{
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.5);
         background-blend-mode: multiply;
     }
 }
 
+.mianImg > h1 {
+    animation-name: move;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+
+.nav {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 30px;
+    
+    color: gray;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+}
+
+#navInfo {
+    border: 0;
+    font-size: 1rem;
+    margin-bottom: 20px;
+
+    background: none;
+
+    color: gray;
+}
+
 .info-content {
     padding: 30px 100px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    font-size: 1rem;
     text-align: center;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 3.6s;
+    animation-fill-mode: both;
+}
+
+.info-img {
+    width: 100%;
+    padding-bottom: 50%;
+
+    background-image: url("https://royal.cha.go.kr/afile/preview/5675");
+    background-size: cover;
+    background-position: center;
+    
+    margin-bottom: 50px;
 }
 
 .info-content > h4 {
@@ -111,18 +169,50 @@ header {
     font-size: 1.2rem;
 }
 
-table {
+.history {
+    padding: 0px 100px;
+    text-align: center;
+    margin-bottom: 100px;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 4.6s;
+    animation-fill-mode: both;
+}
+
+.history-img {
+    width: 100%;
+    padding-bottom: 50%;
+
+    background-image: url("https://www.heritage.go.kr/unisearch/images/national_treasure/1611718.jpg");
+    background-size: cover;
+    background-position: center;
+
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.history > h2 {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.historyTable {
     width: 100%;
 
+    border: 1px solid gray;;
+    border-left: 0;
+    border-right: 0;
+    border-collapse: collapse;
+
     margin: 40px auto;
+    margin-top: 30px;
 }
 
-table, td, th {
+td, th {
     border: 1px solid gray;;
     border-collapse: collapse;
-}
 
-th, td {
     height: 35px;
     padding: 0 15px ;
     text-align: left;
@@ -136,6 +226,11 @@ th {
 fieldset {
     margin: 0 100px;
     padding: 30px;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 5.6s;
+    animation-fill-mode: both;
 }
 
 .researchIcon{
@@ -184,11 +279,15 @@ footer {
     padding:50px 30px;
 
     width: 100%;
-    background-color: rgb(238, 238, 238);
+    background-color: #F8F8F8;
     
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+
+    animation-name: bright;
+    animation-duration: 5s;
+    animation-fill-mode: both;
 }
 
 .footertext {
@@ -200,7 +299,7 @@ footer {
     color: gray;
 }
 
-.footertext > div {
+#telBox {
     width: 150px;
     background-color: #668BAE;
     padding: 5px;
@@ -219,4 +318,35 @@ footer {
 
 .footerlogo2 {
     margin-left: 15px;
+}
+
+.telBoxTable {
+    display: none;
+
+    border-collapse: collapse;
+
+    margin: 10px 0;
+    margin-left: 5px;
+}
+
+.colornone {
+    background-color: rgb(0, 0, 0, 0.0);
+    color: black;
+}
+
+@keyframes move {
+    0% {
+        opacity: 0;
+        transform: translate(0, 200px);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes bright {
+    0%{opacity: 0;}
+    100%{opacity: 100%;}
 }

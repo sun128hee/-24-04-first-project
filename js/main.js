@@ -316,3 +316,12 @@ document.addEventListener("scroll", ()=>{
     }
 });
 
+const div_main = document.querySelector('#main');
+const div_info = document.querySelector('#info');
+const div_tour = document.querySelector('#tour');
+const div_event = document.querySelector('#event');
+const div_booking = document.querySelector('#booking');
+
+div_main.addEventListener('mouseover', ()=>{
+    div_main.classaList.add('mouseovercolor');
+});
