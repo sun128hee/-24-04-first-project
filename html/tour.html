@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="../css/info.css">
+    <link rel="stylesheet" href="../css/tour.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 </head>
 
@@ -38,9 +39,8 @@
             </div>
         </header>
 
-        <!-- 내용이 스크롤에 따라 나오게끔 애니메이션 걸어주기-->
         <div class="mianImg">
-            <h1>경복궁 소개·역사</h1>
+            <h1>관람안내</h1>
         </div>
 
         <div class="nav">
@@ -48,114 +48,103 @@
             <span>▶</span>
             <span>경복궁</span>
             <span>▶</span>
+            <span>관람안내</span>
+            <span>▶</span>
             <select id="navInfo">
-                <option selected>경복궁 소개</option>
+                <option selected>40분 코스</option>
                 <option>경복궁 역사</option>
             </select>
             <hr style="border: 0.5px solid;">
         </div>
-        
-        <!-- 클릭하면 해당 스크롤 좌표로 이동! -->
 
-        <div class="info-content">
-            <div class="info-img"></div>
-            <img src="https://royal.cha.go.kr/imgs/images/2023/12/27/20231227133939229_DM4TC9DV.png" width="110px"
-                style="text-align: center;">
-            <h4 style="font-size: 1.4rem;">
-                경복궁(景福宮)은 1392년 조선 건국 후 <br>
-                1395년(태조 4)에 창건한 조선왕조 제일의 법궁(法宮)이다.
-            </h4>
-
-            <p style="text-align: justify; font-size: 1.2rem;">
-                경복궁은 백악산(북악산)을 주산으로 넓은 지형에 건물을 배치하였고 정문인 광화문 앞으로 넓은 육조거리가 펼쳐진 한양의 중심이었다. ‘경복’의 이름은 ‘새 왕조가 큰 복을 누려 번영할
-                것’이라는 의미가 담겨있으며, 이곳에서 세종 대에 훈민정음이 창제되어 반포되기도 하였다.
-                <br><br>경복궁은 1592년(선조 25) 임진왜란으로 소실되었는데 그 후 복구되지 못하였다가 270여년이 지난 1867년(고종 4)에 다시 지어졌다. 고종 대에 들어 건청궁과
-                태원전, 집옥재 등이 조성되었으며, 특히 건청궁 옥호루는 1895년 을미사변으로 명성황후가 시해되는 비운의 장소이기도 하다.
-                <br><br>1910년 경술국치 후 경복궁은 계획적으로 훼손되기 시작하여 1915년 조선물산공진회를 개최한다는 명분으로 대부분의 전각들이 철거되었고, 1926년에는 조선총독부 청사를
-                지어 경복궁의 경관을 훼손하였다. 이후 1990년대부터 본격적으로 경복궁 복원공사가 진행되었고, 1995년부터 1997년까지 조선총독부 청사를 철거하였으며 흥례문 일원, 침전 권역,
-                건청궁과 태원전, 그리고 광화문 등이 복원되어 현재에 이르고 있다.
-            </p>
+        <div class="courseMap">
+            <div class="courseselect">
+                <!-- 코스안내 누르면 팝업창으로 화면이 나오게 하기 -->
+                <div><i class="fa-solid fa-location-dot"></i> 코스 안내</div>
+                <div class="40course coursebox flex-center" style="cursor:pointer;"><i class="fa-solid fa-route"></i>
+                    40분 코스</div>
+                <div class="60course coursebox flex-center" style="cursor:pointer;"><i class="fa-solid fa-route"></i>
+                    60분 코스</div>
+                <div class="90course coursebox flex-center" style="cursor:pointer;"><i class="fa-solid fa-route"></i>
+                    90분 코스</div>
+            </div>
+            <div class="mapselect flex-center">
+                <div class="mapfull flex-center" style="cursor:pointer;" onclick="clickMapfull()">전체</div>
+                <div class="maptour flex-center" style="cursor:pointer;" onclick="clickMaptour()">둘러보기</div>
+                <div class="mapshop flex-center" style="cursor:pointer;" onclick="clickmapshop()">편의시설</div>
+            </div>
         </div>
-        
-        <div class="history">
-            <hr>
 
-            <div class="history-img"></div>
-            <h2>경복궁 역사</h2>
-            <table class="historyTable">
-                <tr>
-                    <th>연도</th>
-                    <th>내용</th>
-                </tr>
-                <tr>
-                    <td>1395년(태조 4)</td>
-                    <td>경복궁 창건</td>
-                </tr>
-                <tr>
-                    <td>1426년(세종 8)</td>
-                    <td>광화문, 건춘문, 영추문 지음</td>
-                </tr>
-                <tr>
-                    <td>1446년(세종 28)</td>
-                    <td>훈민정음 반포</td>
-                </tr>
-                <tr>
-                    <td>1475년(성종 6)</td>
-                    <td>북문의 이름을 신무문이라 함</td>
-                </tr>
-                <tr>
-                    <td>1592년(선조 25)</td>
-                    <td>임진왜란으로 소실</td>
-                </tr>
-                <tr>
-                    <td>1865년(고종 2)</td>
-                    <td>중건 시작</td>
-                </tr>
-                <tr>
-                    <td>1867년(고종 4)</td>
-                    <td>중건 완료</td>
-                </tr>
-                <tr>
-                    <td>1873년(고종 10)</td>
-                    <td>건청궁 지음</td>
-                </tr>
-                <tr>
-                    <td>1895년(고종 32)</td>
-                    <td>건청궁 옥호루에서 을미사변 발생</td>
-                </tr>
-                <tr>
-                    <td>1896년(고종 33)</td>
-                    <td>고종이 거처를 러시아공사관으로 옮김</td>
-                </tr>
-                <tr>
-                    <td>1915년</td>
-                    <td>조산물산공진회 개최로 전각 철거</td>
-                </tr>
-                <tr>
-                    <td>1926년</td>
-                    <td>조선총독부 청사 지음</td>
-                </tr>
-                <tr>
-                    <td>1990년~</td>
-                    <td>복원공사 시작</td>
-                </tr>
-                <tr>
-                    <td>1994년~</td>
-                    <td>강녕전과 교태전 일원 복원</td>
-                </tr>
-                <tr>
-                    <td>1995년~1997년</td>
-                    <td>조선총독부 청사 철거</td>
-                </tr>
-                <tr>
-                    <td>2001년~2021년</td>
-                    <td>흥례문 일원, 광화문 일원, 흥복전, 취향교 복원 및 향원정 보수</td>
-                </tr>
-                <tr>
-                    <td>2023년</td>
-                    <td>동궁 내 계조당 복원</td>
-                </tr>
-            </table>
+        <div class="mapImg">
+            <img id="mapImg" src="../자료/전체맵.jpg" width="1000px">
+        </div>
+
+        <div class="content-picture">
+            <hr>
+            <div class="content-info">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                이 번호를 클릭하시면아래 화면에서 시설사진을 볼 수 있습니다.
+            </div>
+            <div class="select-picture">
+                <span class="selectNumber" style="cursor:pointer;">
+                    <div class="numBox">1</div> 근정전
+                </span>
+                <span class="selectNumber" style="cursor:pointer;">
+                    <div class="numBox">2</div> 사정전
+                </span>
+                <span class="selectNumber" style="cursor:pointer;">
+                    <div class="numBox">3</div> 수정전
+                </span>
+                <span class="selectNumber" style="cursor:pointer;">
+                    <div class="numBox">4</div> 경회루
+                </span>
+                <span class="selectNumber" style="cursor:pointer;">
+                    <div class="numBox">5</div> 강녕전
+                </span>
+                <span class="selectNumber" style="cursor:pointer;">
+                    <div class="numBox">6</div> 교태전
+                </span>
+                <span class="selectNumber" style="cursor:pointer;">
+                    <div class="numBox">7</div> 동궁
+                </span>
+                <span class="selectNumber" style="cursor:pointer;">
+                    <div class="numBox">8</div> 소주방
+                </span>
+                <span class="selectNumber" style="cursor:pointer;">
+                    <div class="numBox">9</div> 자경전
+                </span>
+                <span class="selectNumber" style="cursor:pointer;">
+                    <div class="numBox">10</div> 흥복전
+                </span>
+                <span class="selectNumber" style="cursor:pointer;">
+                    <div class="numBox">11</div> 향원정
+                </span>
+                <span class="selectNumber" style="cursor:pointer;">
+                    <div class="numBox">12</div> 건청궁
+                </span>
+                <span class="selectNumber" style="cursor:pointer;">
+                    <div class="numBox">13</div> 집옥재
+                </span>
+                <span class="selectNumber" style="cursor:pointer;">
+                    <div class="numBox">14</div> 태원전
+                </span>
+            </div>
+            <div class="picture">
+                <h2>근정전</h2>
+                <div class="picture-img"></div>
+                <p>근정전(勤政殿)은 경복궁의 정전으로 왕의 즉위식, 신하들의 하례, 외국 사신의 접견, 궁중연회 등 중요한 국가행사를 치르던 곳이다. 근정전은 궁궐 내에서도 가장 규모가 크고 격식을
+                    갖춘 건물로 면적도 가장 넓게 차지하고 있다. 근정전 앞마당은 다른 궁궐의 정전과 같이 박석이 깔려있고, 중앙에는 삼도(三道)를 두어 궁궐의 격식을 갖추었으며 조정에는 품계석을
+                    놓았다.</p>
+            </div>
+            <!-- 숫자 클릭할 때마다 제목/사진/내용 변경되게 -->
+            <hr>
+        </div>
+
+        <div class="warning">
+            <div class="warningBox">
+                <img src="https://royal.cha.go.kr/resource/templete/royal/img/common/nuri.svg" width="130px">
+                궁능유적본부가 보유한 본 저작물은 "공공누리“ 제1유형(출처표시+상업적 이용가능) 조건에 따라 이용 할 수 있습니다.
+            </div>
         </div>
 
         <fieldset>
@@ -174,11 +163,13 @@
 
         <footer>
             <a href="https://royal.cha.go.kr/ROYAL/main/index.do">
-                <img class="footerlogo1" src="https://royal.cha.go.kr/resource/templete/royal/img/common/ft_logo.svg" width="150px">
+                <img class="footerlogo1" src="https://royal.cha.go.kr/resource/templete/royal/img/common/ft_logo.svg"
+                    width="150px">
             </a>
             <div class="footertext">
                 <div id="telBox" style="cursor:pointer;">
-                    <label for="telBox" style="cursor:pointer;">관리소별 연락처 <i class="fa-solid fa-chevron-down"></i></label>
+                    <label for="telBox" style="cursor:pointer;">관리소별 연락처 <i
+                            class="fa-solid fa-chevron-down"></i></label>
                 </div>
                 <!-- 아이콘을 <i class="fa-solid fa-chevron-up"></i>으로 변경하고 싶음 -->
                 <table class="telBoxTable">
@@ -228,7 +219,7 @@
                         <td>02-972-0370</td>
                     </tr>
                     <tr>
-                        <td>조선왕릉서부지구관리소	</td>
+                        <td>조선왕릉서부지구관리소 </td>
                         <td>[10548] 경기 고양시 덕양구 서오릉로 334-32</td>
                         <td>02-359-0090</td>
                     </tr>
@@ -236,12 +227,13 @@
                 <p>ⓒ Cultural Heritage Administration Royal Palaces and Tombs Center. All rights reserved.</p>
             </div>
             <a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                <img class="footerlogo2" src="https://royal.cha.go.kr/resource/templete/royal/img/common/img_web.png" width="100px">
+                <img class="footerlogo2" src="https://royal.cha.go.kr/resource/templete/royal/img/common/img_web.png"
+                    width="100px">
             </a>
         </footer>
     </div>
 
-    <script src="../js/info.js"></script>
+    <script src="../js/tour.js"></script>
 </body>
 
 </html>

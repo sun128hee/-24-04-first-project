@@ -325,3 +325,18 @@ const div_booking = document.querySelector('#booking');
 div_main.addEventListener('mouseover', ()=>{
     div_main.classaList.add('mouseovercolor');
 });
+
+
+const id_telBox = document.querySelector('#telBox')
+const select_telBoxTable = document.querySelector('.telBoxTable');
+let display = false;
+
+id_telBox.addEventListener('click', ()=>{
+    if(display == false) {
+        select_telBoxTable.style.display = "inline";
+        display = true;
+    } else if (display == true) {
+        select_telBoxTable.style.display = "none";
+        display = false; 
+    }
+});
