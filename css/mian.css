@@ -170,31 +170,6 @@ header {
     margin: 30px 0px;
 }
 
-.middleImg {
-    width: 68%;
-}
-
-.infoImg{
-    background-image: url("https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_01.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.bookingImg{
-    background-image: url("https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_03.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.courseImg {
-    background-image: url("https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_04.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
 .middleText {
     height: 150px;
     flex-wrap: wrap;
@@ -467,18 +442,31 @@ footer {
     display: none;
 
     border-collapse: collapse;
+    color: gray;
 
     margin: 10px 0;
     margin-left: 5px;
 }
 
-td, th {
-    border: 1px solid gray;;
+.telBoxTable td, .telBoxTable th {
+    border: 1px solid lightgrey;
     border-collapse: collapse;
 
     height: 35px;
     padding: 0 15px ;
     text-align: left;
+}
+
+.telBoxTable th {
+    border-top: 2px solid gray;
+}
+
+.telBoxTable th:first-child, .telBoxTable td:first-child {
+    border-left: 0;
+}
+
+.telBoxTable th:last-child, .telBoxTable td:last-child {
+    border-right: 0;
 }
 
 @keyframes move {

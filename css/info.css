@@ -211,7 +211,7 @@ header {
     font-size: 1.2rem;
 }
 
-td, th {
+.historyTable td, th {
     border: 1px solid gray;;
     border-collapse: collapse;
 
@@ -220,7 +220,7 @@ td, th {
     text-align: left;
 }
 
-th {
+.historyTable th {
     background-color: rgb(202, 202, 202);
     color: white;
 }
@@ -326,14 +326,31 @@ footer {
     display: none;
 
     border-collapse: collapse;
+    color: gray;
 
     margin: 10px 0;
     margin-left: 5px;
 }
 
-.colornone {
-    background-color: rgb(0, 0, 0, 0.0);
-    color: black;
+.telBoxTable td, .telBoxTable th {
+    border: 1px solid lightgrey;
+    border-collapse: collapse;
+
+    height: 35px;
+    padding: 0 15px ;
+    text-align: left;
+}
+
+.telBoxTable th {
+    border-top: 2px solid gray;
+}
+
+.telBoxTable th:first-child, .telBoxTable td:first-child {
+    border-left: 0;
+}
+
+.telBoxTable th:last-child, .telBoxTable td:last-child {
+    border-right: 0;
 }
 
 @keyframes move {

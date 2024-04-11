@@ -21,7 +21,7 @@
             <div class="topMenu">
                 <a href="./main.html"><img src="../자료/경복궁3_logo.png" alt="경복궁 main으로" height="60px"></a>
                 <label for="main"></label>
-                <div id="main" class="menubox flex-center"><a href="./main.html">main</a></div>
+                <div id="main" class="menubox flex-center"><a href="./main.html">MAIN</a></div>
                 <label for="info"></label>
                 <div id="info" class="menubox flex-center"><a href="./info.html">소개·역사</a></div>
                 <label for="tour"></label>
@@ -39,198 +39,461 @@
             </div>
         </header>
 
-        <div class="mianImg">
-            <h1>관람안내</h1>
-        </div>
-
-        <div class="nav">
-            <i class="fa-solid fa-house"></i>
-            <span>▶</span>
-            <span>경복궁</span>
-            <span>▶</span>
-            <span>관람안내</span>
-            <span>▶</span>
-            <select id="navInfo">
-                <option selected>40분 코스</option>
-                <option>경복궁 역사</option>
-            </select>
-            <hr style="border: 0.5px solid;">
-        </div>
-
-        <div class="courseMap">
-            <div class="courseselect">
-                <!-- 코스안내 누르면 팝업창으로 화면이 나오게 하기 -->
-                <div><i class="fa-solid fa-location-dot"></i> 코스 안내</div>
-                <div class="40course coursebox flex-center" style="cursor:pointer;"><i class="fa-solid fa-route"></i>
-                    40분 코스</div>
-                <div class="60course coursebox flex-center" style="cursor:pointer;"><i class="fa-solid fa-route"></i>
-                    60분 코스</div>
-                <div class="90course coursebox flex-center" style="cursor:pointer;"><i class="fa-solid fa-route"></i>
-                    90분 코스</div>
-            </div>
-            <div class="mapselect flex-center">
-                <div class="mapfull flex-center" style="cursor:pointer;" onclick="clickMapfull()">전체</div>
-                <div class="maptour flex-center" style="cursor:pointer;" onclick="clickMaptour()">둘러보기</div>
-                <div class="mapshop flex-center" style="cursor:pointer;" onclick="clickmapshop()">편의시설</div>
-            </div>
-        </div>
-
-        <div class="mapImg">
-            <img id="mapImg" src="../자료/전체맵.jpg" width="1000px">
-        </div>
-
-        <div class="content-picture">
-            <hr>
-            <div class="content-info">
-                <i class="fa-solid fa-circle-exclamation"></i>
-                이 번호를 클릭하시면아래 화면에서 시설사진을 볼 수 있습니다.
-            </div>
-            <div class="select-picture">
-                <span class="selectNumber" style="cursor:pointer;">
-                    <div class="numBox">1</div> 근정전
-                </span>
-                <span class="selectNumber" style="cursor:pointer;">
-                    <div class="numBox">2</div> 사정전
-                </span>
-                <span class="selectNumber" style="cursor:pointer;">
-                    <div class="numBox">3</div> 수정전
-                </span>
-                <span class="selectNumber" style="cursor:pointer;">
-                    <div class="numBox">4</div> 경회루
-                </span>
-                <span class="selectNumber" style="cursor:pointer;">
-                    <div class="numBox">5</div> 강녕전
-                </span>
-                <span class="selectNumber" style="cursor:pointer;">
-                    <div class="numBox">6</div> 교태전
-                </span>
-                <span class="selectNumber" style="cursor:pointer;">
-                    <div class="numBox">7</div> 동궁
-                </span>
-                <span class="selectNumber" style="cursor:pointer;">
-                    <div class="numBox">8</div> 소주방
-                </span>
-                <span class="selectNumber" style="cursor:pointer;">
-                    <div class="numBox">9</div> 자경전
-                </span>
-                <span class="selectNumber" style="cursor:pointer;">
-                    <div class="numBox">10</div> 흥복전
-                </span>
-                <span class="selectNumber" style="cursor:pointer;">
-                    <div class="numBox">11</div> 향원정
-                </span>
-                <span class="selectNumber" style="cursor:pointer;">
-                    <div class="numBox">12</div> 건청궁
-                </span>
-                <span class="selectNumber" style="cursor:pointer;">
-                    <div class="numBox">13</div> 집옥재
-                </span>
-                <span class="selectNumber" style="cursor:pointer;">
-                    <div class="numBox">14</div> 태원전
-                </span>
-            </div>
-            <div class="picture">
-                <h2>근정전</h2>
-                <div class="picture-img"></div>
-                <p>근정전(勤政殿)은 경복궁의 정전으로 왕의 즉위식, 신하들의 하례, 외국 사신의 접견, 궁중연회 등 중요한 국가행사를 치르던 곳이다. 근정전은 궁궐 내에서도 가장 규모가 크고 격식을
-                    갖춘 건물로 면적도 가장 넓게 차지하고 있다. 근정전 앞마당은 다른 궁궐의 정전과 같이 박석이 깔려있고, 중앙에는 삼도(三道)를 두어 궁궐의 격식을 갖추었으며 조정에는 품계석을
-                    놓았다.</p>
-            </div>
-            <!-- 숫자 클릭할 때마다 제목/사진/내용 변경되게 -->
-            <hr>
-        </div>
-
-        <div class="warning">
-            <div class="warningBox">
-                <img src="https://royal.cha.go.kr/resource/templete/royal/img/common/nuri.svg" width="130px">
-                궁능유적본부가 보유한 본 저작물은 "공공누리“ 제1유형(출처표시+상업적 이용가능) 조건에 따라 이용 할 수 있습니다.
-            </div>
-        </div>
-
-        <fieldset>
-            <p><i class="researchIcon fa-regular fa-circle-question"></i>이 페이지의 정보와 사용편의성에 만족하시나요?</p>
-            <label><input type="radio" name="reserach"> 매우 만족</label>
-            <label><input type="radio" name="reserach"> 만족</label>
-            <label><input type="radio" name="reserach"> 보통</label>
-            <label><input type="radio" name="reserach"> 불만족</label>
-            <label><input type="radio" name="reserach"> 매우 불만족</label>
-            <div>
-                <input type="text" class="reserachText" placeholder="여러분의 소중한 의견을 남겨주세요.(최대 1500자)"></input>
-                <!-- text 상자 focus 되면 border 색상이 생기게끔 -->
-                <button type=button" class="reserachButton">등록</button>
-            </div>
-        </fieldset>
-
-        <footer>
-            <a href="https://royal.cha.go.kr/ROYAL/main/index.do">
-                <img class="footerlogo1" src="https://royal.cha.go.kr/resource/templete/royal/img/common/ft_logo.svg"
-                    width="150px">
-            </a>
-            <div class="footertext">
-                <div id="telBox" style="cursor:pointer;">
-                    <label for="telBox" style="cursor:pointer;">관리소별 연락처 <i
-                            class="fa-solid fa-chevron-down"></i></label>
+        <div class="pop-up hidden">
+            <div class="clear"><i class="fa-solid fa-xmark" style="cursor:pointer;"></i></div>
+            <div class="popup-container">
+                <div class="courseselect-popup">
+                    <div class="coursebox-popup flex-center" style="cursor:pointer;"><i
+                            class="fa-solid fa-route"></i>
+                        40분 코스</div>
                 </div>
-                <!-- 아이콘을 <i class="fa-solid fa-chevron-up"></i>으로 변경하고 싶음 -->
-                <table class="telBoxTable">
-                    <tr>
-                        <th>기관</th>
-                        <th>주소</th>
-                        <th>연락처</th>
-                    </tr>
-                    <tr>
-                        <td>경복궁관리소</td>
-                        <td>[03045] 서울 종로구 사직로 161</td>
-                        <td>02-3700-3900</td>
-                    </tr>
-                    <tr>
-                        <td>창덕궁관리소</td>
-                        <td>[03072] 서울 종로구 율곡로 99번지</td>
-                        <td>02-3668-2300</td>
-                    </tr>
-                    <tr>
-                        <td>창경궁관리소</td>
-                        <td>[03072] 서울 종로구 창경궁로 185</td>
-                        <td>02-762-4868</td>
-                    </tr>
-                    <tr>
-                        <td>덕수궁관리소</td>
-                        <td>[04519] 서울 중구 세종대로 99</td>
-                        <td>02-771-9951</td>
-                    </tr>
-                    <tr>
-                        <td>종묘관리소</td>
-                        <td>[03135] 서울 종로구 종로157</td>
-                        <td>02-765-0195</td>
-                    </tr>
-                    <tr>
-                        <td>세종대왕유적관리소</td>
-                        <td>[12642] 경기 여주시 세종대왕면 영릉로 269-10</td>
-                        <td>031-880-4700</td>
-                    </tr>
-                    <tr>
-                        <td>조선왕릉동부지구관리소</td>
-                        <td>[11910] 경기 구리시 동구릉로 197</td>
-                        <td>031-563-2909</td>
-                    </tr>
-                    <tr>
-                        <td>조선왕릉중부지구관리소</td>
-                        <td>[01794] 서울 노원구 화랑로 681</td>
-                        <td>02-972-0370</td>
-                    </tr>
-                    <tr>
-                        <td>조선왕릉서부지구관리소 </td>
-                        <td>[10548] 경기 고양시 덕양구 서오릉로 334-32</td>
-                        <td>02-359-0090</td>
-                    </tr>
-                </table>
-                <p>ⓒ Cultural Heritage Administration Royal Palaces and Tombs Center. All rights reserved.</p>
+                <div class="popup-middle">
+                    <div class="popup-img"></div>
+                    <div class="popup-course40"></div>
+                </div>
+                <!-- 이미지 슬라이드 수정 예정
+                안되면 그냥... 슬라이드 하지 말고 넘어가...ㅋㅋ.... -->
+                <div class="popup-slide">
+                    <span class="controller prev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </span>
+                    <div class="slides">
+                        <div class="slide-item">
+                            <div class="slide-img1"></div>
+                            <div class="slide-info">
+                                흥례문
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <div class="slide-img2"></div>
+                            <div class="slide-info">
+                                영제교
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <div class="slide-img3"></div>
+                            <div class="slide-info">
+                                근정전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <div class="slide-img4"></div>
+                            <div class="slide-info">
+                                사정전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <div class="slide-img5"></div>
+                            <div class="slide-info">
+                                수정전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <!-- <div class="slide-item">
+                            <div class="slide-img6"></div>
+                            <div class="slide-info">
+                                경회루
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <span class="controller next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>    
+                </div>
             </div>
-            <a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                <img class="footerlogo2" src="https://royal.cha.go.kr/resource/templete/royal/img/common/img_web.png"
-                    width="100px">
-            </a>
-        </footer>
+        </div>
+
+        <div class="pop-up hidden">
+            <i class="fa-solid fa-xmark clear2" style="cursor:pointer;"></i>
+            <div class="popup-container">
+                <div class="courseselect-popup">
+                    <div class="coursebox-popup flex-center" style="cursor:pointer;"><i
+                            class="fa-solid fa-route"></i>
+                        60분 코스</div>
+                </div>
+                <div class="popup-middle">
+                    <div class="popup-img"></div>
+                    <div class="popup-course60"></div>
+                </div>
+                <!-- 이미지 슬라이드 수정 예정
+                안되면 그냥... 슬라이드 하지 말고 넘어가...ㅋㅋ.... -->
+                <div class="popup-slide">
+                    <span class="controller prev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </span>
+                    <div class="slides">
+                        <div class="slide-item">
+                            <div class="slide-img1"></div>
+                            <div class="slide-info">
+                                흥례문
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <div class="slide-img2"></div>
+                            <div class="slide-info">
+                                영제교
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <div class="slide-img3"></div>
+                            <div class="slide-info">
+                                근정전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <div class="slide-img5"></div>
+                            <div class="slide-info">
+                                수정전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <div class="slide-img7"></div>
+                            <div class="slide-info">
+                                교태전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <!-- <div class="slide-item">
+                            <div class="slide-img8"></div>
+                            <div class="slide-info">
+                                강녕전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div> -->
+                        <!-- <div class="slide-item">
+                            <div class="slide-img4"></div>
+                            <div class="slide-info">
+                                사정전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div> -->
+                        <!-- <div class="slide-item">
+                            <div class="slide-img6"></div>
+                            <div class="slide-info">
+                                경회루
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div> -->
+                        <!-- <div class="slide-item">
+                            <div class="slide-img9"></div>
+                            <div class="slide-info">
+                                자경전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <span class="controller next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>    
+                </div>
+            </div>
+        </div>
+
+        <div class="pop-up hidden">
+            <i class="fa-solid fa-xmark clear3" style="cursor:pointer;"></i>
+            <div class="popup-container">
+                <div class="courseselect-popup">
+                    <div class="coursebox-popup flex-center" style="cursor:pointer;"><i
+                            class="fa-solid fa-route"></i>
+                        90분 코스</div>
+                </div>
+                <div class="popup-middle">
+                    <div class="popup-img"></div>
+                    <div class="popup-course90"></div>
+                </div>
+                <!-- 이미지 슬라이드 수정 예정
+                안되면 그냥... 슬라이드 하지 말고 넘어가...ㅋㅋ.... -->
+                <div class="popup-slide">
+                    <span class="controller prev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </span>
+                    <div class="slides">
+                        <div class="slide-item">
+                            <div class="slide-img1"></div>
+                            <div class="slide-info">
+                                흥례문
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <div class="slide-img2"></div>
+                            <div class="slide-info">
+                                영제교
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <div class="slide-img3"></div>
+                            <div class="slide-info">
+                                근정전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <div class="slide-img5"></div>
+                            <div class="slide-info">
+                                수정전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <div class="slide-img6"></div>
+                            <div class="slide-info">
+                                경회루
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <!-- <div class="slide-item">
+                            <div class="slide-img4"></div>
+                            <div class="slide-info">
+                                사정전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div> -->
+                        <!-- <div class="slide-item">
+                            <div class="slide-img8"></div>
+                            <div class="slide-info">
+                                강녕전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div> -->
+                        <!-- <div class="slide-item">
+                            <div class="slide-img7"></div>
+                            <div class="slide-info">
+                                교태전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div> -->
+                        <!-- <div class="slide-item">
+                            <div class="slide-img9"></div>
+                            <div class="slide-info">
+                                자경전
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div> -->
+                        <!-- <div class="slide-item">
+                            <div class="slide-img10"></div>
+                            <div class="slide-info">
+                                향원정
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <span class="controller next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>    
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="mianImg">
+        <h1>관람안내</h1>
+    </div>
+
+    <div class="nav">
+        <i class="fa-solid fa-house"></i>
+        <span>▶</span>
+        <span>경복궁</span>
+        <span>▶</span>
+        <span>관람안내</span>
+        <span>▶</span>
+        <select id="navInfo">
+            <option selected>관람코스</option>
+            <option>시설 </option>
+        </select>
+        <hr style="border: 0.5px solid;">
+    </div>
+
+    <div class="courseMap">
+        <div class="courseselect">
+            <!-- 코스안내 누르면 팝업창으로 화면이 나오게 하기 -->
+            <div><i class="fa-solid fa-location-dot"></i> 코스 안내</div>
+            <div class="coursebox flex-center" style="cursor:pointer;"><i class="fa-solid fa-route"></i>
+                40분 코스</div>
+            <div class="coursebox flex-center" style="cursor:pointer;"><i class="fa-solid fa-route"></i>
+                60분 코스</div>
+            <div class="coursebox flex-center" style="cursor:pointer;"><i class="fa-solid fa-route"></i>
+                90분 코스</div>
+        </div>
+        <div class="mapselect flex-center">
+            <div class="mapfull flex-center" style="cursor:pointer;" onclick="clickMapfull()">전체</div>
+            <div class="maptour flex-center" style="cursor:pointer;" onclick="clickMaptour()">둘러보기</div>
+            <div class="mapshop flex-center" style="cursor:pointer;" onclick="clickmapshop()">편의시설</div>
+        </div>
+    </div>
+    <div class="mapImg">
+        <img id="mapImg" src="../자료/전체맵.jpg" width="800px">
+    </div>
+
+    <div class="content-picture">
+        <hr>
+        <div class="content-info">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            이 번호를 클릭하시면아래 화면에서 시설사진을 볼 수 있습니다.
+        </div>
+        <!-- 해당 번호 클릭했을 때 opacity=1로 변경-->
+        <div class="select-picture">
+            <span class="selectNumber" style="cursor:pointer;" onclick="click1()">
+                <div class="numBox">1</div> 근정전
+            </span>
+            <span class="selectNumber" style="cursor:pointer;" onclick="click2()">
+                <div class="numBox">2</div> 사정전
+            </span>
+            <span class="selectNumber" style="cursor:pointer;" onclick="click3()">
+                <div class="numBox">3</div> 수정전
+            </span>
+            <span class="selectNumber" style="cursor:pointer;" onclick="click4()">
+                <div class="numBox">4</div> 경회루
+            </span>
+            <span class="selectNumber" style="cursor:pointer;" onclick="click5()">
+                <div class="numBox">5</div> 강녕전
+            </span>
+            <span class="selectNumber" style="cursor:pointer;" onclick="click6()">
+                <div class="numBox">6</div> 교태전
+            </span>
+            <span class="selectNumber" style="cursor:pointer;" onclick="click7()">
+                <div class="numBox">7</div> 동궁
+            </span>
+            <span class="selectNumber" style="cursor:pointer;" onclick="click8()">
+                <div class="numBox">8</div> 소주방
+            </span>
+            <span class="selectNumber" style="cursor:pointer;" onclick="click9()">
+                <div class="numBox">9</div> 자경전
+            </span>
+            <span class="selectNumber" style="cursor:pointer;" onclick="click10()">
+                <div class="numBox">10</div> 흥복전
+            </span>
+            <span class="selectNumber" style="cursor:pointer;" onclick="click11()">
+                <div class="numBox">11</div> 향원정
+            </span>
+            <span class="selectNumber" style="cursor:pointer;" onclick="click12()">
+                <div class="numBox">12</div> 건청궁
+            </span>
+            <span class="selectNumber" style="cursor:pointer;" onclick="click13()">
+                <div class="numBox">13</div> 집옥재
+            </span>
+            <span class="selectNumber" style="cursor:pointer;" onclick="click14()">
+                <div class="numBox">14</div> 태원전
+            </span>
+        </div>
+        <div class="picture">
+            <h2 class="picture-h2">근정전</h2>
+            <div class="picture-img"></div>
+            <p class="picture-p">근정전(勤政殿)은 경복궁의 정전으로 왕의 즉위식, 신하들의 하례, 외국 사신의 접견, 궁중연회 등 중요한 국가행사를 치르던 곳이다. 근정전은 궁궐
+                내에서도 가장 규모가 크고 격식을
+                갖춘 건물로 면적도 가장 넓게 차지하고 있다. 근정전 앞마당은 다른 궁궐의 정전과 같이 박석이 깔려있고, 중앙에는 삼도(三道)를 두어 궁궐의 격식을 갖추었으며 조정에는 품계석을
+                놓았다.</p>
+        </div>
+        <hr>
+    </div>
+
+    <div class="warning">
+        <div class="warningBox">
+            <img src="https://royal.cha.go.kr/resource/templete/royal/img/common/nuri.svg" width="130px">
+            궁능유적본부가 보유한 본 저작물은 "공공누리“ 제1유형(출처표시+상업적 이용가능) 조건에 따라 이용 할 수 있습니다.
+        </div>
+    </div>
+
+    <fieldset>
+        <p><i class="researchIcon fa-regular fa-circle-question"></i>이 페이지의 정보와 사용편의성에 만족하시나요?</p>
+        <label><input type="radio" name="reserach"> 매우 만족</label>
+        <label><input type="radio" name="reserach"> 만족</label>
+        <label><input type="radio" name="reserach"> 보통</label>
+        <label><input type="radio" name="reserach"> 불만족</label>
+        <label><input type="radio" name="reserach"> 매우 불만족</label>
+        <div>
+            <input type="text" class="reserachText" placeholder="여러분의 소중한 의견을 남겨주세요."></input>
+            <!-- text 상자 focus 되면 border 색상이 생기게끔 -->
+            <button type=button" class="reserachButton" style="cursor:pointer;"
+                onclick="return researchClick()">등록</button>
+            <!-- 등록 누르면 의견을 남겨주셔서 감사합니다. / radio 선택이 안되면 만족도를 선택해주세요. 창 띄우기 -->
+        </div>
+    </fieldset>
+
+    <footer>
+        <a href="https://royal.cha.go.kr/ROYAL/main/index.do">
+            <img class="footerlogo1" src="https://royal.cha.go.kr/resource/templete/royal/img/common/ft_logo.svg"
+                width="150px">
+        </a>
+        <div class="footertext">
+            <div id="telBox" style="cursor:pointer;">
+                <label for="telBox" style="cursor:pointer;">관리소별 연락처 <i class="fa-solid fa-chevron-down"></i></label>
+            </div>
+            <!-- 아이콘을 <i class="fa-solid fa-chevron-up"></i>으로 변경하고 싶음 -->
+            <table class="telBoxTable">
+                <tr>
+                    <th>기관</th>
+                    <th>주소</th>
+                    <th>연락처</th>
+                </tr>
+                <tr>
+                    <td>경복궁관리소</td>
+                    <td>[03045] 서울 종로구 사직로 161</td>
+                    <td>02-3700-3900</td>
+                </tr>
+                <tr>
+                    <td>창덕궁관리소</td>
+                    <td>[03072] 서울 종로구 율곡로 99번지</td>
+                    <td>02-3668-2300</td>
+                </tr>
+                <tr>
+                    <td>창경궁관리소</td>
+                    <td>[03072] 서울 종로구 창경궁로 185</td>
+                    <td>02-762-4868</td>
+                </tr>
+                <tr>
+                    <td>덕수궁관리소</td>
+                    <td>[04519] 서울 중구 세종대로 99</td>
+                    <td>02-771-9951</td>
+                </tr>
+                <tr>
+                    <td>종묘관리소</td>
+                    <td>[03135] 서울 종로구 종로157</td>
+                    <td>02-765-0195</td>
+                </tr>
+                <tr>
+                    <td>세종대왕유적관리소</td>
+                    <td>[12642] 경기 여주시 세종대왕면 영릉로 269-10</td>
+                    <td>031-880-4700</td>
+                </tr>
+                <tr>
+                    <td>조선왕릉동부지구관리소</td>
+                    <td>[11910] 경기 구리시 동구릉로 197</td>
+                    <td>031-563-2909</td>
+                </tr>
+                <tr>
+                    <td>조선왕릉중부지구관리소</td>
+                    <td>[01794] 서울 노원구 화랑로 681</td>
+                    <td>02-972-0370</td>
+                </tr>
+                <tr>
+                    <td>조선왕릉서부지구관리소 </td>
+                    <td>[10548] 경기 고양시 덕양구 서오릉로 334-32</td>
+                    <td>02-359-0090</td>
+                </tr>
+            </table>
+            <p>ⓒ Cultural Heritage Administration Royal Palaces and Tombs Center. All rights reserved.</p>
+        </div>
+        <a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
+            <img class="footerlogo2" src="https://royal.cha.go.kr/resource/templete/royal/img/common/img_web.png"
+                width="100px">
+        </a>
+    </footer>
     </div>
 
     <script src="../js/tour.js"></script>

@@ -169,10 +169,17 @@ header {
 
     border: 1px solid lightgray;
     border-radius: 30px;
+    
+    color: gray;
 
     margin-left: 20px;
 
     font-size: 1rem;
+}
+
+.clear {
+    width: 30px;
+    height: 30px;
 }
 
 .coursebox > i {
@@ -190,8 +197,24 @@ header {
     height: 50px;
 
     background-color: #F7F7F7;
+    color: gray;
 
     border-radius: 20px;
+}
+
+.mapfull:hover {
+    background-color: #17106E;
+    color: white;
+}
+
+.mapfull:active {
+    background-color: #17106E;
+    color: white;
+}
+
+.mapfull:visited {
+    background-color: #17106E;
+    color: white;
 }
 
 .maptour {
@@ -199,8 +222,14 @@ header {
     height: 50px;
 
     background-color: #F7F7F7;
+    color: gray;
 
     border-radius: 20px;
+}
+
+.maptour:hover {
+    background-color: #17106E;
+    color: white;
 }
 
 .mapshop {
@@ -208,14 +237,20 @@ header {
     height: 50px;
 
     background-color: #F7F7F7;
+    color: gray;
 
     border-radius: 20px;
+}
+
+.mapshop:hover {
+    background-color: #17106E;
+    color: white;
 }
 
 .mapImg {
     padding: 50px 0;
 
-    border: 1px solid gray;
+    border: 1px solid lightgrey;
     border-radius: 20px;
 
     text-align: center;
@@ -226,6 +261,341 @@ header {
     animation-duration: 1s;
     animation-delay: 3.6s;
     animation-fill-mode: both;
+}
+
+.pop-up {
+    position: fixed;
+    z-index: 10;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgb(0, 0, 0, 0.7);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.pop-up > i {
+    color: white;
+    font-size: 2rem;
+    margin: 0 3%;
+}
+
+.popup-container {
+    width: 100%;
+    height: 85%;
+
+    margin: 0 3%;
+    padding-bottom: 0;
+
+    background-color: white;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.courseselect-popup {
+    width: 100%;
+    display: flex;
+
+    margin: 10px 20px;
+    margin-top: 28px;
+}
+
+.coursebox-popup > i {
+    margin-right: 5px;
+}
+
+.coursebox-popup {
+    width: 120px;
+    height: 50px;
+
+    background-color: rgb(0, 0, 0, 0.8);
+    border-radius: 30px;
+    
+    color: white;
+
+    margin-left: 20px;
+
+    font-size: 0.8rem;
+}
+
+.popup-img{
+    width: 43%;
+    height: 100%;
+
+    background-image: url("../자료/둘러보기맵.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.popup-course40 {
+    width: 50%;
+    height: 100%;
+
+    background-image: url("../자료/40분코스.PNG");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.popup-course60 {
+    width: 50%;
+    height: 100%;
+
+    background-image: url("../자료/60분코스.PNG");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.popup-course90 {
+    width: 50%;
+    height: 100%;
+
+    background-image: url("../자료/90분코스.PNG");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.popup-middle {
+    width: 100%;
+    height: 45%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.popup-infoText {
+    width: 160px;
+    height: 50px;
+
+    border: 1px solid gray;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;
+    margin-top: 15px;
+}
+
+.popup-infoText > p {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.popup-slide {
+    width: 100%;
+    height: 40%;
+
+    background-color: #F7F7F7;
+    border-radius: 10px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow-x: hidden;
+
+    padding: 0 20px;
+}
+
+.slides {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slide-item {
+    margin: 0 10px;
+}
+
+.controller {
+    width: 30px;
+    height: 30px;
+
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.controller:hover {
+    background-color: rgb(0, 0, 0, 1);
+}
+
+.slide-img1 {
+    width: 170px;
+    height: 155px;
+
+    /*흥례문*/
+    background-image: url("https://royal.cha.go.kr/afile/preview/3401");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 10px;
+}
+
+.slide-img2 {
+    width: 170px;
+    height: 155px;
+
+    /*영제교*/
+    background-image: url("https://royal.cha.go.kr/afile/preview/3370");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 10px;
+}
+
+.slide-img3 {
+    width: 170px;
+    height: 155px;
+
+    /*근정전*/
+    background-image: url("https://royal.cha.go.kr/afile/preview/3371");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 10px;
+}
+
+.slide-img4 {
+    width: 170px;
+    height: 155px;
+
+    /*사정전*/
+    background-image: url("https://royal.cha.go.kr/afile/preview/3372");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 10px;
+}
+
+.slide-img5 {
+    width: 170px;
+    height: 155px;
+
+    /*경회루*/
+    background-image: url("https://royal.cha.go.kr/afile/preview/3373");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 10px;
+}
+
+.slide-img6 {
+    width: 170px;
+    height: 155px;
+
+    /*수정전*/
+    background-image: url("https://royal.cha.go.kr/afile/preview/3374");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 10px;
+}
+
+.slide-img7 {
+    width: 170px;
+    height: 155px;
+
+    /*교태전*/
+    background-image: url("https://royal.cha.go.kr/afile/preview/3410");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 10px;
+}
+
+.slide-img8 {
+    width: 170px;
+    height: 155px;
+
+    /*강녕전*/
+    background-image: url("https://royal.cha.go.kr/afile/preview/3409");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 10px;
+}
+
+.slide-img9 {
+    width: 170px;
+    height: 155px;
+
+    /*자경전*/
+    background-image: url("https://royal.cha.go.kr/afile/preview/3411");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 10px;
+}
+
+.slide-img10 {
+    width: 170px;
+    height: 155px;
+
+    /*향원정*/
+    background-image: url("https://royal.cha.go.kr/afile/preview/5775");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 10px;
+}
+
+.slide-info {
+    width: 170px;
+    height: 45px;
+
+    border: 1px solid gray;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 13px; /*없애지 말기*/
+    padding: 15px; /*없애지 말기*/
 }
 
 .flex-center {
@@ -285,11 +655,23 @@ header {
     margin-top: 40px;
 }
 
+.selectNumber {
+    opacity: 50%;
+}
+
+.selectNumber:hover {
+    opacity: 100%;
+}
+
+.selectNumber-checked {
+    opacity: 100%;
+}
+
 .numBox {
     width: 30px;
     height: 30px;
 
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgb(0, 0, 0);
 
     border-radius: 50%;
 
@@ -298,6 +680,8 @@ header {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+
+    padding-bottom: px;
 }
 
 .select-picture > span {
@@ -456,18 +840,31 @@ footer {
     display: none;
 
     border-collapse: collapse;
+    color: gray;
 
     margin: 10px 0;
     margin-left: 5px;
 }
 
-td, th {
-    border: 1px solid gray;;
+.telBoxTable td, .telBoxTable th {
+    border: 1px solid lightgrey;
     border-collapse: collapse;
 
     height: 35px;
     padding: 0 15px ;
     text-align: left;
+}
+
+.telBoxTable th {
+    border-top: 2px solid gray;
+}
+
+.telBoxTable th:first-child, td:first-child {
+    border-left: 0;
+}
+
+.telBoxTable th:last-child, td:last-child {
+    border-right: 0;
 }
 
 @keyframes move {

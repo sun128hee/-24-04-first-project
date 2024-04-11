@@ -1,0 +1,50 @@
+
+//이미지 슬라이드 버전 1
+
+const slides = document.querySelector('popup-slide');
+const slideItem = document.querySelector('.slide-item');
+let itemIdx = 0;
+const slideCount = slideItem.lenth;
+const prev = document.querySelector('#prevSlide')
+const next = document.querySelector('#nextSlide')
+const slidewidth = 300;
+const sildemargin = 100;
+
+slides.style.width = (slidewidth + sildemargin) + slideCount + 'px';
+
+function moveSlide(num) {
+    slides.style.left
+}
+
+
+
+//이미지 슬라이드 하는 부분 다시 확인하고 작성
+
+const popupSlide = document.querySelector('.popup-slide');
+const slides = document.querySelector('.slides');
+const slideItem = document.querySelectorAll('.slide-item');
+
+let currentIndex = 0;
+
+slideItem.forEach(inner => {
+    slideItem.style.width = `${popupSlide.clientWidth}px`
+});
+
+slides.style.width = `${popupSlide.clientWidth * slideItem.length}px`;
+
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+prev.addEventListener('click', ()=>{
+    currentIndex--;
+    currentIndex = currentIndex < 0 ? 0 : currentIndex;
+    slides.style.marginLeft = `-${popupSlide.clientWidth * currentIndex}px`;
+});
+
+next.addEventListener('click', ()=>{
+    currentIndex++;
+    currentIndex =
+        currentIndex >= slideItem.length ? slideItem.length -1 : currentIndex;
+        slides.style.marginLeft = `-${popupSlide.clientWidth * currentIndex}px`;
+});
+

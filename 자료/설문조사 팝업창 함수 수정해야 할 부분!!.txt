@@ -1,0 +1,23 @@
+1000 * 670
+
+500*300
+
+function researchClick() {
+    var arrSelect = document.getElementsByName('reserach');
+    
+    //체크여부!!
+    
+
+    for (var i = 0; i <= arrSelect.length; i++) {
+        if (arrSelect[i].checked) {
+            //체크된거 있다
+        }
+    }
+
+    if (하나라도 체크된게 있냐) {
+        alert('의견을 남겨주셔서 감사합니다.');
+    } else {
+        alert('만족도를 선택해주세요.');
+    }
+
+}
