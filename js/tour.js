@@ -129,33 +129,66 @@ function click14() {
 }
 
 const course = document.querySelectorAll('.coursebox');
+const popupCourse = document.querySelectorAll('.coursebox-popup');
 
-const clear = document.querySelector('.clear');
+const clear1 = document.querySelector('.clear1');
 const clear2 = document.querySelector('.clear2');
 const clear3 = document.querySelector('.clear3');
 
 const Popup = document.querySelectorAll('.pop-up');
 
 course[0].addEventListener('click', ()=>{
-    Popup[0].classList.remove('hidden')
+    Popup[0].classList.remove('hidden');
+    course[0].classList.add('selectColor');
+    popupCourse[0].style.backgroundColor = "black";
+    popupCourse[0].style.color = "white";    
 });
 
-clear.addEventListener('click', ()=>{
-    Popup[1].classList.add('hidden')
+popupCourse[0].addEventListener('click', ()=>{
+    Popup[0].classList.remove('hidden')
+    course[0].classList.add('selectColor');
+    popupCourse[0].style.backgroundColor = "black";
+    popupCourse[0].style.color = "white";
+});
+
+clear1.addEventListener('click', ()=>{
+    Popup[0].classList.add('hidden')
+    course[0].classList.remove('selectColor');
+    popupCourse[0].style.backgroundColor = null;
+    popupCourse[0].style.color = "gray";
 });
 
 course[1].addEventListener('click', ()=>{
     Popup[1].classList.remove('hidden')
+    course[1].classList.add('selectColor');
+    popupCourse[1].style.backgroundColor = "black";
+    popupCourse[1].style.color = "white";    
+});
+
+popupCourse[1].addEventListener('click', ()=>{
+    Popup[1].classList.remove('hidden')
+    course[1].classList.add('selectColor');
+    popupCourse[1].style.backgroundColor = "black";
+    popupCourse[1].style.color = "white";
 });
 
 clear2.addEventListener('click', ()=>{
     Popup[1].classList.add('hidden')
+    course[1].classList.remove('selectColor');
+    popupCourse[1].style.backgroundColor = null;
+    popupCourse[1].style.color = "gray";
 });
 
 course[2].addEventListener('click', ()=>{
     Popup[2].classList.remove('hidden')
+    course[2].classList.add('selectColor');
+    popupCourse[2].style.backgroundColor = "black";
+    popupCourse[2].style.color = "white";
 });
 
 clear3.addEventListener('click', ()=>{
     Popup[2].classList.add('hidden')
+    course[2].classList.remove('selectColor');
+    popupCourse[2].style.backgroundColor = null;
+    popupCourse[2].style.color = "gray";
 });
