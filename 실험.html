@@ -55,6 +55,21 @@
             width: 100px;
             margin-top: 20px;
         }
+
+        td{
+			width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 20px;
+            font-family: 굴림;
+            border:2px solid;
+			border-color: black;
+            border-radius : 8px;/*모서리 둥글게*/
+		}
+		
+		#yearMonth{
+			width: 250px;
+		}
     </style>
 </head>
 
@@ -76,6 +91,23 @@
         <button class="button-left">⬅Left</button>
         <button class="button-right">Right➡</button>
     </div>
+    <table id="calendar_table" >
+        <tr id="mainBar">
+            <td id="preventMonth" colspan="1"><input type="button" id="preventMonth_Button" onclick="preventMonth()"></td>
+            <td id="yearMonth" colspan="5"></td>
+            <td id="nextMonth" colspan="1"><input type="button" id="nextMonth_Button" onclick="nextMonth()"></td>
+        </tr>
+        <tr>
+            <td>일</td>
+            <td>월</td>
+            <td>화</td>
+            <td>수</td>
+            <td>목</td>
+            <td>금</td>
+            <td>토</td>
+        </tr>
+    </table>
+
 
     <script src="./실험.js"></script>
 </body>

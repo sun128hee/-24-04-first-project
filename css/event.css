@@ -1,0 +1,638 @@
+/*event.css*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: black;
+
+    animation-name: bodybright;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+
+@keyframes bodybright {
+    0% {background-color: black;}
+    100% {background-color: white;}
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    width: 100%;
+    padding: 15px 3%;
+    position: fixed;
+    z-index: 1;
+
+    background-color: rgb(0, 0, 0, 0);
+    color: white;
+
+    animation-name: bright;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+}
+
+.topMenu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1.1rem;
+}
+
+#language {
+    width: 80px;
+    height: 30px;
+    background-color: white;
+    border: 0px;
+    border-radius: 15px;
+
+    margin-top: 13px;
+
+    text-align: center;
+    font-size: 0.7rem;
+    color: gray;
+
+    opacity: 90%;
+}
+
+.menubox {
+    width: 12%;
+    height: 60px;
+}
+
+.flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.mianImg {
+    width: 100%;
+    height: 50vh;
+    background-image: url("../자료/행사메인이미지.jpg");
+    background-size: cover;
+    background-position: bottom center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: mainImgbright;
+    animation-duration: 5s;
+}
+
+@keyframes mainImgbright {
+    0%{
+        background-color: rgb(0, 0, 0, 1);
+        background-blend-mode: multiply;}
+
+    100%{
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: multiply;
+    }
+}
+
+.mianImg > h1 {
+    animation-name: move;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+
+.nav {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 30px;
+    
+    color: gray;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+}
+
+#navInfo {
+    border: 0;
+    font-size: 1rem;
+    margin-bottom: 20px;
+
+    background: none;
+
+    color: gray;
+}
+
+fieldset {
+    margin: 0 100px;
+    padding: 30px;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 5.6s;
+    animation-fill-mode: both;
+}
+
+.researchIcon{
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+fieldset > p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+fieldset > label {
+    padding-right: 60px;
+}
+
+.reserachText {
+    width: 70%;
+    height: 35px;
+
+    margin-top: 10px;
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: #dfdfdf;
+
+    border: 0;
+    border-radius: 5px;
+}
+
+.reserachButton {
+    width: 50px;
+    height: 35px;
+
+    background-color: black;
+    color: white;
+
+    border: 0;
+    border-radius: 5px;
+}
+
+footer {
+    margin-top: 80px;
+    padding:50px 30px;
+
+    width: 100%;
+    background-color: #F8F8F8;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    animation-name: bright;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+}
+
+.footertext {
+    width: 70%;
+}
+
+.footertext > p {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+#telBox {
+    width: 150px;
+    background-color: #668BAE;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 5px;
+
+    text-align: center;
+    color: white;
+    
+    font-size: 0.9rem;
+}
+
+.footerlogo1 {
+    margin-right: 15px;
+}
+
+.footerlogo2 {
+    margin-left: 15px;
+}
+
+.telBoxTable {
+    display: none;
+
+    border-collapse: collapse;
+    color: gray;
+
+    margin: 10px 0;
+    margin-left: 5px;
+}
+
+.telBoxTable td, .telBoxTable th {
+    border: 1px solid lightgrey;
+    border-collapse: collapse;
+
+    height: 35px;
+    padding: 0 15px ;
+    text-align: left;
+}
+
+.telBoxTable th {
+    border-top: 2px solid gray;
+}
+
+.telBoxTable th:first-child, .telBoxTable td:first-child {
+    border-left: 0;
+}
+
+.telBoxTable th:last-child, .telBoxTable td:last-child {
+    border-right: 0;
+}
+
+/* @keyframes move {
+    0% {
+        opacity: 0;
+        transform: translate(0, 200px);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes bright {
+    0%{opacity: 0;}
+    100%{opacity: 100%;}
+} */
+
+
+
+
+.event-date {
+    padding: 30px 100px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    font-size: 1rem;
+    text-align: center;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 3.6s;
+    animation-fill-mode: both;
+}
+
+.move-month {
+    width: 50px;
+    height: 50px;
+
+    background-color: rgba(0, 0, 0);
+
+    color: white;
+
+    opacity: 60%;
+}
+
+.move-month:hover {
+    opacity: 100%;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.date-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 100px;
+    margin-bottom: 30px;
+}
+
+.calendar {
+    width: 100%;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    border-collapse: collapse;
+
+    color: gray;
+}
+
+.calendar th,td {
+    width: 200px;
+    height: 100px;
+
+    font-size: 1rem;
+
+    border-collapse: collapse;
+}
+
+.calendar th {
+    background-color: #F8F8F8;
+    border-bottom: 1px solid lightgray;
+    height: 80px;
+}
+
+.calendar th:first-child, .calendar td:first-child {
+    color: salmon;
+}
+
+.calendar th:last-child, .calendar td:last-child{
+    color: rgb(79, 135, 255);
+}
+
+.select-event {
+    margin-top: 100px;
+    margin-bottom: 20px;
+
+    display: flex;
+}
+
+.slect-full {
+    width: 90px;
+    height: 50px;
+
+    background-color: rgb(20, 20, 20);
+    color: white;
+
+    border-radius: 30px;
+
+    margin-right: 20px;
+}
+
+.select-1 {
+    width: 120px;
+    height: 50px;
+
+    background-color: #44407e;
+    color: white;
+
+    border-radius: 30px;
+
+    margin-right: 20px;
+}
+
+.select-2 {
+    width: 120px;
+    height: 50px;
+
+    background-color: #b94343;
+    color: white;
+
+    border-radius: 30px;
+
+    margin-right: 20px;
+}
+
+.slide {
+    width: 80%;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-item {
+    margin: 80px 0;
+    margin-right: 100px;
+
+    cursor: pointer;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    transition-duration: 1s;
+}
+
+.slide-item:first-child {
+    margin-left: 40px;
+}
+
+.slide-textbox1 {
+    font-size: 0.9rem;
+
+    color: rgb(85, 85, 85);
+}
+
+.slide-textbox2 {
+    font-size: 0.9rem;
+
+    color: rgb(85, 85, 85);
+
+    margin-top: 10px;
+}
+
+.slide-item > h3 {
+    font-size: 1.4rem;
+
+    color: rgb(66, 66, 66);
+
+    margin-bottom: 10px;
+}
+
+.item-infobox {
+    width: 78px;
+    height: 28px;
+
+    background-color: #44407e;
+    color: white;
+
+    border-radius: 30px;
+
+    font-size: 0.7rem;
+    margin: 10px auto;
+}
+
+.info-button {
+    width: 130px;
+    height: 50px;
+
+    color: gray;
+
+    border: 1px solid lightgray;
+
+    font-size: 1rem;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.slide-move {
+    width: 50px;
+    height: 50px;
+
+    background-color: rgba(0, 0, 0);
+
+    border: 0;
+
+    color: white;
+
+    opacity: 60%;
+
+    border-radius: 50px;
+
+    transform: translateY(-150px);
+}
+
+.slide-move:hover {
+    opacity: 100%;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slide-img1 {
+    width: 300px;
+    height: 390px;
+
+    background-image: url("https://royal.cha.go.kr/afile/previewThumbnail/24032234812kxMJ5");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide-img2 {
+    width: 300px;
+    height: 390px;
+    
+    background-image: url("https://royal.cha.go.kr/afile/previewThumbnail/24032858041nY1T8");
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide-img3 {
+    width: 300px;
+    height: 390px;
+
+    background-image: url("https://royal.cha.go.kr/afile/previewThumbnail/24012452907MdADN");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide-img4 {
+    width: 300px;
+    height: 390px;
+
+    background-image: url("https://royal.cha.go.kr/afile/previewThumbnail/24032214620RUW0k");
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pop-up {
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgb(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+    
+    position: fixed;
+
+    z-index: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+
+.pop-up > i {
+    color: white;
+    font-size: 2rem;
+    margin: 0 7%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.popUp-container {
+    width: 100%;
+    height: 75%;
+
+    margin: 0 7%;
+    padding: 60px;
+
+    background-color: white;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-info {
+    width: 60%;
+}
+
+.popup-select {
+    width: 100px;
+    height: 35px;
+
+    font-size: 0.9rem;
+
+    background-color: #44407e;
+    color: white;
+
+    border-radius: 30px;
+
+    margin-right: 20px;
+}
+
+.popup-info > hr {
+    margin: 20px 0;
+}
+
+.popup-info > h2 {
+    font-size: 1.5rm;
+}
+
+.popup-info > table {
+    text-align: left;
+    margin-top: 17px;
+}
+
+.popup-info th {
+    width: 200px;
+}
+
+.popup-info th,td {
+    height: 37px;
+}
+
+.popup-info td {
+    width: 400px;
+}

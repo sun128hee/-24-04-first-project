@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/event.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <!-- fontsize rem 적용하는 방법 찾기 -->
+            <div class="topMenu">
+                <a href="./main.html"><img src="../자료/경복궁3_logo.png" alt="경복궁 main으로" height="50px"></a>
+                <label for="main"></label>
+                <div id="main" class="menubox flex-center"><a href="./main.html">MAIN</a></div>
+                <label for="info"></label>
+                <div id="info" class="menubox flex-center"><a href="./info.html">소개·역사</a></div>
+                <label for="tour"></label>
+                <div id="tour" class="menubox flex-center"><a href="./tour.html">관람안내</a></div>
+                <label for="event"></label>
+                <div id="event" class="menubox flex-center"><a href="./event.html">행사마당</a></div>
+                <label for="booking"></label>
+                <div id="booking" class="menubox flex-center">예약하기</div>
+                <select id="language">
+                    <option value="kor" selected>KOR</option>
+                    <option value="ENG">ENG</option>
+                    <option value="JPN">JPN</option>
+                    <option value="CHN">CHN</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="pop-up hidden">
+            <i class="fa-solid fa-xmark clear1" style="cursor:pointer;" onclick="clear1()"></i>
+            <div class="popUp-container flex-center">
+                <img src="https://royal.cha.go.kr/afile/previewThumbnail/24032234812kxMJ5" width="320px">
+                <div class="popup-info">
+                    <div class="popup-select flex-center">궁궐·종묘</div>
+                    <hr>
+                    <h2>[경복궁] 상반기 별빛야행</h2>
+                    <table>
+                        <tr>
+                            <th>행사기간</th>
+                            <td>
+                                4월 3일(수) ~ 5월 4일(토)
+                                <br>매주 수~일요일 18:40, 19:40
+                                <br>(4.26.(금) 제외, 5.2.(목)~5.4.(토) 외국인 행사)
+                            </td>
+                        <tr>
+                            <th>장소</th>
+                            <td>경복궁 소주방, 집옥재, 건청궁, 향원정 등</td>
+                        </tr>
+                        <tr>
+                            <th>대상</th>
+                            <td>
+                                선착순 접수
+                                <br>1차 : 3.22.(금) 14:00 / 2차 : 4.12.(금) 14:00
+                                <br>(1인당 6만원)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>링크</th>
+                            <td>
+                                <a href="">https://www.ticketlink.co.kr/product/49248</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>주관단체</th>
+                            <td>궁능유적본부, 한국문화재재단</td>
+                        </tr>
+                        <tr>
+                            <th>기타</th>
+                            <td>
+                                만65세 이상, 장애인, 국가유공자 : 전화예매
+                                <br>(<i class="fa-solid fa-phone"></i>1588-7890)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>문의</th>
+                            <td>1522-2295</td>
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="mianImg">
+            <h1>행사마당</h1>
+        </div>
+
+        <div class="nav">
+            <i class="fa-solid fa-house"></i>
+            <span>▶</span>
+            <span>경복궁</span>
+            <span>▶</span>
+            <select id="navInfo">
+                <option selected>문화행사</option>
+                <option>제향일정</option>
+            </select>
+            <hr style="border: 0.5px solid;">
+        </div>
+
+        <div>
+            <div class="event-date">
+                <div class="date-text">
+                    <div class="prev move-month flex-center">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                    <h1 class="monthText"></h1>
+                    <div class="next move-month flex-center">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+                <table class="calendar">
+                    <tr>
+                        <th class="sunday">일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="select-event">
+                    <div class="slect-full flex-center">전체</div>
+                    <div class="select-1 flex-center">궁궐·종묘</div>
+                    <div class="select-2 flex-center">조선왕릉</div>
+                </div>
+
+                <hr>
+
+                <div class="flex-between">
+                    <button class="slide-prev slide-move flex-center" onclick="clickPrev()">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </button>
+
+                    <div class="slide flex-between">
+                        <div class="slide-item">
+                            <div class="slide-img1"></div>
+                            <div class="item-infobox flex-center">궁궐·종묘</div>
+                            <h3>[경복궁] 상반기 별빛야행</h3>
+                            <div class="slide-textbox1">
+                                <p><i class="fa-regular fa-calendar"></i> 기간 : 4월 3일(수) ~ 5월 4일(토)</p>
+                                <p>매주 수요일~일요일 18:40, 19:40</p>
+                                <p>(4월 26일(금) 제외)</p>
+                                <p>(5월 2일(목)~5월 4일(토) 외국인 행사)</p>
+                            </div>
+                            <div class="slide-textbox2">
+                                <p><i class="fa-solid fa-location-dot"></i> 장소 : 경복궁 소주방, 집옥재,</p>
+                                <p>건청궁, 향원정 등</p>
+                            </div>
+                            <div class="info-button flex-center">자세히보기</div>
+                        </div>
+
+                        <div class="slide-item">
+                            <div class="slide-img2"></div>
+                            <div class="item-infobox flex-center">궁궐·종묘</div>
+                            <h3>2024년 경복궁 집옥재
+                                <br>작은도서관 개방 안내
+                            </h3>
+                            <div class="slide-textbox1">
+                                <p><i class="fa-regular fa-calendar"></i> 기간 : 4월 3일 ~ 10월 4일</p>
+                                <p>*매주 화요일 및 휴궁일, 7~8월 제외,</p>
+                                <p>추석연휴(9월 16일 ~ 18일) 휴관*</p>
+                                <p>*문화행사가 있는 날은 13:00까지 운영*</p>
+                            </div>
+                            <div class="slide-textbox2">
+                                <p><i class="fa-solid fa-location-dot"></i> 장소 : 경복궁 집옥재, 팔우정</p>
+                            </div>
+                            <div class="info-button flex-center">자세히보기</div>
+                        </div>
+
+                        <div class="slide-item">
+                            <div class="slide-img3"></div>
+                            <div class="item-infobox flex-center">궁궐·종묘</div>
+                            <h3>[경복궁] 수문장 교대의식</h3>
+                            <div class="slide-textbox1">
+                                <p><i class="fa-regular fa-calendar"></i> 기간 : 1월 1일 ~ 12월 31일</p>
+                                <p>매주 화요일 및 휴궁일 제외</p>
+                            </div>
+                            <div class="slide-textbox2">
+                                <p><i class="fa-solid fa-location-dot"></i> 장소 : 경복궁 흥례문 일원</p>
+                            </div>
+                            <div class="info-button flex-center">자세히보기</div>
+                        </div>
+
+                        <div class="slide-item">
+                            <div class="slide-img4"></div>
+                            <div class="item-infobox flex-center">궁궐·종묘</div>
+                            <h3>2024 수문장 순라의식</h3>
+                            <div class="slide-textbox1">
+                                <p><i class="fa-regular fa-calendar"></i> 기간 : 3월 23일 ~ 12월 29일</p>
+                                <p>토·일, 공휴일 15:00 ~ 16:00</p>
+                            </div>
+                            <div class="slide-textbox2">
+                                <p><i class="fa-solid fa-location-dot"></i> 장소 : 경복궁 광화문 월대</p>
+                                <p>~인사동 문화의 거리 일대</p>
+                            </div>
+                            <div class="info-button flex-center">자세히보기</div>
+                        </div>
+                    </div>
+
+                    <button class="slide-next slide-move flex-center" onclick="clickNext()">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+                <hr>
+            </div>
+
+            <fieldset>
+                <p><i class="researchIcon fa-regular fa-circle-question"></i>이 페이지의 정보와 사용편의성에 만족하시나요?</p>
+                <label><input type="radio" name="reserach"> 매우 만족</label>
+                <label><input type="radio" name="reserach"> 만족</label>
+                <label><input type="radio" name="reserach"> 보통</label>
+                <label><input type="radio" name="reserach"> 불만족</label>
+                <label><input type="radio" name="reserach"> 매우 불만족</label>
+                <div>
+                    <input type="text" class="reserachText" placeholder="여러분의 소중한 의견을 남겨주세요."></input>
+                    <button type=button" class="reserachButton" style="cursor:pointer;">등록</button>
+                </div>
+            </fieldset>
+
+            <footer>
+                <a href="https://royal.cha.go.kr/ROYAL/main/index.do">
+                    <img class="footerlogo1"
+                        src="https://royal.cha.go.kr/resource/templete/royal/img/common/ft_logo.svg" width="150px">
+                </a>
+                <div class="footertext">
+                    <div id="telBox" style="cursor:pointer;">
+                        <label for="telBox" style="cursor:pointer;">관리소별 연락처 <i
+                                class="fa-solid fa-chevron-down"></i></label>
+                    </div>
+                    <!-- 아이콘을 <i class="fa-solid fa-chevron-up"></i>으로 변경하고 싶음 -->
+                    <table class="telBoxTable">
+                        <tr>
+                            <th>기관</th>
+                            <th>주소</th>
+                            <th>연락처</th>
+                        </tr>
+                        <tr>
+                            <td>경복궁관리소</td>
+                            <td>[03045] 서울 종로구 사직로 161</td>
+                            <td>02-3700-3900</td>
+                        </tr>
+                        <tr>
+                            <td>창덕궁관리소</td>
+                            <td>[03072] 서울 종로구 율곡로 99번지</td>
+                            <td>02-3668-2300</td>
+                        </tr>
+                        <tr>
+                            <td>창경궁관리소</td>
+                            <td>[03072] 서울 종로구 창경궁로 185</td>
+                            <td>02-762-4868</td>
+                        </tr>
+                        <tr>
+                            <td>덕수궁관리소</td>
+                            <td>[04519] 서울 중구 세종대로 99</td>
+                            <td>02-771-9951</td>
+                        </tr>
+                        <tr>
+                            <td>종묘관리소</td>
+                            <td>[03135] 서울 종로구 종로157</td>
+                            <td>02-765-0195</td>
+                        </tr>
+                        <tr>
+                            <td>세종대왕유적관리소</td>
+                            <td>[12642] 경기 여주시 세종대왕면 영릉로 269-10</td>
+                            <td>031-880-4700</td>
+                        </tr>
+                        <tr>
+                            <td>조선왕릉동부지구관리소</td>
+                            <td>[11910] 경기 구리시 동구릉로 197</td>
+                            <td>031-563-2909</td>
+                        </tr>
+                        <tr>
+                            <td>조선왕릉중부지구관리소</td>
+                            <td>[01794] 서울 노원구 화랑로 681</td>
+                            <td>02-972-0370</td>
+                        </tr>
+                        <tr>
+                            <td>조선왕릉서부지구관리소 </td>
+                            <td>[10548] 경기 고양시 덕양구 서오릉로 334-32</td>
+                            <td>02-359-0090</td>
+                        </tr>
+                    </table>
+                    <p>ⓒ Cultural Heritage Administration Royal Palaces and Tombs Center. All rights reserved.</p>
+                </div>
+                <a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
+                    <img class="footerlogo2"
+                        src="https://royal.cha.go.kr/resource/templete/royal/img/common/img_web.png" width="100px">
+                </a>
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="../js/event.js"></script>
+</body>
+
+</html>

@@ -1,13 +1,4 @@
 //info.js
-
-const telBox = document.querySelector('#telBox');
-
-
-telBox.onclick = () => {
-        
-        document.querySelector('.telBoxTable').style.display = "Block";
-};
-
 const header = document.querySelector('header');
 const changeHeight = header.getBoundingClientRect().height;
 
