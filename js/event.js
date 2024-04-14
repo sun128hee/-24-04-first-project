@@ -39,8 +39,6 @@ monthText.textContent = theYear + ". " + theMonth;
 
 const slideItem = document.querySelectorAll('.slide-item');
 const slide = document.querySelector('.slide');
-const slidePrev = document.querySelector('.slide-prev');
-const slideNext = document.querySelector('.slide-next');
 
 function clickPrev() {
     slideItem[0].style.transform = "translateX(-800px)";

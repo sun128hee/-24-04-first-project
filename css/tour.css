@@ -282,20 +282,20 @@ header {
     color: white;
     font-size: 2rem;
     margin: 0 3%;
+
+    display: block;
 }
 
 .popup-container {
-    width: 100%;
-    height: 85%;
+    width: 1200px;
+    height: 800px;
 
-    margin: 0 3%;
+    margin: 0 auto;
 
     background-color: white;
     border-radius: 10px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: block;
 }
 
 .courseselect-popup {
@@ -344,7 +344,7 @@ header {
     width: 50%;
     height: 100%;
 
-    background-image: url("../자료/40분코스.PNG");
+    background-image: url("../자료/40분코스.jpg");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -357,7 +357,7 @@ header {
     width: 50%;
     height: 100%;
 
-    background-image: url("../자료/60분코스.PNG");
+    background-image: url("../자료/60분코스.jpg");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -370,7 +370,7 @@ header {
     width: 50%;
     height: 100%;
 
-    background-image: url("../자료/90분코스.PNG");
+    background-image: url("../자료/90분코스.jpg");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -409,7 +409,7 @@ header {
 
 .popup-slide {
     width: 100%;
-    height: 40%;
+    height: 45%;
 
     background-color: #F7F7F7;
     border-radius: 10px;
@@ -435,7 +435,7 @@ header {
 }
 
 .slide-item {
-    margin: 0 10px;
+    margin: 0 25px;
 }
 
 .controller {
@@ -459,7 +459,7 @@ header {
 
 .slide-img1 {
     width: 170px;
-    height: 155px;
+    height: 160px;
 
     /*흥례문*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3401");
@@ -472,7 +472,7 @@ header {
 
 .slide-img2 {
     width: 170px;
-    height: 155px;
+    height: 160px;
 
     /*영제교*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3370");
@@ -485,7 +485,7 @@ header {
 
 .slide-img3 {
     width: 170px;
-    height: 155px;
+    height: 160px;
 
     /*근정전*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3371");
@@ -498,7 +498,7 @@ header {
 
 .slide-img4 {
     width: 170px;
-    height: 155px;
+    height: 160px;
 
     /*사정전*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3372");
@@ -511,7 +511,7 @@ header {
 
 .slide-img5 {
     width: 170px;
-    height: 155px;
+    height: 160px;
 
     /*경회루*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3373");
@@ -524,7 +524,7 @@ header {
 
 .slide-img6 {
     width: 170px;
-    height: 155px;
+    height: 160px;
 
     /*수정전*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3374");
@@ -537,7 +537,7 @@ header {
 
 .slide-img7 {
     width: 170px;
-    height: 155px;
+    height: 160px;
 
     /*교태전*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3410");
@@ -550,7 +550,7 @@ header {
 
 .slide-img8 {
     width: 170px;
-    height: 155px;
+    height: 160px;
 
     /*강녕전*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3409");
@@ -563,7 +563,7 @@ header {
 
 .slide-img9 {
     width: 170px;
-    height: 155px;
+    height: 160px;
 
     /*자경전*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3411");
@@ -576,7 +576,7 @@ header {
 
 .slide-img10 {
     width: 170px;
-    height: 155px;
+    height: 160px;
 
     /*향원정*/
     background-image: url("https://royal.cha.go.kr/afile/preview/5775");

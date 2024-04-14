@@ -192,3 +192,82 @@ clear3.addEventListener('click', ()=>{
     popupCourse[2].style.backgroundColor = null;
     popupCourse[2].style.color = "gray";
 });
+
+
+const slides = document.querySelector('.slides');
+
+const prev = document.querySelectorAll('.prev');
+const next = document.querySelectorAll('.next')
+
+const Item40 = document.querySelectorAll('.item40');
+const Item60 = document.querySelectorAll('.item60');
+const Item90 = document.querySelectorAll('.item90');
+
+prev[0].addEventListener('click', ()=>{
+    Item40[0].style.transform = "translateX(-1100px)";
+    Item40[1].style.transform = "translateX(-1100px)";
+    Item40[2].style.transform = "translateX(-1100px)";
+    Item40[3].style.transform = "translateX(-1100px)";
+    Item40[4].style.transform = "translateX(-1100px)";
+    Item40[5].style.transform = "translateX(-1100px)";
+});
+
+next[0].addEventListener('click', ()=>{
+    Item40[0].style.transform = "translateX(0)";
+    Item40[1].style.transform = "translateX(0)";
+    Item40[2].style.transform = "translateX(0)";
+    Item40[3].style.transform = "translateX(0)";
+    Item40[4].style.transform = "translateX(0)";
+    Item40[5].style.transform = "translateX(0)";
+});
+
+prev[1].addEventListener('click', ()=>{
+    Item60[0].style.transform = "translateX(-1100px)";
+    Item60[1].style.transform = "translateX(-1100px)";
+    Item60[2].style.transform = "translateX(-1100px)";
+    Item60[3].style.transform = "translateX(-1100px)";
+    Item60[4].style.transform = "translateX(-1100px)";
+    Item60[5].style.transform = "translateX(-1100px)";
+    Item60[6].style.transform = "translateX(-1100px)";
+    Item60[7].style.transform = "translateX(-1100px)";
+    Item60[8].style.transform = "translateX(-1100px)";
+});
+
+next[1].addEventListener('click', ()=>{
+    Item60[0].style.transform = "translateX(0)";
+    Item60[1].style.transform = "translateX(0)";
+    Item60[2].style.transform = "translateX(0)";
+    Item60[3].style.transform = "translateX(0)";
+    Item60[4].style.transform = "translateX(0)";
+    Item60[5].style.transform = "translateX(0)";
+    Item60[6].style.transform = "translateX(0)";
+    Item60[7].style.transform = "translateX(0)";
+    Item60[8].style.transform = "translateX(0)";
+});
+
+prev[2].addEventListener('click', ()=>{
+    Item90[0].style.transform = "translateX(-1100px)";
+    Item90[1].style.transform = "translateX(-1100px)";
+    Item90[2].style.transform = "translateX(-1100px)";
+    Item90[3].style.transform = "translateX(-1100px)";
+    Item90[4].style.transform = "translateX(-1100px)";
+    Item90[5].style.transform = "translateX(-1100px)";
+    Item90[6].style.transform = "translateX(-1100px)";
+    Item90[7].style.transform = "translateX(-1100px)";
+    Item90[8].style.transform = "translateX(-1100px)";
+    Item90[9].style.transform = "translateX(-1100px)";
+});
+
+next[2].addEventListener('click', ()=>{
+    Item90[0].style.transform = "translateX(0)";
+    Item90[1].style.transform = "translateX(0)";
+    Item90[2].style.transform = "translateX(0)";
+    Item90[3].style.transform = "translateX(0)";
+    Item90[4].style.transform = "translateX(0)";
+    Item90[5].style.transform = "translateX(0)";
+    Item90[6].style.transform = "translateX(0)";
+    Item90[7].style.transform = "translateX(0)";
+    Item90[8].style.transform = "translateX(0)";
+    Item90[9].style.transform = "translateX(0)";
+});
+

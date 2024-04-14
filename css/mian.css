@@ -207,14 +207,16 @@ header {
 }
 
 .storybox {
-    width: 210px;
-    height: 200px;
+    width: 280px;
+    height: 270px;
 
     color: white;
     margin: 4px;
     text-align: center;
 
-    border-radius: 1.5%;
+    padding: 20px;
+
+    border-radius: 10px;
 }
 
 .story1 {
@@ -374,17 +376,21 @@ header {
     border-radius: 5px;
 }
 
-.storybox > p {
-    width: 150px;
-    font-size: 0.7rem;
+.storyP {
+    font-size: 0.9rem;
     text-align: justify;
 
     margin: 0 auto;
+
+    color: white;
 }
 
-.storybox > h4 {
-    padding-top: 20px;
+.storyH4 {
     padding-bottom: 10px;
+    font-size: 1.4rem;
+
+    color: white;
+
 }
 
 .transition {
