@@ -19,17 +19,46 @@
         <header>
             <!-- fontsize rem 적용하는 방법 찾기 -->
             <div class="topMenu">
-                <a href="./main.html"><img src="../자료/경복궁3_logo.png" alt="경복궁 main으로" height="50px"></a>
+                <a href="./main.html" id="clickMain"><img src="../자료/경복궁3_logo.png" alt="경복궁 main으로" height="50px"></a>
                 <label for="main"></label>
-                <div id="main" class="menubox flex-center"><a href="./main.html">MAIN</a></div>
+                <div id="main" class="menubox flex-center">
+                    <a href="./main.html">MAIN</a>
+                </div>
                 <label for="info"></label>
-                <div id="info" class="menubox flex-center"><a href="./info.html">소개·역사</a></div>
+                <div id="info" class="menubox flex-center">
+                    <a href="./info.html">소개·역사</a>
+                    <ul class="info-list">
+                        <li>경복궁 소개</li>
+                        <li>경복궁 역사</li>
+                    </ul>
+                </div>
                 <label for="tour"></label>
-                <div id="tour" class="menubox flex-center"><a href="./tour.html">관람안내</a></div>
+                <div id="tour" class="menubox flex-center">
+                    <a href="./tour.html">관람안내</a>
+                    <ul class="tour-list">
+                        <li>관람시간</li>
+                        <li>관람코스</li>
+                        <li>시설안내</li>
+                        <li>오시는 길</li>
+                    </ul>
+                </div>
                 <label for="event"></label>
-                <div id="event" class="menubox flex-center"><a href="./event.html">행사마당</a></div>
+                <div id="event" class="menubox flex-center">
+                    <a href="./event.html">행사마당</a>
+                    <ul class="event-list">
+                        <li>행사일정</li>
+                        <li>문화행사</li>
+                    </ul>
+                </div>
                 <label for="booking"></label>
-                <div id="booking" class="menubox flex-center">예약하기</div>
+                <div id="booking" class="menubox flex-center">
+                    <a>예약하기</a>
+                    <ul class="booking-list">
+                        <li>예약 모아보기</li>
+                        <li>촬영 신청</li>
+                        <li>예약조회/취소</li>
+                    </ul>
+                </div>
                 <select id="language">
                     <option value="kor" selected>KOR</option>
                     <option value="ENG">ENG</option>
@@ -50,8 +79,6 @@
                     <div class="popup-img"></div>
                     <div class="popup-course40"></div>
                 </div>
-                <!-- 이미지 슬라이드 수정 예정
-                안되면 그냥... 슬라이드 하지 말고 넘어가...ㅋㅋ.... -->
                 <div class="popup-slide">
                     <span class="controller prev">
                         <i class="fa-solid fa-chevron-left"></i>
@@ -119,8 +146,6 @@
                     <div class="popup-img"></div>
                     <div class="popup-course60"></div>
                 </div>
-                <!-- 이미지 슬라이드 수정 예정
-                안되면 그냥... 슬라이드 하지 말고 넘어가...ㅋㅋ.... -->
                 <div class="popup-slide">
                     <span class="controller prev">
                         <i class="fa-solid fa-chevron-left"></i>
@@ -209,8 +234,6 @@
                     <div class="popup-img"></div>
                     <div class="popup-course90"></div>
                 </div>
-                <!-- 이미지 슬라이드 수정 예정
-                안되면 그냥... 슬라이드 하지 말고 넘어가...ㅋㅋ.... -->
                 <div class="popup-slide">
                     <span class="controller prev">
                         <i class="fa-solid fa-chevron-left"></i>
@@ -294,10 +317,7 @@
                 </div>
             </div>
         </div>
-
-
-    </div>
-
+        
     <div class="mianImg">
         <h1>관람안내</h1>
     </div>
@@ -309,14 +329,14 @@
         <span>▶</span>
         <span>관람안내</span>
         <span>▶</span>
-        <select id="navInfo">
-            <option selected>관람코스</option>
-            <option>시설안내</option>
+        <select id="navInfo" onchange="location.href=this.value">
+            <option selected value="#section1">관람코스</option>
+            <option value="#section2">시설안내</option>
         </select>
         <hr style="border: 0.5px solid;">
     </div>
 
-    <div class="courseMap">
+    <div id="section1" class="courseMap">
         <div class="courseselect">
             <!-- 코스안내 누르면 팝업창으로 화면이 나오게 하기 -->
             <div><i class="fa-solid fa-location-dot"></i> 코스 안내</div>
@@ -328,16 +348,16 @@
                 90분 코스</div>
         </div>
         <div class="mapselect flex-center">
-            <div class="mapfull flex-center" style="cursor:pointer;" onclick="clickMapfull()">전체</div>
-            <div class="maptour flex-center" style="cursor:pointer;" onclick="clickMaptour()">둘러보기</div>
-            <div class="mapshop flex-center" style="cursor:pointer;" onclick="clickmapshop()">편의시설</div>
+            <button type="button" class="mapfull flex-center" style="cursor:pointer;" onclick="clickMapfull()">전체</button>
+            <button type="button" class="maptour flex-center" style="cursor:pointer;" onclick="clickMaptour()">둘러보기</button>
+            <button type="button" class="mapshop flex-center" style="cursor:pointer;" onclick="clickmapshop()">편의시설</button>
         </div>
     </div>
     <div class="mapImg">
         <img id="mapImg" src="../자료/전체맵.jpg" width="800px">
     </div>
 
-    <div class="content-picture">
+    <div id="section2" class="content-picture">
         <hr>
         <div class="content-info">
             <i class="fa-solid fa-circle-exclamation"></i>
@@ -345,48 +365,48 @@
         </div>
         <!-- 해당 번호 클릭했을 때 opacity=1로 변경-->
         <div class="select-picture">
-            <span class="selectNumber" style="cursor:pointer;" onclick="click1()">
+            <button type="button" class="selectNumber" style="cursor:pointer;" onclick="click1()">
                 <div class="numBox">1</div> 근정전
-            </span>
-            <span class="selectNumber" style="cursor:pointer;" onclick="click2()">
+            </button>
+            <button type="button" class="selectNumber" style="cursor:pointer;" onclick="click2()">
                 <div class="numBox">2</div> 사정전
-            </span>
-            <span class="selectNumber" style="cursor:pointer;" onclick="click3()">
+            </button>
+            <button type="button" class="selectNumber" style="cursor:pointer;" onclick="click3()">
                 <div class="numBox">3</div> 수정전
-            </span>
-            <span class="selectNumber" style="cursor:pointer;" onclick="click4()">
+            </button>
+            <button type="button" class="selectNumber" style="cursor:pointer;" onclick="click4()">
                 <div class="numBox">4</div> 경회루
-            </span>
-            <span class="selectNumber" style="cursor:pointer;" onclick="click5()">
+            </button>
+            <button type="button" class="selectNumber" style="cursor:pointer;" onclick="click5()">
                 <div class="numBox">5</div> 강녕전
-            </span>
-            <span class="selectNumber" style="cursor:pointer;" onclick="click6()">
+            </button>
+            <button type="button" class="selectNumber" style="cursor:pointer;" onclick="click6()">
                 <div class="numBox">6</div> 교태전
-            </span>
-            <span class="selectNumber" style="cursor:pointer;" onclick="click7()">
+            </button>
+            <button type="button" class="selectNumber" style="cursor:pointer;" onclick="click7()">
                 <div class="numBox">7</div> 동궁
-            </span>
-            <span class="selectNumber" style="cursor:pointer;" onclick="click8()">
+            </button>
+            <button type="button" class="selectNumber" style="cursor:pointer;" onclick="click8()">
                 <div class="numBox">8</div> 소주방
-            </span>
-            <span class="selectNumber" style="cursor:pointer;" onclick="click9()">
+            </button>
+            <button type="button" class="selectNumber" style="cursor:pointer;" onclick="click9()">
                 <div class="numBox">9</div> 자경전
-            </span>
-            <span class="selectNumber" style="cursor:pointer;" onclick="click10()">
+            </button>
+            <button type="button" class="selectNumber" style="cursor:pointer;" onclick="click10()">
                 <div class="numBox">10</div> 흥복전
-            </span>
-            <span class="selectNumber" style="cursor:pointer;" onclick="click11()">
+            </button>
+            <button type="button" class="selectNumber" style="cursor:pointer;" onclick="click11()">
                 <div class="numBox">11</div> 향원정
-            </span>
-            <span class="selectNumber" style="cursor:pointer;" onclick="click12()">
+            </button>
+            <button type="button" class="selectNumber" style="cursor:pointer;" onclick="click12()">
                 <div class="numBox">12</div> 건청궁
-            </span>
-            <span class="selectNumber" style="cursor:pointer;" onclick="click13()">
+            </button>
+            <button type="button" class="selectNumber" style="cursor:pointer;" onclick="click13()">
                 <div class="numBox">13</div> 집옥재
-            </span>
-            <span class="selectNumber" style="cursor:pointer;" onclick="click14()">
+            </button>
+            <button type="button" class="selectNumber" style="cursor:pointer;" onclick="click14()">
                 <div class="numBox">14</div> 태원전
-            </span>
+            </button>
         </div>
         <div class="picture">
             <h2 class="picture-h2">근정전</h2>
@@ -491,6 +511,7 @@
                 width="100px">
         </a>
     </footer>
+
     </div>
 
     <script src="../js/tour.js"></script>

@@ -18,17 +18,46 @@
         <header>
             <!-- fontsize rem 적용하는 방법 찾기 -->
             <div class="topMenu">
-                <a href="./main.html"><img src="../자료/경복궁3_logo.png" alt="경복궁 main으로" height="50px"></a>
+                <a href="./main.html" id="clickMain"><img src="../자료/경복궁3_logo.png" alt="경복궁 main으로" height="50px"></a>
                 <label for="main"></label>
-                <div id="main" class="menubox flex-center"><a href="./main.html">MAIN</a></div>
+                <div id="main" class="menubox flex-center-header">
+                    <a href="./main.html">MAIN</a>
+                </div>
                 <label for="info"></label>
-                <div id="info" class="menubox flex-center"><a href="./info.html">소개·역사</a></div>
+                <div id="info" class="menubox flex-center-header">
+                    <a href="./info.html">소개·역사</a>
+                    <ul class="info-list">
+                        <li>경복궁 소개</li>
+                        <li>경복궁 역사</li>
+                    </ul>
+                </div>
                 <label for="tour"></label>
-                <div id="tour" class="menubox flex-center"><a href="./tour.html">관람안내</a></div>
+                <div id="tour" class="menubox flex-center-header">
+                    <a href="./tour.html">관람안내</a>
+                    <ul class="tour-list">
+                        <li>관람시간</li>
+                        <li>관람코스</li>
+                        <li>시설안내</li>
+                        <li>오시는 길</li>
+                    </ul>
+                </div>
                 <label for="event"></label>
-                <div id="event" class="menubox flex-center"><a href="./event.html">행사마당</a></div>
+                <div id="event" class="menubox flex-center-header">
+                    <a href="./event.html">행사마당</a>
+                    <ul class="event-list">
+                        <li>행사일정</li>
+                        <li>문화행사</li>
+                    </ul>
+                </div>
                 <label for="booking"></label>
-                <div id="booking" class="menubox flex-center">예약하기</div>
+                <div id="booking" class="menubox flex-center-header">
+                    <a>예약하기</a>
+                    <ul class="booking-list">
+                        <li>예약 모아보기</li>
+                        <li>촬영 신청</li>
+                        <li>예약조회/취소</li>
+                    </ul>
+                </div>
                 <select id="language">
                     <option value="kor" selected>KOR</option>
                     <option value="ENG">ENG</option>
@@ -87,7 +116,159 @@
                             <th>문의</th>
                             <td>1522-2295</td>
                         </tr>
-                        
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="pop-up hidden">
+            <i class="fa-solid fa-xmark clear1" style="cursor:pointer;" onclick="clear2()"></i>
+            <div class="popUp-container flex-center">
+                <img src="https://royal.cha.go.kr/afile/previewThumbnail/24032858041nY1T8" width="320px">
+                <div class="popup-info">
+                    <div class="popup-select flex-center">궁궐·종묘</div>
+                    <hr>
+                    <h2>2024년 경복궁 집옥재 작은도서관 개발 안내</h2>
+                    <table>
+                        <tr>
+                            <th>행사기간</th>
+                            <td>
+                                4월 3일(수) ~ 10월 31일(목)
+                                <br>매주 화요일 및 휴궁일, 7~8월 제외
+                                <br>추석연휴(9월 16일 ~ 18일) 휴관
+                                <br>문화행사가 있는 날은 ~13:00까지 운영
+                                <br>(4월18일, 6월 16일, 6월 20일, 9월 5일, 10월 17일)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>관람시간</th>
+                            <td>10:00 ~ 16:00</td>
+                        </tr>
+                        <tr>
+                            <th>장소</th>
+                            <td>경복궁 집옥재, 팔우정</td>
+                        </tr>
+                        <tr>
+                            <th>대상</th>
+                            <td>
+                                경복궁 관람객(자유관람)
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="pop-up hidden">
+            <i class="fa-solid fa-xmark clear1" style="cursor:pointer;" onclick="clear3()"></i>
+            <div class="popUp-container flex-center">
+                <img src="https://royal.cha.go.kr/afile/previewThumbnail/24012452907MdADN" width="320px">
+                <div class="popup-info">
+                    <div class="popup-select flex-center">궁궐·종묘</div>
+                    <hr>
+                    <h2>[경복궁] 수문장 교대의식</h2>
+                    <table>
+                        <tr>
+                            <th>행사기간</th>
+                            <td>
+                                1월 1일(월) ~ 12월 31일(화)
+                                <br>* 매주 화요일 및 휴궁일 제외
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>행사시간</th>
+                            <td>수문장 교대의식 : 10:00, 14:00 (소요시간 20분)
+                                <br>광화문 파수의식 : 11:00, 13:00 (소요시간 10분)
+                                <br>광화문 입직근무 : 교대의식 및 파수의식 후 광화문 입직근무 (매시간)
+                                <br>수문군 공개훈련 : 09:35, 13:35 (소요시간 15분)
+                                <br>※기상 상황이나 기관 사정에 따른 일정 변동이 있을 수 있습니다.
+                                <br>※별도 예약없이 현장 안내에 따라 자유롭게 관람하시면 됩니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>링크</th>
+                            <td>
+                                <a href="https://www.chf.or.kr/cms/content/view/221">
+                                    https://www.chf.or.kr/cms/content/view/221</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>주관단체</th>
+                            <td>
+                                궁능유적본부, 한국문화재재단
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>문의</th>
+                            <td>
+                                02-3210-1645
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="pop-up hidden">
+            <i class="fa-solid fa-xmark clear1" style="cursor:pointer;" onclick="clear4()"></i>
+            <div class="popUp-container flex-center">
+                <img src="https://royal.cha.go.kr/afile/previewThumbnail/24032214620RUW0k" width="320px">
+                <div class="popup-info">
+                    <div class="popup-select flex-center">궁궐·종묘</div>
+                    <hr>
+                    <h2>2024 수문장 순라의식</h2>
+                    <table>
+                        <tr>
+                            <th>행사기간</th>
+                            <td>
+                                3월 23일(토) ~ 12월 29일(일)
+                                <br>토·일, 공휴일 15:00 ~ 16:00
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>장소</th>
+                            <td>
+                                경복궁 광화문 월대 ~ 인사동 문화의 거리 일대
+                                <br>(매주 토·일·공휴일)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>대상</th>
+                            <td>
+                                제한 없음
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>링크</th>
+                            <td>
+                                <a href="
+                                https://www.chf.or.kr/cont/view/fest/month/menu/210?thisPage=1&idx=109471&searchCategory1=600&searchCategory2=&searchCategory3=&searchField=all&searchDate=202404&weekSel=&searchText=">
+                                    https://www.chf.or.kr/cont/view/fest/month/menu/210?
+                                    <br>thisPage=1&idx=109471&searchCategory1=600&searchCategory2
+                                    <br>=&searchCategory3=&searchField=all&searchDate=202404&weekSel
+                                    <br>=&searchText=</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>주관단체</th>
+                            <td>
+                                궁능유적본부, 한국문화재재단
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>기타</th>
+                            <td>
+                                경복궁 수문장과 순라군의 순라의식 행렬
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>문의</th>
+                            <td>
+                                02-3210-1645
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -102,15 +283,15 @@
             <span>▶</span>
             <span>경복궁</span>
             <span>▶</span>
-            <select id="navInfo">
-                <option selected>문화행사</option>
-                <option>제향일정</option>
+            <select id="navInfo" onchange="location.href=this.value">
+                <option selected value="#section1">행사일정</option>
+                <option value="#section2">문화행사</option>
             </select>
             <hr style="border: 0.5px solid;">
         </div>
 
         <div>
-            <div class="event-date">
+            <div id="section1" class="event-date">
                 <div class="date-text">
                     <div class="prev move-month flex-center">
                         <i class="fa-solid fa-angle-left"></i>
@@ -132,59 +313,107 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
+                        <td class="day">1</td>
+                        <td class="day">2</td>
+                        <td class="day">3</td>
+                        <td class="day">4</td>
+                        <td class="day">5</td>
+                        <td class="day">6</td>
+                    </tr>
+                    <tr class="one-box">
+                        <td></td>
+                        <td><div class="one"></div></td>
+                        <td></td>
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
                     </tr>
                     <tr>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>12</td>
-                        <td>13</td>
+                        <td class="day">7</td>
+                        <td class="day">8</td>
+                        <td class="day">9</td>
+                        <td class="day red-color">10</td>
+                        <td class="day">11</td>
+                        <td class="day">12</td>
+                        <td class="day">13</td>
+                    </tr>
+                    <tr class="one-box">
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
+                        <td></td>
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
                     </tr>
                     <tr>
-                        <td>14</td>
-                        <td>15</td>
-                        <td>16</td>
-                        <td>17</td>
-                        <td>18</td>
-                        <td>19</td>
-                        <td>20</td>
+                        <td class="day">14</td>
+                        <td class="day">15</td>
+                        <td class="day">16</td>
+                        <td class="day">17</td>
+                        <td class="day">18</td>
+                        <td class="day">19</td>
+                        <td class="day">20</td>
+                    </tr>
+                    <tr class="one-box">
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
+                        <td></td>
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
                     </tr>
                     <tr>
-                        <td>21</td>
-                        <td>22</td>
-                        <td>23</td>
-                        <td>24</td>
-                        <td>25</td>
-                        <td>26</td>
-                        <td>27</td>
+                        <td class="day">21</td>
+                        <td class="day">22</td>
+                        <td class="day">23</td>
+                        <td class="day">24</td>
+                        <td class="day">25</td>
+                        <td class="day">26</td>
+                        <td class="day">27</td>
+                    </tr>
+                    <tr class="one-box">
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
+                        <td></td>
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
                     </tr>
                     <tr>
-                        <td>28</td>
-                        <td>29</td>
-                        <td>30</td>
+                        <td class="day">28</td>
+                        <td class="day">29</td>
+                        <td class="day">30</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="one-box">
+                        <td><div class="one"></div></td>
+                        <td><div class="one"></div></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                 </table>
+            </div>
+
+            <div id="section2" class="content-slide">
                 <div class="select-event">
-                    <div class="slect-full flex-center">전체</div>
-                    <div class="select-1 flex-center">궁궐·종묘</div>
-                    <div class="select-2 flex-center">조선왕릉</div>
+                    <button type="button" class="slect-full flex-center">전체</button>
+                    <button type="button" class="select-1 flex-center">궁궐·종묘</button>
+                    <button type="button" class="select-2 flex-center">조선왕릉</button>
                 </div>
 
                 <hr>
 
-                <div class="flex-between">
+                <div class="slide-all flex-between">
                     <button class="slide-prev slide-move flex-center" onclick="clickPrev()">
                         <i class="fa-solid fa-angle-left"></i>
                     </button>
@@ -253,6 +482,29 @@
                             </div>
                             <div class="info-button flex-center">자세히보기</div>
                         </div>
+
+                        <div class="slide-item">
+                            <div class="slide-img5"></div>
+                            <div class="item-infobox2 flex-center"></div>
+                            <br>
+                            <h3><br></h3>
+                            <div class="slide-textbox1">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                            <div class="slide-textbox2">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+
                     </div>
 
                     <button class="slide-next slide-move flex-center" onclick="clickNext()">

@@ -1,17 +1,95 @@
 //tour.js
 
+//header 스크롤시 배경 생성
 const header = document.querySelector('header');
 const changeHeight = header.getBoundingClientRect().height;
 
 document.addEventListener("scroll", () => {
     if (window.scrollY > changeHeight) {
-        header.style.backgroundColor = "rgb(0, 0, 0, 0.8)";
+        header.style.backgroundColor = "rgb(0, 0, 0)";
     }
     else {
         header.style.backgroundColor = null;
     }
 });
 
+
+//헤더 메뉴 이벤트
+const info =  document.querySelector('#info');
+const infoList = document.querySelector('.info-list');
+const tour = document.querySelector('#tour');
+const tourList = document.querySelector('.tour-list');
+const event0 = document.querySelector('#event');
+const eventList = document.querySelector('.event-list');
+const booking = document.querySelector('#booking');
+const bookingList = document.querySelector('.booking-list');
+const main = document.querySelector('#main');
+
+info.addEventListener('mouseover', ()=>{
+    infoList.style.display = "inline";
+    info.style.backgroundColor = "rgb(0, 0, 0)";
+    info.classList.add('borderbottom');
+    infoList.style.backgroundColor = "rgb(0, 0, 0)";
+});
+
+info.addEventListener('mouseout', ()=>{
+    infoList.style.display = "none";
+    info.style.backgroundColor = "rgb(0, 0, 0, 0)";
+    info.classList.remove('borderbottom');
+});
+
+tour.addEventListener('mouseover', ()=>{
+    tourList.style.display = "inline";
+    tour.style.backgroundColor = "rgb(0, 0, 0)";
+    tour.classList.add('borderbottom');
+    tourList.style.backgroundColor = "rgb(0, 0, 0)";
+
+});
+
+tour.addEventListener('mouseout', ()=>{
+    tourList.style.display = "none";
+    tour.style.backgroundColor = "rgb(0, 0, 0, 0)";
+    tour.classList.remove('borderbottom');
+});
+
+event0.addEventListener('mouseover', ()=>{
+    eventList.style.display = "inline";
+    event0.style.backgroundColor = "rgb(0, 0, 0)";
+    event0.classList.add('borderbottom');
+    eventList.style.backgroundColor = "rgb(0, 0, 0)";
+});
+
+event0.addEventListener('mouseout', ()=>{
+    eventList.style.display = "none";
+    event0.style.backgroundColor = "rgb(0, 0, 0, 0)";
+    event0.classList.remove('borderbottom');
+});
+
+booking.addEventListener('mouseover', ()=>{
+    bookingList.style.display = "inline";
+    booking.style.backgroundColor = "rgb(0, 0, 0)";
+    booking.classList.add('borderbottom');
+    bookingList.style.backgroundColor = "rgb(0, 0, 0)";
+});
+
+booking.addEventListener('mouseout', ()=>{
+    bookingList.style.display = "none";
+    booking.style.backgroundColor = "rgb(0, 0, 0, 0)";
+    booking.classList.remove('borderbottom');
+});
+
+main.addEventListener('mouseover', ()=>{
+    main.style.backgroundColor = "rgb(0, 0, 0)";
+    main.classList.add('borderbottom');
+});
+
+main.addEventListener('mouseout', ()=>{
+    main.style.backgroundColor = "rgb(0, 0, 0, 0)";
+    main.classList.remove('borderbottom');
+});
+
+
+//전체, 둘러보기, 편의시설 클릭 시 이미지 변경
 const div_mapfull = document.querySelector('.mapfull');
 const div_maptour = document.querySelector('.maptour');
 const div_mapshop = document.querySelector('.mapshop');
@@ -29,6 +107,8 @@ function clickmapshop() {
     id_mapimg.src = "../자료/편의시설맵.jpg";
 }
 
+
+//관리소별 연락처 클릭 시 telbox table 생성
 const id_telBox = document.querySelector('#telBox')
 const select_telBoxTable = document.querySelector('.telBoxTable');
 let display = false;
@@ -44,6 +124,7 @@ id_telBox.addEventListener('click', () => {
 });
 
 
+//시설안내 이벤트
 function click1() {
     document.querySelector('.picture-h2').textContent = "근정전";
     document.querySelector('.picture-img').style.backgroundImage = "url(https://royal.cha.go.kr/afile/preview/4801)";
@@ -128,6 +209,8 @@ function click14() {
     document.querySelector('.picture-p').textContent = "태원전(泰元殿)은 태조의 어진을 모셨고, 이후에는 빈전(殯殿, 왕과 왕비가 세상을 떠난 후 발인하기 전까지 재궁(관)을 모셔둔 건물)으로 사용되었다. 태원전 주변에는 부속 건물인 문경전(文慶殿)과 공묵재(恭默齋), 영사재(永思齋) 등 의례용 건물이 있다. 태원전은 2006년에 현재 모습으로 복원하였다.";
 }
 
+
+//코스 팝업 이벤트
 const course = document.querySelectorAll('.coursebox');
 const popupCourse = document.querySelectorAll('.coursebox-popup');
 
@@ -194,6 +277,7 @@ clear3.addEventListener('click', ()=>{
 });
 
 
+//팝업 이미지 슬라이드 이벤트
 const slides = document.querySelector('.slides');
 
 const prev = document.querySelectorAll('.prev');
@@ -203,7 +287,7 @@ const Item40 = document.querySelectorAll('.item40');
 const Item60 = document.querySelectorAll('.item60');
 const Item90 = document.querySelectorAll('.item90');
 
-prev[0].addEventListener('click', ()=>{
+next[0].addEventListener('click', ()=>{
     Item40[0].style.transform = "translateX(-1100px)";
     Item40[1].style.transform = "translateX(-1100px)";
     Item40[2].style.transform = "translateX(-1100px)";
@@ -212,7 +296,7 @@ prev[0].addEventListener('click', ()=>{
     Item40[5].style.transform = "translateX(-1100px)";
 });
 
-next[0].addEventListener('click', ()=>{
+prev[0].addEventListener('click', ()=>{
     Item40[0].style.transform = "translateX(0)";
     Item40[1].style.transform = "translateX(0)";
     Item40[2].style.transform = "translateX(0)";
@@ -221,7 +305,7 @@ next[0].addEventListener('click', ()=>{
     Item40[5].style.transform = "translateX(0)";
 });
 
-prev[1].addEventListener('click', ()=>{
+next[1].addEventListener('click', ()=>{
     Item60[0].style.transform = "translateX(-1100px)";
     Item60[1].style.transform = "translateX(-1100px)";
     Item60[2].style.transform = "translateX(-1100px)";
@@ -233,7 +317,7 @@ prev[1].addEventListener('click', ()=>{
     Item60[8].style.transform = "translateX(-1100px)";
 });
 
-next[1].addEventListener('click', ()=>{
+prev[1].addEventListener('click', ()=>{
     Item60[0].style.transform = "translateX(0)";
     Item60[1].style.transform = "translateX(0)";
     Item60[2].style.transform = "translateX(0)";
@@ -245,7 +329,7 @@ next[1].addEventListener('click', ()=>{
     Item60[8].style.transform = "translateX(0)";
 });
 
-prev[2].addEventListener('click', ()=>{
+next[2].addEventListener('click', ()=>{
     Item90[0].style.transform = "translateX(-1100px)";
     Item90[1].style.transform = "translateX(-1100px)";
     Item90[2].style.transform = "translateX(-1100px)";
@@ -258,7 +342,7 @@ prev[2].addEventListener('click', ()=>{
     Item90[9].style.transform = "translateX(-1100px)";
 });
 
-next[2].addEventListener('click', ()=>{
+prev[2].addEventListener('click', ()=>{
     Item90[0].style.transform = "translateX(0)";
     Item90[1].style.transform = "translateX(0)";
     Item90[2].style.transform = "translateX(0)";

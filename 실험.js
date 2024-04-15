@@ -42,32 +42,32 @@ let todayMonth = today.getMonth() + 1;
 
 let today_yearMonth = todayYear + " - " + todayMonth;
 
-document.getElementById("yearMonth").innerHTML= today_yearMonth;
+document.getElementById("yearMonth").innerHTML = today_yearMonth;
 
-let firstDate = new Date(today.getFullYear(), today.getMonth(),1);
-let lastDate = new Date(today.getFullYear(), today.getMonth()+1,0);
+let firstDate = new Date(today.getFullYear(), today.getMonth(), 1);
+let lastDate = new Date(today.getFullYear(), today.getMonth() + 1, 0);
 let day = firstDate.getDay();
 let calendar = document.getElementById("calendar_table");
-let week = Math.ceil(lastDate.getDate()/7) + 1;
+let week = Math.ceil(lastDate.getDate() / 7) + 1;
 // let row = calendar.insertRow();
 
-function buildCalendar(){
+function buildCalendar() {
     let leftDays = 7; // setDays 와 반비례 
     let setDays = 1;// leftDays 와 반비례 
-    for(i = 1; i < week; i++){
+    for (i = 1; i < week; i++) {
         let row = calendar.insertRow();
-        while(day != 0){
+        while (day != 0) {
             row.insertCell().innerHTML = "";
             day -= 1;
             leftDays -= 1;
         } // 1주
-        while(leftDays != 0){
-            if(setDays > lastDate.getDate()){
+        while (leftDays != 0) {
+            if (setDays > lastDate.getDate()) {
                 row.insertCell().innerHTML = "";
                 leftDays -= 1;
-            }else{
+            } else {
                 row.insertCell().innerHTML = setDays;
-                setDays +=1;
+                setDays += 1;
                 leftDays -= 1;
             }
         }

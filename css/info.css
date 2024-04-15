@@ -1,9 +1,14 @@
 /*info.css*/
 
+/*기본세팅*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
 }
 
 a {
@@ -24,9 +29,29 @@ body {
     100% {background-color: white;}
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+#info > a, #tour > a, #event > a, #booking > a {
+    height: 60px;
+
+    padding-top: 20px;
+}
+
+#clickMain {
+    padding-top: 10px;
+}
+
+li {
+    width: 110px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.9rem;
+}
+
+.info-list, .tour-list, .event-list, .booking-list {
+    display: none;
 }
 
 header {
@@ -68,7 +93,7 @@ header {
 }
 
 .menubox {
-    width: 12%;
+    width: 110px;
     height: 60px;
 }
 
@@ -368,4 +393,8 @@ footer {
 @keyframes bright {
     0%{opacity: 0;}
     100%{opacity: 100%;}
+}
+
+.borderbottom {
+    border-bottom: 3px solid rgb(255, 255, 255, 0.3);
 }

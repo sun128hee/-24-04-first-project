@@ -1,9 +1,14 @@
 /*event.css*/
 
+/*기본세팅*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
 }
 
 a {
@@ -24,10 +29,32 @@ body {
     100% {background-color: white;}
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+
+/*헤더 설정*/
+#info > a, #tour > a, #event > a, #booking > a {
+    height: 60px;
+
+    padding-top: 20px;
 }
+
+#clickMain {
+    padding-top: 10px;
+}
+
+li {
+    width: 110px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.9rem;
+}
+
+/* .info-list, .tour-list, .event-list, .booking-list {
+    display: none;
+} */
 
 header {
     width: 100%;
@@ -67,24 +94,29 @@ header {
     opacity: 90%;
 }
 
+.borderbottom {
+    border-bottom: 3px solid rgb(255, 255, 255, 0.3);
+}
+
 .menubox {
-    width: 12%;
+    width: 110px;
     height: 60px;
 }
 
-.flex-center {
+.flex-center-header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
+/*메인이미지 설정*/
 .mianImg {
     width: 100%;
     height: 50vh;
-    background-image: url("../자료/행사메인이미지.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2020/11/24/02/13/gyeongbok-palace-5771324_1280.jpg");
     background-size: cover;
-    background-position: bottom center;
+    background-position: center;
 
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: overlay;
@@ -117,6 +149,8 @@ header {
     animation-fill-mode: both;
 }
 
+
+/*nav 설정*/
 .nav {
     padding-left: 100px;
     padding-right: 100px;
@@ -140,8 +174,11 @@ header {
     color: gray;
 }
 
+
+/*설문조사 설정*/
 fieldset {
     margin: 0 100px;
+    margin-top: 50px;
     padding: 30px;
 
     animation-name: move;
@@ -191,6 +228,8 @@ fieldset > label {
     border-radius: 5px;
 }
 
+
+/*footer 설정*/
 footer {
     margin-top: 80px;
     padding:50px 30px;
@@ -216,7 +255,7 @@ footer {
     color: gray;
 }
 
-#telBox {
+.footertext > div {
     width: 150px;
     background-color: #668BAE;
     padding: 5px;
@@ -260,15 +299,17 @@ footer {
     border-top: 2px solid gray;
 }
 
-.telBoxTable th:first-child, .telBoxTable td:first-child {
+.telBoxTable th:first-child, td:first-child {
     border-left: 0;
 }
 
-.telBoxTable th:last-child, .telBoxTable td:last-child {
+.telBoxTable th:last-child, td:last-child {
     border-right: 0;
 }
 
-/* @keyframes move {
+
+/*애니메이션*/
+@keyframes move {
     0% {
         opacity: 0;
         transform: translate(0, 200px);
@@ -283,15 +324,11 @@ footer {
 @keyframes bright {
     0%{opacity: 0;}
     100%{opacity: 100%;}
-} */
-
-
-
+}
 
 .event-date {
     padding: 30px 100px;
     margin-top: 30px;
-    margin-bottom: 50px;
 
     font-size: 1rem;
     text-align: center;
@@ -344,14 +381,15 @@ footer {
 }
 
 .calendar td {
-    height: 100px;
+    height: 40px;
 
+    padding-top: 40px;
 }
 
 .calendar th {
     background-color: #F8F8F8;
     border-bottom: 1px solid lightgray;
-    height: 80px;
+    height: 70px;
 }
 
 .calendar th:first-child, .calendar td:first-child {
@@ -362,47 +400,113 @@ footer {
     color: rgb(79, 135, 255);
 }
 
+.red-color {
+    color: salmon;
+}
+
+.one {
+    width: 7px;
+    height: 7px;
+
+    margin: 0 auto;
+
+    border-radius: 100%;
+
+    background-color: #44407e;
+
+    margin-bottom: 20px;
+}
+
+.one-box > td {
+    height: 5px;
+
+    padding-top: 10px;
+}
+
+.one-box:last-child > td {
+    padding-bottom: 20px;
+}
+
 .select-event {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 20px;
 
     display: flex;
+}
+
+.content-slide {
+    padding: 30px 100px;
+    margin-bottom: 50px;
+
+    font-size: 1rem;
+    text-align: center;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 4.6s;
+    animation-fill-mode: both;
 }
 
 .slect-full {
     width: 90px;
     height: 50px;
 
-    background-color: rgb(20, 20, 20);
-    color: white;
+    border: 2.5px solid rgb(20, 20, 20);
+    background-color: rgb(0, 0, 0, 0);
+
+    font-weight: bold;
 
     border-radius: 30px;
 
     margin-right: 20px;
+}
+
+.slect-full:focus {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    border: 0;
 }
 
 .select-1 {
     width: 120px;
     height: 50px;
 
-    background-color: #44407e;
-    color: white;
+    border: 2.5px solid #44407e;
+    color: #44407e;
+    background-color: rgb(0, 0, 0, 0);
+
+    font-weight: bold;
 
     border-radius: 30px;
 
     margin-right: 20px;
 }
 
+.select-1:focus {
+    background-color: #44407e;
+    color: white;
+    border: 0;
+}
+
 .select-2 {
     width: 120px;
     height: 50px;
 
-    background-color: #b94343;
-    color: white;
+    border: 2.5px solid #b94343;
+    background-color: rgb(0, 0, 0, 0);
+    color: #b94343;
+
+    font-weight: bold;
 
     border-radius: 30px;
 
     margin-right: 20px;
+}
+
+.select-2:focus {
+    background-color: #b94343;
+    color: white;
+    border: 0;
 }
 
 .slide {
@@ -415,7 +519,7 @@ footer {
 }
 
 .slide-item {
-    margin: 80px 0;
+    margin: 80px 20px;
     margin-right: 100px;
 
     cursor: pointer;
@@ -430,7 +534,7 @@ footer {
 }
 
 .slide-item:first-child {
-    margin-left: 40px;
+    margin-left: 70px;
 }
 
 .slide-textbox1 {
@@ -466,6 +570,13 @@ footer {
 
     font-size: 0.7rem;
     margin: 10px auto;
+}
+
+.item-infobox2 {
+    width: 78px;
+    height: 28px;
+
+    border-radius: 30px;
 }
 
 .info-button {
@@ -547,6 +658,11 @@ footer {
     background-repeat: no-repeat;
 }
 
+.slide-img5 {
+    width: 300px;
+    height: 390px;
+}
+
 .pop-up {
     width: 100%;
     height: 100vh;
@@ -575,11 +691,15 @@ footer {
     visibility: hidden;
 }
 
+.hidden-none {
+    display: none;
+}
+
 .popUp-container {
-    width: 100%;
+    width: 1100px;
     height: 75%;
 
-    margin: 0 7%;
+    margin: 0 auto;
     padding: 60px;
 
     background-color: white;
@@ -631,4 +751,8 @@ footer {
 
 .popup-info td {
     width: 400px;
+}
+
+.day {
+    cursor: pointer;
 }
