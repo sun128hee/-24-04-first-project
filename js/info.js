@@ -104,3 +104,26 @@ id_telBox.addEventListener('click', ()=>{
         display = false; 
     }
 });
+
+
+//설문조사 입력창 
+const reserach = document.getElementsByName('reserach');
+
+// function researchClick() {
+    
+//     //체크여부!!
+    
+
+//     for (var i = 0; i <= arrSelect.length; i++) {
+//         if (reserach[i].checked) {
+//             //체크된거 있다
+//         }
+//     }
+
+//     if (하나라도 체크된게 있냐) {
+//         alert('의견을 남겨주셔서 감사합니다.');
+//     } else {
+//         alert('만족도를 선택해주세요.');
+//     }
+
+// }
