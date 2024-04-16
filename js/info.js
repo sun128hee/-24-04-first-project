@@ -98,13 +98,14 @@ let display = false;
 id_telBox.addEventListener('click', ()=>{
     if(display == false) {
         select_telBoxTable.style.display = "inline";
+        id_telBox.innerHTML = "관리소별 연락처 <i class='fa-solid fa-chevron-up'></i>"
         display = true;
     } else if (display == true) {
         select_telBoxTable.style.display = "none";
+        id_telBox.innerHTML = "관리소별 연락처 <i class='fa-solid fa-chevron-down'></i>"
         display = false; 
     }
 });
-
 
 //설문조사 입력창 
 const reserach = document.getElementsByName('reserach');

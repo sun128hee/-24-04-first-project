@@ -1,12 +1,18 @@
 /*mian.css*/
 
+
+/*전체 설정*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-ul {
+html {
+    font-size: 1vw;
+}
+
+li {
     list-style: none;
 }
 
@@ -24,36 +30,16 @@ body {
 }
 
 @keyframes bodybright {
-    0% {background-color: black;}
-    100% {background-color: white;}
+    0% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: white;
+    }
 }
 
 /*헤더*/
-#info > a, #tour > a, #event > a, #booking > a {
-    height: 60px;
-
-    padding-top: 20px;
-}
-
-#clickMain {
-    padding-top: 10px;
-}
-
-li {
-    width: 110px;
-    height: 50px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 0.9rem;
-}
-
-.info-list, .tour-list, .event-list, .booking-list {
-    display: none;
-}
-
 header {
     width: 100%;
     padding: 15px 3%;
@@ -66,14 +52,16 @@ header {
     animation-name: bright;
     animation-duration: 5s;
     animation-fill-mode: both;
+
+    font-weight: bolder;
 }
 
-.topMenu{
+.topMenu {
     width: 100%;
     display: flex;
     justify-content: space-between;
 
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
 .menubox {
@@ -88,14 +76,118 @@ header {
     border: 0px;
     border-radius: 15px;
 
-    margin-top: 13px;
-
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: gray;
 
     opacity: 90%;
+
+    position: relative;
+    top: 18px;
 }
+
+
+/*헤더 리스트*/
+#main>a,
+#info>a,
+#tour>a,
+#event>a,
+#booking>a {
+    height: 60px;
+
+    padding-top: 20px;
+}
+
+#full-menu>i {
+    padding-top: 8px;
+}
+
+#clickMain {
+    padding-top: 10px;
+}
+
+header li {
+    width: 110px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.1rem;
+}
+
+.info-list,
+.tour-list,
+.event-list,
+.booking-list {
+    display: none;
+}
+
+
+/*팝업헤더*/
+.popupmenu {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgb(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+
+    position: fixed;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.popupmenu-container {
+    width: 30vw;
+    height: 100vh;
+
+    background-color: white;
+
+    padding: 20px;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.popupmenu-container > hr {
+    margin: 25px 0;
+    background-color: #b3b9be;
+    height: 1px;
+    border: 0;
+}
+
+.popuomenu-box {
+    text-align: left;
+}
+
+.popuomenu-box > ul {
+    padding-left: 30px;
+    text-align: left;
+
+    font-size: 1.3rem;
+
+    display: none;
+}
+
+.popuomenu-box li {
+    margin-top: 10px;
+}
+
+.popupmenu-container > div:first-child {
+    display: flex;
+    justify-content: space-between;
+
+    padding-right: 20px;
+}
+
+.x-mark{
+    font-size: 2.5rem;
+}
+
+
 
 
 /*플렉스 센터*/
@@ -120,11 +212,12 @@ header {
 }
 
 @keyframes mainImgbright {
-    0%{
+    0% {
         background-color: rgb(0, 0, 0, 1);
-        background-blend-mode: multiply;}
+        background-blend-mode: multiply;
+    }
 
-    100%{
+    100% {
         background-color: rgba(0, 0, 0, 0.1);
         background-blend-mode: multiply;
     }
@@ -137,33 +230,56 @@ header {
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     animation-name: move;
     animation-duration: 1s;
     animation-delay: 3.6s;
     animation-fill-mode: both;
+
+    font-size: 1.3rem;
 }
 
 .helpText {
-    width: 20%;
+    width: 200px;
+    margin-right: 2%;
 }
 
-.help > a {
-    width: 120px;
-    height: 120px;
+.helpItem {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.1rem;
+}
+
+.helpItem>a {
+    width: 10.5vw;
+    height: 10.5vw;
 
     background-color: rgb(120, 127, 151);
-    border-radius: 100px;
+    border-radius: 50%;
 
     color: white;
     text-align: center;
+
+    padding-top: 0.5vw;
+}
+
+.helpItem p{
+    margin-bottom: 2vw;
 }
 
 .helpIcon {
-    font-size: 40px;
-    margin: 18px;
+    font-size: 4rem;
+    margin: 1.5vw;
+}
+
+.helpText>h2 {
+    margin-bottom: 10px;
 }
 
 
@@ -176,11 +292,13 @@ header {
     animation-duration: 1s;
     animation-delay: 4.6s;
     animation-fill-mode: both;
+
+    font-size: 1.3rem;
 }
 
 .middle-start {
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
 
     margin: 30px 0px;
 }
@@ -199,8 +317,59 @@ header {
     margin-left: 20px;
 }
 
+.middleText>p {
+    margin-bottom: 5px;
+}
+
+
+.middleImg {
+    width: 68%;
+    height: 150px;
+
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: white;
+}
+
+.middleImg:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.middleImg>h2,
+.middleImg>p {
+    display: none;
+}
+
+.infoImg {
+    background-image: url("https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_01.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bookingImg {
+    background-image: url("https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_03.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tourImg {
+    background-image: url("https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_04.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
 /*textalign & margin 설정*/
-.textalign-right{
+.textalign-right {
     text-align: right;
     margin-right: 20px;
 }
@@ -223,24 +392,26 @@ header {
 }
 
 /*경복궁 이야기 콘텐츠*/
-.content-story{
+.content-story {
     animation-name: move;
     animation-duration: 1s;
     animation-delay: 5.6s;
     animation-fill-mode: both;
-    
+
     margin-top: 70px;
+
+    font-size: 1.4rem;
 }
 
 .storybox {
-    width: 280px;
-    height: 270px;
+    width: 21vw;
+    height: 21vw;
 
     color: white;
-    margin: 4px;
+    margin: 0.6vw;
     text-align: center;
 
-    padding: 20px;
+    padding: 1.8vw;
 
     border-radius: 10px;
 }
@@ -404,7 +575,7 @@ header {
 }
 
 .storyP {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     text-align: justify;
 
     margin: 0 auto;
@@ -415,6 +586,7 @@ header {
 .storyH4 {
     padding-bottom: 10px;
     font-size: 1.4rem;
+    font-weight: bold;
 
     color: white;
 
@@ -430,11 +602,11 @@ header {
 /*footer*/
 footer {
     margin-top: 80px;
-    padding:50px 30px;
+    padding: 50px 30px;
 
     width: 100%;
     background-color: #F8F8F8;
-    
+
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -448,12 +620,12 @@ footer {
     width: 70%;
 }
 
-.footertext > p {
-    font-size: 0.8rem;
+.footertext>p {
+    font-size: 1rem;
     color: gray;
 }
 
-.footertext > div {
+#telBox {
     width: 150px;
     background-color: #668BAE;
     padding: 5px;
@@ -462,8 +634,8 @@ footer {
 
     text-align: center;
     color: white;
-    
-    font-size: 0.9rem;
+
+    font-size: 1rem;
 }
 
 .footerlogo1 {
@@ -482,14 +654,17 @@ footer {
 
     margin: 10px 0;
     margin-left: 5px;
+
+    font-size: 1rem;
 }
 
-.telBoxTable td, .telBoxTable th {
+.telBoxTable td,
+.telBoxTable th {
     border: 1px solid lightgrey;
     border-collapse: collapse;
 
     height: 35px;
-    padding: 0 15px ;
+    padding: 0 15px;
     text-align: left;
 }
 
@@ -497,11 +672,13 @@ footer {
     border-top: 2px solid gray;
 }
 
-.telBoxTable th:first-child, .telBoxTable td:first-child {
+.telBoxTable th:first-child,
+.telBoxTable td:first-child {
     border-left: 0;
 }
 
-.telBoxTable th:last-child, .telBoxTable td:last-child {
+.telBoxTable th:last-child,
+.telBoxTable td:last-child {
     border-right: 0;
 }
 
@@ -520,10 +697,232 @@ footer {
 }
 
 @keyframes bright {
-    0%{opacity: 0;}
-    100%{opacity: 100%;}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }
 
 .borderbottom {
     border-bottom: 3px solid rgb(255, 255, 255, 0.3);
+}
+
+
+/*미디어 쿼리*/
+@media screen and (max-width:950px) {
+    html {
+        font-size: 1.3vw;
+    }
+
+    .help {
+        margin: 60px 7%;
+    }
+
+    .helpText {
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .helpItem {
+        width: 100%;
+        margin-top: 2vw;
+    }
+
+    .helpItem > a {
+        width: 14vw;
+        height: 14vw;
+
+        margin: 1vw 0.5vw;
+    }
+    
+    .middleImg {
+        width: 100vw;
+        height: 140px;
+    }
+
+    .infoImg {
+        background: linear-gradient(to right, rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0)),
+            url("https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_01.jpg");
+    }
+
+    .bookingImg {
+        background: linear-gradient(to left, rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0)),
+            url("https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_03.jpg");
+    }
+
+    .tourImg {
+        background: linear-gradient(to right, rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0)),
+            url("https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_04.jpg");
+    }
+
+    .middleText {
+        display: none;
+    }
+
+    .middleImg>h2,
+    .middleImg>p {
+        display: block;
+    }
+
+    #main,
+    #info,
+    #tour,
+    #event,
+    #booking {
+        visibility: hidden;
+    }
+
+    #language {
+        width: 9vw;
+        font-size: 0.8rem;
+    }
+
+    .topMenu {
+        font-size: 2rem;
+    }
+
+    .content-story {
+        font-size: 1.3rem;
+    }
+
+    .storybox {
+        width: 28vw;
+        height: 28vw;
+    }
+}
+
+@media screen and (max-width:750px) {
+    html {
+        font-size: 2vw;
+    }
+
+    .helpItem > a {
+        width: 20vw;
+        height: 20vw;
+
+        margin: 1vw 1vw;
+
+        padding: 2vw;
+
+        font-size: 1.2rem;
+    }
+
+    .helpItem {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #language {
+        width: 15vw;
+        font-size: 1rem;
+    }
+
+    .content-story {
+        font-size: 1.3rem;
+    }
+
+    .storybox {
+        width: 43vw;
+        height: 43vw;
+    }
+
+    .storyP {
+        font-size: 1.3rem;
+    }
+
+    .storyH4 {
+        font-size: 1.5rem;
+    }
+    /* .footer {
+        flex-wrap: wrap;
+    }
+
+    .footer > a:last-child {
+        order: 2;
+    }
+
+    .footertext {
+        order: 3;
+    }
+
+    .footertext{
+        width: 100%;
+    } */
+}
+
+@media screen and (max-width:520px) {
+    .helpItem > a {
+        width: 18vw;
+        height: 18vw;
+
+        margin: 1vw 2vw;
+
+        font-size: 1rem;
+    }
+
+    .helpIcon {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    html {
+        width: 450px;
+        font-size: 11px;
+    }
+
+    header {
+        width: 450px;
+    }
+
+    #language {
+        width: 30px;
+        font-size: 1rem;
+    }
+
+    .helpItem {
+        width: 450px;
+    }
+
+    .helpText {
+        width: 450px;
+    }
+
+    .helpItem > a {
+        width: 100px;
+        height: 100px;
+
+        margin: 1vw 1vw;
+
+        padding: 2vw;
+
+        font-size: 1.2rem;
+    }
+
+    .middleImg {
+        width: 450px;
+    }
+
+    .storybox {
+        width: 280px;
+        height: 280px;
+        
+        margin: 7px 0;
+
+        padding: 30px;
+    }
+
+    .storyP {
+        font-size: 1.3rem;
+    }
+
+    .storyH4 {
+        font-size: 1.5rem;
+    }
 }

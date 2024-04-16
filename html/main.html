@@ -20,11 +20,11 @@
             <div class="topMenu">
                 <a href="./main.html" id="clickMain"><img src="../자료/경복궁3_logo.png" alt="경복궁 main으로" height="50px"></a>
                 <label for="main"></label>
-                <div id="main" class="menubox flex-center">
+                <div id="main" class="menubox flex-center" style="cursor:pointer">
                     <a href="./main.html">MAIN</a>
                 </div>
                 <label for="info"></label>
-                <div id="info" class="menubox flex-center">
+                <div id="info" class="menubox flex-center" style="cursor:pointer">
                     <a href="./info.html">소개·역사</a>
                     <ul class="info-list">
                         <li>경복궁 소개</li>
@@ -32,7 +32,7 @@
                     </ul>
                 </div>
                 <label for="tour"></label>
-                <div id="tour" class="menubox flex-center">
+                <div id="tour" class="menubox flex-center" style="cursor:pointer">
                     <a href="./tour.html">관람안내</a>
                     <ul class="tour-list">
                         <li>관람시간</li>
@@ -42,7 +42,7 @@
                     </ul>
                 </div>
                 <label for="event"></label>
-                <div id="event" class="menubox flex-center">
+                <div id="event" class="menubox flex-center" style="cursor:pointer">
                     <a href="./event.html">행사마당</a>
                     <ul class="event-list">
                         <li>행사일정</li>
@@ -50,13 +50,16 @@
                     </ul>
                 </div>
                 <label for="booking"></label>
-                <div id="booking" class="menubox flex-center">
-                    <a>예약하기</a>
+                <div id="booking" class="menubox flex-center" style="cursor:pointer">
+                    <a style="cursor:pointer">예약하기</a>
                     <ul class="booking-list">
                         <li>예약 모아보기</li>
                         <li>촬영 신청</li>
                         <li>예약조회/취소</li>
                     </ul>
+                </div>
+                <div id="full-menu" class="menubox flex-center" style="cursor:pointer">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
                 <select id="language">
                     <option value="kor" selected>KOR</option>
@@ -67,6 +70,66 @@
             </div>
         </header>
 
+        <div class="popupmenu">
+
+            <div class="popupmenu-container">
+                <div>
+                    <a href="./main.html" id="clickMain"><img src="../자료/경복궁3_logo.png" alt="경복궁 main으로"
+                            height="50px"></a>
+                    <i class="fa-solid fa-xmark x-mark" onclick="popupClear()"></i>
+                </div>
+
+                <hr>
+
+                <div class="popuomenu-box">
+                    <a href="../html/main.html">MAIN <i class="fa-solid fa-chevron-down"></i></a>
+                </div>
+
+                <hr>
+
+                <div class="popuomenu-box">
+                    <a href="../html/info.html">소개·역사 <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul>
+                        <li>경복궁 소개</li>
+                        <li>경복궁 역사</li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="popuomenu-box">
+                    <a href="../html/tour.html">관람안내 <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul>
+                        <li>관람시간</li>
+                        <li>관람코스</li>
+                        <li>시설안내</li>
+                        <li>오시는 길</li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="popuomenu-box">
+                    <a href="../html/event.html">행사마당 <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul>
+                        <li>행사일정</li>
+                        <li>문화행사</li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="popuomenu-box">
+                    <a href="../html/main.html">예약하기 <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul>
+                        <li>예약 모아보기</li>
+                        <li>촬영 신청</li>
+                        <li>예약조회/취소</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <!-- 내용이 스크롤에 따라 나오게끔 애니메이션 걸어주기-->
 
         <div class="GyeongbokgungImg">
@@ -75,39 +138,40 @@
 
         <div class="help">
             <div class="helpText">
-                <h3>관람 도우미</h3>
+                <h2>관람 도우미</h2>
                 <p>경복궁 관람에 도움이 되는 바로가기를 안내합니다.</p>
             </div>
-            <a href="">
-                <i class="helpIcon fa-regular fa-clock"></i>
-                <p>관람시간</p>
-            </a>
-            <a href="">
-                <i class="helpIcon fa-regular fa-calendar-check"></i>
-                <p>행사안내</p>
-            </a>
-            <a href="">
-                <i class="helpIcon fa-solid fa-headset"></i></i>
-                <p>해설안내</p>
-            </a>
-            <a href="">
-                <i class="helpIcon fa-regular fa-circle-question"></i>
-                <p>문의사항</p>
-            </a>
-            <a href="">
-                <i class="helpIcon fa-regular fa-map"></i>
-                <p>오시는길</p>
-            </a>
+            <div class="helpItem">
+                <a href="" font-s>
+                    <i class="helpIcon fa-regular fa-clock"></i>
+                    <p>관람시간</p>
+                </a>
+                <a href="../html/event.html">
+                    <i class="helpIcon fa-regular fa-calendar-check"></i>
+                    <p>행사안내</p>
+                </a>
+                <a href="">
+                    <i class="helpIcon fa-solid fa-headset"></i></i>
+                    <p>해설안내</p>
+                </a>
+                <a href="">
+                    <i class="helpIcon fa-regular fa-circle-question"></i>
+                    <p>문의사항</p>
+                </a>
+                <a href="">
+                    <i class="helpIcon fa-regular fa-map"></i>
+                    <p>오시는길</p>
+                </a>
+            </div>
         </div>
 
         <div class="content-menu">
-            <!-- 마우스를 가져가면 스르륵 이미지가 커지기 -->
-            <!-- 클릭하면 관련 페이지로 이동 -->
 
             <a href="./info.html" class="middle-start">
-                <!-- <div class="middleImg infoImg"></div> -->
-                <img src="https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_01.jpg" width="68%"
-                    style="size: cover; mask-repeat: no-repeat; mask-position: center;">
+                <div class="middleImg infoImg">
+                    <p>조선의 법궁 경복궁을 소개합니다.</p>
+                    <h2>경복궁 소개·역사</h2>
+                </div>
                 <div class="middleText">
                     <p>조선의 법궁 경복궁을 소개합니다.</p>
                     <h2>경복궁 소개·역사</h2>
@@ -118,12 +182,16 @@
                     <p>사전예약으로 편안하게 관람하세요.</p>
                     <h2>예약안내</h2>
                 </div>
-                <img src="https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_03.jpg" width="68%"
-                    style="size: cover; mask-repeat: no-repeat; mask-position: center;">
+                <div class="middleImg bookingImg">
+                    <p>사전예약으로 편안하게 관람하세요.</p>
+                    <h2>예약안내</h2>
+                </div>
             </a>
             <a href="./tour.html" class="middle-start">
-                <img src="https://royal.cha.go.kr/resource/templete/royal/img/sub/bg_menu01_04.jpg" width="68%"
-                    style="size: cover; mask-repeat: no-repeat; mask-position: center;">
+                <div class="middleImg tourImg">
+                    <p>사전예약으로 편안하게 관람하세요.</p>
+                    <h2>예약안내</h2>
+                </div>
                 <div class="middleText">
                     <p>경복궁 관람 코스를 추천해드립니다.</p>
                     <h2>관람코스</h2>
@@ -227,10 +295,8 @@
             </a>
             <div class="footertext">
                 <div id="telBox" style="cursor:pointer;">
-                    <label for="telBox" style="cursor:pointer;">관리소별 연락처 <i
-                            class="fa-solid fa-chevron-down"></i></label>
+                    관리소별 연락처 <i class="fa-solid fa-chevron-down"></i>
                 </div>
-                <!-- 아이콘을 <i class="fa-solid fa-chevron-up"></i>으로 변경하고 싶음 -->
                 <table class="telBoxTable">
                     <tr>
                         <th>기관</th>

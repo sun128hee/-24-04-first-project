@@ -93,13 +93,15 @@ const id_telBox = document.querySelector('#telBox')
 const select_telBoxTable = document.querySelector('.telBoxTable');
 let display = false;
 
-id_telBox.addEventListener('click', () => {
-    if (display == false) {
+id_telBox.addEventListener('click', ()=>{
+    if(display == false) {
         select_telBoxTable.style.display = "inline";
+        id_telBox.innerHTML = "관리소별 연락처 <i class='fa-solid fa-chevron-up'></i>"
         display = true;
     } else if (display == true) {
         select_telBoxTable.style.display = "none";
-        display = false;
+        id_telBox.innerHTML = "관리소별 연락처 <i class='fa-solid fa-chevron-down'></i>"
+        display = false; 
     }
 });
 
