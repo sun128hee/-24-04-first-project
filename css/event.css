@@ -1,13 +1,17 @@
 /*event.css*/
 
-/*기본세팅*/
+/*전체 설정*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-ul {
+html {
+    font-size: 1vw;
+}
+
+li {
     list-style: none;
 }
 
@@ -25,37 +29,16 @@ body {
 }
 
 @keyframes bodybright {
-    0% {background-color: black;}
-    100% {background-color: white;}
+    0% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: white;
+    }
 }
 
-
-/*헤더 설정*/
-#info > a, #tour > a, #event > a, #booking > a {
-    height: 60px;
-
-    padding-top: 20px;
-}
-
-#clickMain {
-    padding-top: 10px;
-}
-
-li {
-    width: 110px;
-    height: 50px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 0.9rem;
-}
-
-.info-list, .tour-list, .event-list, .booking-list {
-    display: none;
-}
-
+/*헤더*/
 header {
     width: 100%;
     padding: 15px 3%;
@@ -68,14 +51,21 @@ header {
     animation-name: bright;
     animation-duration: 5s;
     animation-fill-mode: both;
+
+    font-weight: bolder;
 }
 
-.topMenu{
+.topMenu {
     width: 100%;
     display: flex;
     justify-content: space-between;
 
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+}
+
+.menubox {
+    width: 8vw;
+    height: 60px;
 }
 
 #language {
@@ -85,30 +75,303 @@ header {
     border: 0px;
     border-radius: 15px;
 
-    margin-top: 13px;
-
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: gray;
 
     opacity: 90%;
+
+    position: relative;
+    top: 18px;
 }
 
-.borderbottom {
-    border-bottom: 3px solid rgb(255, 255, 255, 0.3);
-}
 
-.menubox {
-    width: 110px;
+/*헤더 리스트*/
+#main>a,
+#info>a,
+#tour>a,
+#event>a,
+#booking>a {
     height: 60px;
+
+    padding-top: 20px;
 }
 
+#full-menu>i {
+    padding-top: 8px;
+}
+
+#clickMain {
+    padding-top: 10px;
+}
+
+header li {
+    width: 8vw;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.1rem;
+}
+
+.info-list,
+.tour-list,
+.event-list,
+.booking-list {
+    display: none;
+}
+
+
+/*팝업헤더*/
+.popupmenu {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgb(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+
+    position: fixed;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.popupmenu-container {
+    width: 30vw;
+    height: 100vh;
+
+    background-color: white;
+
+    padding: 20px;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.popupmenu-container>hr {
+    margin: 25px 0;
+    background-color: #b3b9be;
+    height: 1px;
+    border: 0;
+}
+
+.popupmenu-box {
+    text-align: left;
+}
+
+.popupmenu-box>ul {
+    padding-left: 30px;
+    text-align: left;
+
+    font-size: 1.3rem;
+
+    display: none;
+}
+
+.popupmenu-box li {
+    margin-top: 10px;
+}
+
+.popupmenu-container>div:first-child {
+    display: flex;
+    justify-content: space-between;
+
+    padding-right: 20px;
+}
+
+.x-mark {
+    font-size: 2.5rem;
+}
+
+.hidden-none {
+    display: none;
+}
+
+
+/*설문조사*/
+fieldset {
+    margin: 0 100px;
+    padding: 30px;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 5.6s;
+    animation-fill-mode: both;
+}
+
+.researchIcon{
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+fieldset > p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+fieldset > label {
+    padding-right: 60px;
+}
+
+.reserachText {
+    width: 70%;
+    height: 35px;
+
+    margin-top: 10px;
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: #dfdfdf;
+
+    border: 0;
+    border-radius: 5px;
+}
+
+.reserachButton {
+    width: 50px;
+    height: 35px;
+
+    background-color: black;
+    color: white;
+
+    border: 0;
+    border-radius: 5px;
+}
+
+/*footer*/
+footer {
+    margin-top: 80px;
+    padding: 50px 30px;
+
+    width: 100%;
+    background-color: #F8F8F8;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    animation-name: bright;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+}
+
+.footertext {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.footertext>p {
+    font-size: 1rem;
+    color: gray;
+
+    display: inline-block;
+}
+
+#telBox {
+    width: 11vw;
+    background-color: #668BAE;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 5px;
+
+    text-align: center;
+    color: white;
+
+    font-size: 1rem;
+}
+
+.footerlogo1 {
+    width: 180px;
+    height: 60px;
+
+    background-image: url("https://royal.cha.go.kr/resource/templete/royal/img/common/ft_logo.svg");
+    background-size: cover;
+
+
+    margin-right: 15px;
+
+    display: none;
+}
+
+.footerlogo2 {
+    width: 100px;
+    height: 70px;
+
+    background-image: url("https://royal.cha.go.kr/resource/templete/royal/img/common/img_web.png");
+    background-size: cover;
+
+    margin-left: 15px;
+
+    display: none;
+}
+
+.telBoxTable {
+    display: none;
+
+    border-collapse: collapse;
+    color: gray;
+
+    margin: 10px 0;
+    margin-left: 5px;
+
+    font-size: 1rem;
+}
+
+.telBoxTable td,
+.telBoxTable th {
+    border: 1px solid lightgrey;
+    border-collapse: collapse;
+
+    height: 35px;
+    padding: 0 15px;
+    text-align: left;
+
+    word-break: break-all;
+}
+
+.telBoxTable th {
+    border-top: 2px solid gray;
+}
+
+.telBoxTable th:first-child,
+.telBoxTable td:first-child {
+    border-left: 0;
+}
+
+.telBoxTable th:last-child,
+.telBoxTable td:last-child {
+    border-right: 0;
+}
+
+/*flex-center*/
 .flex-center-header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /*메인이미지 설정*/
 .mianImg {
@@ -174,158 +437,6 @@ header {
     color: gray;
 }
 
-
-/*설문조사 설정*/
-fieldset {
-    margin: 0 100px;
-    margin-top: 50px;
-    padding: 30px;
-
-    animation-name: move;
-    animation-duration: 1s;
-    animation-delay: 5.6s;
-    animation-fill-mode: both;
-}
-
-.researchIcon{
-    font-size: 2rem;
-    margin-right: 10px;
-}
-
-fieldset > p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-fieldset > label {
-    padding-right: 60px;
-}
-
-.reserachText {
-    width: 70%;
-    height: 35px;
-
-    margin-top: 10px;
-    margin-right: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-
-    background-color: #dfdfdf;
-
-    border: 0;
-    border-radius: 5px;
-}
-
-.reserachButton {
-    width: 50px;
-    height: 35px;
-
-    background-color: black;
-    color: white;
-
-    border: 0;
-    border-radius: 5px;
-}
-
-
-/*footer 설정*/
-footer {
-    margin-top: 80px;
-    padding:50px 30px;
-
-    width: 100%;
-    background-color: #F8F8F8;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    animation-name: bright;
-    animation-duration: 5s;
-    animation-fill-mode: both;
-}
-
-.footertext {
-    width: 70%;
-}
-
-.footertext > p {
-    font-size: 0.8rem;
-    color: gray;
-}
-
-.footertext > div {
-    width: 150px;
-    background-color: #668BAE;
-    padding: 5px;
-    border-radius: 3px;
-    margin: 5px;
-
-    text-align: center;
-    color: white;
-    
-    font-size: 0.9rem;
-}
-
-.footerlogo1 {
-    margin-right: 15px;
-}
-
-.footerlogo2 {
-    margin-left: 15px;
-}
-
-.telBoxTable {
-    display: none;
-
-    border-collapse: collapse;
-    color: gray;
-
-    margin: 10px 0;
-    margin-left: 5px;
-}
-
-.telBoxTable td, .telBoxTable th {
-    border: 1px solid lightgrey;
-    border-collapse: collapse;
-
-    height: 35px;
-    padding: 0 15px ;
-    text-align: left;
-}
-
-.telBoxTable th {
-    border-top: 2px solid gray;
-}
-
-.telBoxTable th:first-child, td:first-child {
-    border-left: 0;
-}
-
-.telBoxTable th:last-child, td:last-child {
-    border-right: 0;
-}
-
-
-/*애니메이션*/
-@keyframes move {
-    0% {
-        opacity: 0;
-        transform: translate(0, 200px);
-    }
-
-    100% {
-        opacity: 100%;
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes bright {
-    0%{opacity: 0;}
-    100%{opacity: 100%;}
-}
-
 .event-date {
     padding: 30px 100px;
     margin-top: 30px;
@@ -352,14 +463,6 @@ footer {
 
 .move-month:hover {
     opacity: 100%;
-}
-
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    align-self: center;
 }
 
 .date-text {
@@ -609,11 +712,6 @@ footer {
     opacity: 100%;
 }
 
-.flex-between {
-    display: flex;
-    justify-content: space-between;
-}
-
 .slide-img1 {
     width: 300px;
     height: 390px;
@@ -751,4 +849,189 @@ footer {
 
 .day {
     cursor: pointer;
+}
+
+.borderbottom {
+    border-bottom: 3px solid rgb(255, 255, 255, 0.3);
+}
+
+/*애니메이션*/
+@keyframes move {
+    0% {
+        opacity: 0;
+        transform: translate(0, 200px);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes bright {
+    0%{opacity: 0;}
+    100%{opacity: 100%;}
+}
+
+
+/*미디어 쿼리*/
+@media screen and (min-width:1840px) {
+    html {
+        font-size: 0.8vw;
+    }
+
+    .helpItem>a {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    #telBox {
+        width: 9vw;
+    }
+}
+
+@media screen and (min-width:2300px) {
+    html {
+        font-size: 0.7vw;
+    }
+
+    .helpItem>a {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .storybox {
+        width: 18vw;
+        height: 18vw;
+    }
+}
+
+@media screen and (max-width:950px) {
+    html {
+        font-size: 1.3vw;
+    }
+
+    .middleText {
+        display: none;
+    }
+
+    .middleImg>h2,
+    .middleImg>p {
+        display: block;
+    }
+
+    #main,
+    #info,
+    #tour,
+    #event,
+    #booking {
+        visibility: hidden;
+    }
+
+    #language {
+        width: 9vw;
+        font-size: 0.8rem;
+    }
+
+    .topMenu {
+        font-size: 2rem;
+    }
+
+    #telBox {
+        width: 13vw;
+    }
+}
+
+
+@media screen and (max-width:750px) {
+    html {
+        font-size: 2vw;
+    }
+
+    #language {
+        width: 15vw;
+        font-size: 1rem;
+    }
+
+    #telBox {
+        width: 20vw;
+    }
+
+    footer {
+        width: 100%;
+
+        flex-wrap: wrap;
+    }
+
+    .footerlogo {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footerlogo1 {
+        display: block;
+    }
+
+    .footerlogo2 {
+        display: block;
+    }
+
+    .footerlogo img {
+        display: none;
+    }
+
+    .footertext {
+        width: 100%;
+        display: block;
+
+        margin-top: 3%;
+    }
+
+    .telBoxTable {
+        width: 70%;
+        margin-right: 0;
+    }
+
+    .popupmenu-container {
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .telBoxTable td,
+    .telBoxTable th {
+        height: 20vw;
+
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:450px) {
+    html {
+        width: 450px;
+        font-size: 11px;
+    }
+
+    header {
+        width: 450px;
+    }
+
+    #language {
+        width: 30px;
+        font-size: 1rem;
+    }
+
+    .popupmenu-container {
+        width: 200px;
+    }
+
+    #telBox {
+        width: 120px;
+    }
+
+    .telBoxTable {
+        width: 450px;
+    }
 }

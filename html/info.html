@@ -16,15 +16,14 @@
 <body>
     <div class="container">
         <header>
-            <!-- fontsize rem 적용하는 방법 찾기 -->
             <div class="topMenu">
                 <a href="./main.html" id="clickMain"><img src="../자료/경복궁3_logo.png" alt="경복궁 main으로" height="50px"></a>
                 <label for="main"></label>
-                <div id="main" class="menubox flex-center">
+                <div id="main" class="menubox flex-center" style="cursor:pointer">
                     <a href="./main.html">MAIN</a>
                 </div>
                 <label for="info"></label>
-                <div id="info" class="menubox flex-center">
+                <div id="info" class="menubox flex-center" style="cursor:pointer">
                     <a href="./info.html">소개·역사</a>
                     <ul class="info-list">
                         <li>경복궁 소개</li>
@@ -32,7 +31,7 @@
                     </ul>
                 </div>
                 <label for="tour"></label>
-                <div id="tour" class="menubox flex-center">
+                <div id="tour" class="menubox flex-center" style="cursor:pointer">
                     <a href="./tour.html">관람안내</a>
                     <ul class="tour-list">
                         <li>관람시간</li>
@@ -42,7 +41,7 @@
                     </ul>
                 </div>
                 <label for="event"></label>
-                <div id="event" class="menubox flex-center">
+                <div id="event" class="menubox flex-center" style="cursor:pointer">
                     <a href="./event.html">행사마당</a>
                     <ul class="event-list">
                         <li>행사일정</li>
@@ -50,13 +49,16 @@
                     </ul>
                 </div>
                 <label for="booking"></label>
-                <div id="booking" class="menubox flex-center">
-                    <a>예약하기</a>
+                <div id="booking" class="menubox flex-center" style="cursor:pointer">
+                    <a style="cursor:pointer">예약하기</a>
                     <ul class="booking-list">
                         <li>예약 모아보기</li>
                         <li>촬영 신청</li>
                         <li>예약조회/취소</li>
                     </ul>
+                </div>
+                <div id="full-menu" class="menubox flex-center" style="cursor:pointer">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
                 <select id="language">
                     <option value="kor" selected>KOR</option>
@@ -66,6 +68,74 @@
                 </select>
             </div>
         </header>
+
+        <div class="popupmenu hidden">
+
+            <div class="popupmenu-container">
+                <div>
+                    <a href="./main.html" id="clickMain"><img src="../자료/경복궁3_logo (B).png" alt="경복궁 main으로"
+                            height="50px"></a>
+                    <i class="fa-solid fa-xmark x-mark" onclick="popupClear()"></i>
+                </div>
+
+                <hr>
+
+                <div class="popupmenu-box">
+                    <a href="../html/main.html"">MAIN</a>
+                </div>
+
+                <hr>
+
+                <div class=" popupmenu-box">
+                        <a href="../html/info.html" class="popupmenu-a">소개·역사
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                        <ul class="popupmenu-ul">
+                            <li>경복궁 소개</li>
+                            <li>경복궁 역사</li>
+                        </ul>
+                </div>
+
+                <hr>
+
+                <div class="popupmenu-box">
+                    <a href="../html/tour.html" class="popupmenu-a">관람안내
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="popupmenu-ul">
+                        <li>관람시간</li>
+                        <li>관람코스</li>
+                        <li>시설안내</li>
+                        <li>오시는 길</li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="popupmenu-box">
+                    <a href="../html/event.html" class="popupmenu-a">행사마당
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="popupmenu-ul">
+                        <li>행사일정</li>
+                        <li>문화행사</li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="popupmenu-box">
+                    <a href="../html/main.html" class="popupmenu-a">예약하기
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="popupmenu-ul">
+                        <li>예약 모아보기</li>
+                        <li>촬영 신청</li>
+                        <li>예약조회/취소</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <div class="mianImg">
             <h1>경복궁 소개·역사</h1>
@@ -83,8 +153,6 @@
             <hr style="border: 0.5px solid;">
         </div>
         
-        <!-- 클릭하면 해당 스크롤 좌표로 이동! -->
-
         <div id="section1" class="info-content">
             <div class="info-img"></div>
             <img src="https://royal.cha.go.kr/imgs/images/2023/12/27/20231227133939229_DM4TC9DV.png" width="110px"
@@ -200,9 +268,18 @@
         </fieldset>
 
         <footer>
-            <a href="https://royal.cha.go.kr/ROYAL/main/index.do">
-                <img class="footerlogo1" src="https://royal.cha.go.kr/resource/templete/royal/img/common/ft_logo.svg" width="150px">
-            </a>
+            <div class="footerlogo">
+                <a href="https://royal.cha.go.kr/ROYAL/main/index.do">
+                    <div class="footerlogo1"></div>
+                    <img src="https://royal.cha.go.kr/resource/templete/royal/img/common/ft_logo.svg" width="150px"
+                        style="margin-right: 15px;">
+                </a>
+                <a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
+                    <div class="footerlogo2"></div>
+                    <img src="https://royal.cha.go.kr/resource/templete/royal/img/common/img_web.png" width="100px"
+                        style="margin-left: 15px;">
+                </a>
+            </div>
             <div class="footertext">
                 <div id="telBox" style="cursor:pointer;">
                     관리소별 연락처 <i class="fa-solid fa-chevron-down"></i>
@@ -254,16 +331,13 @@
                         <td>02-972-0370</td>
                     </tr>
                     <tr>
-                        <td>조선왕릉서부지구관리소	</td>
+                        <td>조선왕릉서부지구관리소 </td>
                         <td>[10548] 경기 고양시 덕양구 서오릉로 334-32</td>
                         <td>02-359-0090</td>
                     </tr>
                 </table>
                 <p>ⓒ Cultural Heritage Administration Royal Palaces and Tombs Center. All rights reserved.</p>
             </div>
-            <a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                <img class="footerlogo2" src="https://royal.cha.go.kr/resource/templete/royal/img/common/img_web.png" width="100px">
-            </a>
         </footer>
     </div>
 

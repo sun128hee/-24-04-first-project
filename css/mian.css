@@ -65,7 +65,7 @@ header {
 }
 
 .menubox {
-    width: 110px;
+    width: 8vw;
     height: 60px;
 }
 
@@ -107,7 +107,7 @@ header {
 }
 
 header li {
-    width: 110px;
+    width: 8vw;
     height: 50px;
 
     display: flex;
@@ -152,18 +152,18 @@ header li {
     font-weight: bold;
 }
 
-.popupmenu-container > hr {
+.popupmenu-container>hr {
     margin: 25px 0;
     background-color: #b3b9be;
     height: 1px;
     border: 0;
 }
 
-.popuomenu-box {
+.popupmenu-box {
     text-align: left;
 }
 
-.popuomenu-box > ul {
+.popupmenu-box>ul {
     padding-left: 30px;
     text-align: left;
 
@@ -172,22 +172,24 @@ header li {
     display: none;
 }
 
-.popuomenu-box li {
+.popupmenu-box li {
     margin-top: 10px;
 }
 
-.popupmenu-container > div:first-child {
+.popupmenu-container>div:first-child {
     display: flex;
     justify-content: space-between;
 
     padding-right: 20px;
 }
 
-.x-mark{
+.x-mark {
     font-size: 2.5rem;
 }
 
-
+.hidden {
+    display: none;
+}
 
 
 /*플렉스 센터*/
@@ -222,6 +224,138 @@ header li {
         background-blend-mode: multiply;
     }
 }
+
+/*footer*/
+footer {
+    margin-top: 80px;
+    padding: 50px 30px;
+
+    width: 100%;
+    background-color: #F8F8F8;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    animation-name: bright;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+}
+
+.footertext {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.footertext>p {
+    font-size: 1rem;
+    color: gray;
+
+    display: inline-block;
+}
+
+#telBox {
+    width: 11vw;
+    background-color: #668BAE;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 5px;
+
+    text-align: center;
+    color: white;
+
+    font-size: 1rem;
+}
+
+.footerlogo1 {
+    width: 180px;
+    height: 60px;
+
+    background-image: url("https://royal.cha.go.kr/resource/templete/royal/img/common/ft_logo.svg");
+    background-size: cover;
+
+
+    margin-right: 15px;
+
+    display: none;
+}
+
+.footerlogo2 {
+    width: 100px;
+    height: 70px;
+
+    background-image: url("https://royal.cha.go.kr/resource/templete/royal/img/common/img_web.png");
+    background-size: cover;
+
+    margin-left: 15px;
+
+    display: none;
+}
+
+.telBoxTable {
+    display: none;
+
+    border-collapse: collapse;
+    color: gray;
+
+    margin: 10px 0;
+    margin-left: 5px;
+
+    font-size: 1rem;
+}
+
+.telBoxTable td,
+.telBoxTable th {
+    border: 1px solid lightgrey;
+    border-collapse: collapse;
+
+    height: 35px;
+    padding: 0 15px;
+    text-align: left;
+
+    word-break: break-all;
+}
+
+.telBoxTable th {
+    border-top: 2px solid gray;
+}
+
+.telBoxTable th:first-child,
+.telBoxTable td:first-child {
+    border-left: 0;
+}
+
+.telBoxTable th:last-child,
+.telBoxTable td:last-child {
+    border-right: 0;
+}
+
+/*textalign & margin 설정*/
+.textalign-right {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.textalign-center {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.margin-top {
+    margin-top: 80px;
+}
+
+.margin-bottom {
+    margin-bottom: 30px;
+}
+
+.margin-bottom5 {
+    margin-bottom: 10px;
+}
+
 
 /*바로가기 도우미*/
 .help {
@@ -269,7 +403,7 @@ header li {
     padding-top: 0.5vw;
 }
 
-.helpItem p{
+.helpItem p {
     margin-bottom: 2vw;
 }
 
@@ -365,30 +499,6 @@ header li {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-
-/*textalign & margin 설정*/
-.textalign-right {
-    text-align: right;
-    margin-right: 20px;
-}
-
-.textalign-center {
-    text-align: center;
-    margin-right: 20px;
-}
-
-.margin-top {
-    margin-top: 80px;
-}
-
-.margin-bottom {
-    margin-bottom: 30px;
-}
-
-.margin-bottom5 {
-    margin-bottom: 10px;
 }
 
 /*경복궁 이야기 콘텐츠*/
@@ -592,97 +702,6 @@ header li {
 
 }
 
-/*transition 적용 클레스*/
-.transition {
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-}
-
-
-/*footer*/
-footer {
-    margin-top: 80px;
-    padding: 50px 30px;
-
-    width: 100%;
-    background-color: #F8F8F8;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    animation-name: bright;
-    animation-duration: 5s;
-    animation-fill-mode: both;
-}
-
-.footertext {
-    width: 70%;
-}
-
-.footertext>p {
-    font-size: 1rem;
-    color: gray;
-}
-
-#telBox {
-    width: 150px;
-    background-color: #668BAE;
-    padding: 5px;
-    border-radius: 3px;
-    margin: 5px;
-
-    text-align: center;
-    color: white;
-
-    font-size: 1rem;
-}
-
-.footerlogo1 {
-    margin-right: 15px;
-}
-
-.footerlogo2 {
-    margin-left: 15px;
-}
-
-.telBoxTable {
-    display: none;
-
-    border-collapse: collapse;
-    color: gray;
-
-    margin: 10px 0;
-    margin-left: 5px;
-
-    font-size: 1rem;
-}
-
-.telBoxTable td,
-.telBoxTable th {
-    border: 1px solid lightgrey;
-    border-collapse: collapse;
-
-    height: 35px;
-    padding: 0 15px;
-    text-align: left;
-}
-
-.telBoxTable th {
-    border-top: 2px solid gray;
-}
-
-.telBoxTable th:first-child,
-.telBoxTable td:first-child {
-    border-left: 0;
-}
-
-.telBoxTable th:last-child,
-.telBoxTable td:last-child {
-    border-right: 0;
-}
-
-
 /*애니메이션*/
 @keyframes move {
     0% {
@@ -712,6 +731,37 @@ footer {
 
 
 /*미디어 쿼리*/
+@media screen and (min-width:1840px) {
+    html {
+        font-size: 0.8vw;
+    }
+
+    .helpItem>a {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    #telBox {
+        width: 9vw;
+    }
+}
+
+@media screen and (min-width:2300px) {
+    html {
+        font-size: 0.7vw;
+    }
+
+    .helpItem>a {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .storybox {
+        width: 18vw;
+        height: 18vw;
+    }
+}
+
 @media screen and (max-width:950px) {
     html {
         font-size: 1.3vw;
@@ -732,13 +782,13 @@ footer {
         margin-top: 2vw;
     }
 
-    .helpItem > a {
+    .helpItem>a {
         width: 14vw;
         height: 14vw;
 
         margin: 1vw 0.5vw;
     }
-    
+
     .middleImg {
         width: 100vw;
         height: 140px;
@@ -793,14 +843,19 @@ footer {
         width: 28vw;
         height: 28vw;
     }
+
+    #telBox {
+        width: 13vw;
+    }
 }
+
 
 @media screen and (max-width:750px) {
     html {
         font-size: 2vw;
     }
 
-    .helpItem > a {
+    .helpItem>a {
         width: 20vw;
         height: 20vw;
 
@@ -823,6 +878,51 @@ footer {
         font-size: 1rem;
     }
 
+    #telBox {
+        width: 20vw;
+    }
+
+    footer {
+        width: 100%;
+
+        flex-wrap: wrap;
+    }
+
+    .footerlogo {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footerlogo1 {
+        display: block;
+    }
+
+    .footerlogo2 {
+        display: block;
+    }
+
+    .footerlogo img {
+        display: none;
+    }
+
+    .footertext {
+        width: 100%;
+        display: block;
+
+        margin-top: 3%;
+    }
+
+    .telBoxTable {
+        width: 70%;
+        margin-right: 0;
+    }
+
+    .popupmenu-container {
+        width: 40vw;
+    }
+
     .content-story {
         font-size: 1.3rem;
     }
@@ -839,25 +939,19 @@ footer {
     .storyH4 {
         font-size: 1.5rem;
     }
-    /* .footer {
-        flex-wrap: wrap;
-    }
+}
 
-    .footer > a:last-child {
-        order: 2;
-    }
+@media screen and (max-width:650px) {
+    .telBoxTable td,
+    .telBoxTable th {
+        height: 20vw;
 
-    .footertext {
-        order: 3;
+        padding: 0;
     }
-
-    .footertext{
-        width: 100%;
-    } */
 }
 
 @media screen and (max-width:520px) {
-    .helpItem > a {
+    .helpItem>a {
         width: 18vw;
         height: 18vw;
 
@@ -894,7 +988,7 @@ footer {
         width: 450px;
     }
 
-    .helpItem > a {
+    .helpItem>a {
         width: 100px;
         height: 100px;
 
@@ -909,10 +1003,22 @@ footer {
         width: 450px;
     }
 
+    .popupmenu-container {
+        width: 200px;
+    }
+
+    #telBox {
+        width: 120px;
+    }
+
+    .telBoxTable {
+        width: 450px;
+    }
+
     .storybox {
         width: 280px;
         height: 280px;
-        
+
         margin: 7px 0;
 
         padding: 30px;

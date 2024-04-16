@@ -16,7 +16,6 @@
 <body>
     <div class="container">
         <header>
-            <!-- fontsize rem 적용하는 방법 찾기 -->
             <div class="topMenu">
                 <a href="./main.html" id="clickMain"><img src="../자료/경복궁3_logo.png" alt="경복궁 main으로" height="50px"></a>
                 <label for="main"></label>
@@ -70,36 +69,40 @@
             </div>
         </header>
 
-        <div class="popupmenu">
+        <div class="popupmenu hidden">
 
             <div class="popupmenu-container">
                 <div>
-                    <a href="./main.html" id="clickMain"><img src="../자료/경복궁3_logo.png" alt="경복궁 main으로"
+                    <a href="./main.html" id="clickMain"><img src="../자료/경복궁3_logo (B).png" alt="경복궁 main으로"
                             height="50px"></a>
                     <i class="fa-solid fa-xmark x-mark" onclick="popupClear()"></i>
                 </div>
 
                 <hr>
 
-                <div class="popuomenu-box">
-                    <a href="../html/main.html">MAIN <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="popupmenu-box">
+                    <a href="../html/main.html"">MAIN</a>
                 </div>
 
                 <hr>
 
-                <div class="popuomenu-box">
-                    <a href="../html/info.html">소개·역사 <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul>
-                        <li>경복궁 소개</li>
-                        <li>경복궁 역사</li>
-                    </ul>
+                <div class=" popupmenu-box">
+                        <a href="../html/info.html" class="popupmenu-a">소개·역사
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                        <ul class="popupmenu-ul">
+                            <li>경복궁 소개</li>
+                            <li>경복궁 역사</li>
+                        </ul>
                 </div>
 
                 <hr>
 
-                <div class="popuomenu-box">
-                    <a href="../html/tour.html">관람안내 <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul>
+                <div class="popupmenu-box">
+                    <a href="../html/tour.html" class="popupmenu-a">관람안내
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="popupmenu-ul">
                         <li>관람시간</li>
                         <li>관람코스</li>
                         <li>시설안내</li>
@@ -109,9 +112,11 @@
 
                 <hr>
 
-                <div class="popuomenu-box">
-                    <a href="../html/event.html">행사마당 <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul>
+                <div class="popupmenu-box">
+                    <a href="../html/event.html" class="popupmenu-a">행사마당
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="popupmenu-ul">
                         <li>행사일정</li>
                         <li>문화행사</li>
                     </ul>
@@ -119,9 +124,11 @@
 
                 <hr>
 
-                <div class="popuomenu-box">
-                    <a href="../html/main.html">예약하기 <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul>
+                <div class="popupmenu-box">
+                    <a href="../html/main.html" class="popupmenu-a">예약하기
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="popupmenu-ul">
                         <li>예약 모아보기</li>
                         <li>촬영 신청</li>
                         <li>예약조회/취소</li>
@@ -129,8 +136,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- 내용이 스크롤에 따라 나오게끔 애니메이션 걸어주기-->
 
         <div class="GyeongbokgungImg">
             <!-- 이미지 슬라이더 자동으로 넘어가게+수동으로 넘어가게 -->
@@ -289,10 +294,18 @@
         </div>
 
         <footer>
-            <a href="https://royal.cha.go.kr/ROYAL/main/index.do">
-                <img class="footerlogo1" src="https://royal.cha.go.kr/resource/templete/royal/img/common/ft_logo.svg"
-                    width="150px">
-            </a>
+            <div class="footerlogo">
+                <a href="https://royal.cha.go.kr/ROYAL/main/index.do">
+                    <div class="footerlogo1"></div>
+                    <img src="https://royal.cha.go.kr/resource/templete/royal/img/common/ft_logo.svg" width="150px"
+                        style="margin-right: 15px;">
+                </a>
+                <a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
+                    <div class="footerlogo2"></div>
+                    <img src="https://royal.cha.go.kr/resource/templete/royal/img/common/img_web.png" width="100px"
+                        style="margin-left: 15px;">
+                </a>
+            </div>
             <div class="footertext">
                 <div id="telBox" style="cursor:pointer;">
                     관리소별 연락처 <i class="fa-solid fa-chevron-down"></i>
@@ -351,10 +364,6 @@
                 </table>
                 <p>ⓒ Cultural Heritage Administration Royal Palaces and Tombs Center. All rights reserved.</p>
             </div>
-            <a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                <img class="footerlogo2" src="https://royal.cha.go.kr/resource/templete/royal/img/common/img_web.png"
-                    width="100px">
-            </a>
         </footer>
     </div>
 
