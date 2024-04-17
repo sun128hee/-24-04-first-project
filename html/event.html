@@ -637,20 +637,19 @@
 
             <fieldset>
                 <p><i class="researchIcon fa-regular fa-circle-question"></i>이 페이지의 정보와 사용편의성에 만족하시나요?</p>
-                <label><input type="radio" name="reserach"> 매우 만족</label>
-                <label><input type="radio" name="reserach"> 만족</label>
-                <label><input type="radio" name="reserach"> 보통</label>
-                <label><input type="radio" name="reserach"> 불만족</label>
-                <label><input type="radio" name="reserach"> 매우 불만족</label>
+                <div class="radio">
+                    <div><input type="radio" name="reserach"> 매우 만족</div>
+                    <div><input type="radio" name="reserach"> 만족</div>
+                    <div><input type="radio" name="reserach"> 보통</div>
+                    <div><input type="radio" name="reserach"> 불만족</div>
+                    <div><input type="radio" name="reserach"> 매우 불만족</div>
+                </div>
                 <div>
                     <input type="text" class="reserachText" placeholder="여러분의 소중한 의견을 남겨주세요."></input>
-                    <!-- text 상자 focus 되면 border 색상이 생기게끔 -->
-                    <button type=button" class="reserachButton" style="cursor:pointer;"
-                        onclick="return researchClick()">등록</button>
-                    <!-- 등록 누르면 의견을 남겨주셔서 감사합니다. / radio 선택이 안되면 만족도를 선택해주세요. 창 띄우기 -->
+                    <button type=button" class="reserachButton" style="cursor:pointer;">등록</button>
                 </div>
             </fieldset>
-
+        
             <footer>
                 <div class="footerlogo">
                     <a href="https://royal.cha.go.kr/ROYAL/main/index.do">

@@ -190,59 +190,6 @@ header li {
     display: none;
 }
 
-
-/*설문조사*/
-fieldset {
-    margin: 0 100px;
-    padding: 30px;
-
-    animation-name: move;
-    animation-duration: 1s;
-    animation-delay: 5.6s;
-    animation-fill-mode: both;
-}
-
-.researchIcon{
-    font-size: 2rem;
-    margin-right: 10px;
-}
-
-fieldset > p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-fieldset > label {
-    padding-right: 60px;
-}
-
-.reserachText {
-    width: 70%;
-    height: 35px;
-
-    margin-top: 10px;
-    margin-right: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-
-    background-color: #dfdfdf;
-
-    border: 0;
-    border-radius: 5px;
-}
-
-.reserachButton {
-    width: 50px;
-    height: 35px;
-
-    background-color: black;
-    color: white;
-
-    border: 0;
-    border-radius: 5px;
-}
-
 /*footer*/
 footer {
     margin-top: 80px;
@@ -352,6 +299,68 @@ footer {
 }
 
 
+/*설문조사*/
+fieldset {
+    margin: 0 100px;
+    padding: 30px;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 5.6s;
+    animation-fill-mode: both;
+
+    font-size: 1.25rem;
+}
+
+.researchIcon{
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+fieldset > p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.radio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.radio > div {
+    width: 8.5vw;
+    margin-right: 4.3vw;
+
+    margin-bottom: 1.8vw;
+}
+
+.reserachText {
+    width: 85%;
+    height: 35px;
+
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: #dfdfdf;
+
+    border: 0;
+    border-radius: 5px;
+}
+
+.reserachButton {
+    width: 50px;
+    height: 35px;
+
+    background-color: black;
+    color: white;
+
+    border: 0;
+    border-radius: 5px;
+}
+
+
 /*플렉스 센터*/
 .flex-center {
     display: flex;
@@ -396,9 +405,11 @@ footer {
     animation-duration: 2s;
     animation-delay: 2s;
     animation-fill-mode: both;
+
+    font-size: 2.2rem;
 }
 
-/*nav 설정*/
+/*nav*/
 .nav {
     padding-left: 100px;
     padding-right: 100px;
@@ -410,24 +421,28 @@ footer {
     animation-duration: 1s;
     animation-delay: 3s;
     animation-fill-mode: both;
+
+    font-size: 1.2rem;
 }
 
 #navInfo {
     border: 0;
-    font-size: 1rem;
     margin-bottom: 20px;
 
     background: none;
 
     color: gray;
+
+    font-size: 1.2rem;
 }
 
+/*코스 안내*/
 .courseMap {
     padding: 30px 100px;
     margin-top: 20px;
     margin-bottom: 15px;
 
-    font-size: 1rem;
+    font-size: 1.4rem;
 
     display: flex;
     flex-wrap: wrap;
@@ -446,8 +461,8 @@ footer {
 }
 
 .coursebox {
-    width: 150px;
-    height: 50px;
+    width: 12vw;
+    height: 4vw;
 
     border: 1px solid lightgray;
     border-radius: 30px;
@@ -456,7 +471,7 @@ footer {
 
     margin-left: 20px;
 
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .coursebox > i {
@@ -469,9 +484,13 @@ footer {
     border-radius: 20px;
 }
 
+.mapselect > button {
+    font-size: 1.2rem;
+}
+
 .mapfull {
-    width: 80px;
-    height: 50px;
+    width: 6.5vw;
+    height: 4vw;
 
     background-color: #F7F7F7;
     color: gray;
@@ -486,8 +505,8 @@ footer {
 }
 
 .maptour {
-    width: 100px;
-    height: 50px;
+    width: 8.5vw;
+    height: 4vw;
 
     background-color: #F7F7F7;
     color: gray;
@@ -502,8 +521,8 @@ footer {
 }
 
 .mapshop {
-    width: 100px;
-    height: 50px;
+    width: 8.5vw;
+    height: 4vw;
 
     background-color: #F7F7F7;
     color: gray;
@@ -517,6 +536,7 @@ footer {
     color: white;
 }
 
+/*맵 이미지 설정*/
 .mapImg {
     padding: 50px 0;
 
@@ -533,6 +553,7 @@ footer {
     animation-fill-mode: both;
 }
 
+/*코스 팝업*/
 .pop-up {
     position: fixed;
     z-index: 10;
@@ -541,29 +562,25 @@ footer {
     height: 100vh;
 
     background-color: rgb(0, 0, 0, 0.7);
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
-    align-content: center;
 }
 
 .hidden {
     visibility: hidden;
 }
 
-.pop-up > i {
+.popupX {
+    margin-left: 84%;
+    margin-top: 8%;
+
     color: white;
     font-size: 2rem;
-    margin: 0 3%;
 
     display: block;
 }
 
 .popup-container {
-    width: 1200px;
-    height: 800px;
+    width: 70vw;
+    height: 50vw;
 
     margin: 0 auto;
 
@@ -576,18 +593,15 @@ footer {
 .courseselect-popup {
     width: 100%;
     display: flex;
-
-    margin: 10px 20px;
-    margin-top: 28px;
 }
 
 .coursebox-popup > i {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .coursebox-popup {
-    width: 120px;
-    height: 50px;
+    width: 9vw;
+    height: 3vw;
 
     border: 1px solid lightgray;
 
@@ -595,9 +609,10 @@ footer {
     
     border-radius: 30px;
 
-    margin-left: 20px;
+    margin: 30px;
+    margin-bottom: 10px;
 
-    font-size: 0.8rem;
+    font-size: 1.1rem;
 }
 
 .selectColor {
@@ -606,11 +621,11 @@ footer {
 }
 
 .popup-img{
-    width: 43%;
-    height: 100%;
+    width: 30vw;
+    height: 40vw;
 
     background-image: url("../자료/둘러보기맵.jpg");
-    background-size: 100%;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -656,35 +671,20 @@ footer {
 
 .popup-middle {
     width: 100%;
-    height: 45%;
+    height: 24vw;
+
+    padding: 0 30px;
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.popup-infoText {
-    width: 160px;
-    height: 50px;
 
-    border: 1px solid gray;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 0 20px;
-    margin-top: 15px;
-}
-
-.popup-infoText > p {
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
+/*코스 팝업 이미지 슬라이드*/
 .popup-slide {
     width: 100%;
-    height: 45%;
+    height: 40%;
 
     background-color: #F7F7F7;
     border-radius: 10px;
@@ -710,12 +710,14 @@ footer {
 }
 
 .slide-item {
-    margin: 0 25px;
+    margin: 0 1.2vw;
+
+    position: relative;
 }
 
 .controller {
-    width: 35px;
-    height: 32px;
+    width: 2.8vw;
+    height: 2.5vw;
 
     background-color: rgb(0, 0, 0, 0.5);
     color: white;
@@ -725,6 +727,8 @@ footer {
     justify-content: center;
     align-items: center;
 
+    padding-top: 0.4%;
+
     cursor: pointer;
 }
 
@@ -732,139 +736,96 @@ footer {
     background-color: rgb(0, 0, 0, 1);
 }
 
-.slide-img1 {
-    width: 170px;
-    height: 160px;
+.slide-img {
+    width: 13vw;
+    height: 13vw;
 
+    border-radius: 10px;
+}
+
+.img1 {
     /*흥례문*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3401");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    border-radius: 10px;
 }
 
-.slide-img2 {
-    width: 170px;
-    height: 160px;
-
+.img2 {
     /*영제교*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3370");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    border-radius: 10px;
 }
 
-.slide-img3 {
-    width: 170px;
-    height: 160px;
-
+.img3 {
     /*근정전*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3371");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    border-radius: 10px;
 }
 
-.slide-img4 {
-    width: 170px;
-    height: 160px;
-
+.img4 {
     /*사정전*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3372");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    border-radius: 10px;
 }
 
-.slide-img5 {
-    width: 170px;
-    height: 160px;
-
+.img5 {
     /*경회루*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3373");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    border-radius: 10px;
 }
 
-.slide-img6 {
-    width: 170px;
-    height: 160px;
-
+.img6 {
     /*수정전*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3374");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    border-radius: 10px;
 }
 
-.slide-img7 {
-    width: 170px;
-    height: 160px;
-
+.img7 {
     /*교태전*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3410");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    border-radius: 10px;
 }
 
-.slide-img8 {
-    width: 170px;
-    height: 160px;
-
+.img8 {
     /*강녕전*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3409");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    border-radius: 10px;
 }
 
-.slide-img9 {
-    width: 170px;
-    height: 160px;
-
+.img9 {
     /*자경전*/
     background-image: url("https://royal.cha.go.kr/afile/preview/3411");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    border-radius: 10px;
 }
 
-.slide-img10 {
-    width: 170px;
-    height: 160px;
-
+.img10 {
     /*향원정*/
     background-image: url("https://royal.cha.go.kr/afile/preview/5775");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    border-radius: 10px;
 }
 
 .slide-info {
-    width: 170px;
-    height: 45px;
+    width: 13vw;
+    height: 3vw;
 
     border: 1px solid gray;
 
@@ -876,6 +837,7 @@ footer {
     padding: 15px; /*없애지 말기*/
 }
 
+/*시설안내*/
 .content-picture {
     padding: 0 100px;
     margin-top: 30px;
@@ -889,16 +851,15 @@ footer {
 
 .content-info {
     width: 100%;
-    height: 50px;
 
     background-color: #F7F7F7;
     border: 1px solid lightgray;
 
-    padding: 0 30px;
+    padding: 20px 30px;
     margin-top: 90px;
     margin-bottom: 30px;
 
-    font-size: 1rem;
+    font-size: 1.2rem;
 
     display: flex;
     align-items: center;
@@ -907,17 +868,15 @@ footer {
 .content-info > i {
     margin-right: 8px;
 
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
+/*시설 번호 고르기*/
 .select-picture {
     width: 100%;
 
-    font-size: 1.2rem;
-
     padding: 40px 0;
     padding-left: 60px;
-    padding-bottom: 40px;
 
     display: flex;
     flex-wrap: wrap;
@@ -928,14 +887,17 @@ footer {
 }
 
 .selectNumber {
+    width: 14vw;
+    height: 4vw;
+
+    font-size: 1.3rem;
+
     background-color: rgb(0, 0, 0, 0);
     border: 0;
 
     opacity: 50%;
-    font-size: 1.1rem;
 
     text-align: left;
-
 }
 
 .selectNumber:focus {
@@ -943,8 +905,8 @@ footer {
 }
 
 .numBox {
-    width: 30px;
-    height: 30px;
+    width: 2.3vw;
+    height: 2.3vw;
 
     background-color: rgb(0, 0, 0);
 
@@ -957,15 +919,13 @@ footer {
     align-items: center;
 
     padding-top: 1px;
-}
-
-.select-picture > button {
-    width: 200px;
-    height: 50px;
+    margin-right: 0.5vw;
 }
 
 .picture > h2 {
     margin-top: 50px;
+
+    font-size: 1.9rem;
 }
 
 .picture-img {
@@ -980,7 +940,7 @@ footer {
 }
 
 .picture > p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: justify;
 
     margin-bottom: 60px;
@@ -1006,7 +966,7 @@ footer {
     display: flex;
     align-items: center;
 
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .warningBox > img {
@@ -1046,11 +1006,6 @@ footer {
         font-size: 0.8vw;
     }
 
-    .helpItem>a {
-        width: 10vw;
-        height: 10vw;
-    }
-
     #telBox {
         width: 9vw;
     }
@@ -1059,16 +1014,6 @@ footer {
 @media screen and (min-width:2300px) {
     html {
         font-size: 0.7vw;
-    }
-
-    .helpItem>a {
-        width: 8vw;
-        height: 8vw;
-    }
-
-    .storybox {
-        width: 18vw;
-        height: 18vw;
     }
 }
 
@@ -1079,11 +1024,6 @@ footer {
 
     .middleText {
         display: none;
-    }
-
-    .middleImg>h2,
-    .middleImg>p {
-        display: block;
     }
 
     #main,
@@ -1105,6 +1045,67 @@ footer {
 
     #telBox {
         width: 13vw;
+    }
+
+    .radio > div {
+        width: 11vw;
+        margin-right: 4.3vw;
+    }
+
+    .popup-container {
+        height: 55vw;
+    }
+
+    .popup-slide {
+        height: 50%;
+    }
+
+    .slide-item {
+        margin: 0 1vw;
+
+    }
+
+    .slide-img {
+        width: 13vw;
+        height: 13vw;    
+    }
+
+}
+
+@media screen and (max-width:850px) {
+    .courseMap {
+        margin-bottom: 0;
+    }
+    
+    .courseselect {
+        width: 100%;
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+
+    .coursebox {
+        width: 15vw;
+        height: 5vw;    
+    }
+
+    .mapselect {
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+
+    .mapfull {
+        width: 9vw;
+        height: 5vw;
+    }
+
+    .maptour {
+        width: 11vw;
+        height: 5vw;
+    }
+
+    .mapshop {
+        width: 11vw;
+        height: 5vw;
     }
 }
 
@@ -1163,6 +1164,122 @@ footer {
     .popupmenu-container {
         width: 40vw;
     }
+
+    .coursebox-popup {
+        width: 12vw;
+
+        font-size: 0.7rem;
+    }
+
+    fieldset {
+        margin: 0 50px;
+        font-size: 1.2rem;
+    }
+
+    .radio > div {
+        width: 20vw;
+        margin-right: 0;
+    }
+
+    .reserachText {
+        width: 85%;
+    }
+
+    .nav {
+        padding: 0 50px;
+    }
+    
+
+    .courseMap {
+        padding: 30px 50px;
+    }
+
+    .coursebox {
+        width: 20vw;
+        height: 6vw;    
+    }
+
+    .mapfull {
+        width: 10.5vw;
+        height: 6.5vw;
+    }
+
+    .maptour {
+        width: 14.5vw;
+        height: 6.5vw;
+    }
+
+    .mapshop {
+        width: 14.5vw;
+        height: 6.5vw;
+    }
+
+    .mapImg {
+        margin: 0 50px;
+        margin-bottom: 100px;
+    }
+
+    .content-picture {
+        padding: 0 50px;
+    }
+
+    .numBox {
+        width: 3.2vw;
+        height: 3.2vw;
+    }
+
+    .selectNumber {
+        width: 19vw;
+        height: 7vw;
+    }
+
+    .warning {
+        margin: 50px;
+    }
+
+    .popup-container {
+        height: 70vh;
+
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-between; */
+    }
+
+    .popup-middle {
+        flex-wrap: wrap;
+
+        width: 100%;
+        height: 50%;
+    }
+
+    .popup-img {
+        display: none;
+    }
+
+    .popup-course40 {
+        width: 100%;
+
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+
+    .popup-course60 {
+        width: 100%;
+
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+
+    .popup-course90 {
+        width: 100%;
+
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    
+    .popup-slide {
+        height: 40%;
+    }
 }
 
 @media screen and (max-width:650px) {
@@ -1171,6 +1288,42 @@ footer {
         height: 20vw;
 
         padding: 0;
+    }
+
+    .coursebox {
+        margin-left: 15px;
+    }
+
+    .selectNumber {
+        width: 23vw;
+        height: 7vw;    
+    }
+}
+
+@media screen and (max-width:600px) {
+    .reserachText {
+        width: 80%;
+    }
+
+    .courseselect div:first-child {
+        font-size: 1.13rem;
+    }
+}
+
+@media screen and (max-width:523px) {
+    .coursebox {
+        margin-left: 7px;
+    }
+
+    .selectNumber {
+        width: 22vw;
+        height: 7vw;    
+    }
+}
+
+@media screen and (max-width:475px) {
+    .reserachText {
+        width: 75%;
     }
 }
 
@@ -1185,7 +1338,7 @@ footer {
     }
 
     #language {
-        width: 30px;
+        width: 60px;
         font-size: 1rem;
     }
 
@@ -1199,5 +1352,57 @@ footer {
 
     .telBoxTable {
         width: 450px;
+    }
+
+    .radio > div {
+        width: 90px;
+    }
+
+    .courseselect {
+        justify-content: space-between;
+    }
+
+    .courseselect div {
+        font-size: 11px;
+    }
+
+    .coursebox {
+        width: 20vw;
+        height: 7vw;
+
+        margin-left: 0;
+    }
+
+    .mapselect > button {
+        font-size: 11px;
+    }
+
+    .mapfull {
+        width: 12vw;
+        height: 7vw;
+    }
+
+    .maptour {
+        width: 16vw;
+        height: 7vw;
+    }
+
+    .mapshop {
+        width: 16vw;
+        height: 7vw;
+    }
+
+    .numBox {
+        width: 4.5vw;
+        height: 4.5vw;
+    }
+
+    .select-picture {
+        width: 100%;
+    }
+
+    .selectNumber {
+        width: 135px;
+        height: 8vw;    
     }
 }

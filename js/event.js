@@ -182,17 +182,17 @@ const slideItem = document.querySelectorAll('.slide-item');
 const slide = document.querySelector('.slide');
 
 function clickNext() {
-    slideItem[0].style.transform = "translateX(-760px)";
-    slideItem[1].style.transform = "translateX(-760px)";
-    slideItem[2].style.transform = "translateX(-760px)";
-    slideItem[3].style.transform = "translateX(-760px)";
+    slideItem[0].style.left = "-113%";
+    slideItem[1].style.left = "-113%";
+    slideItem[2].style.left = "-113%";
+    slideItem[3].style.left = "-113%";
 }
 
 function clickPrev() {
-    slideItem[0].style.transform = "translateX(0px)";
-    slideItem[1].style.transform = "translateX(0px)";
-    slideItem[2].style.transform = "translateX(0px)";
-    slideItem[3].style.transform = "translateX(0px)";
+    slideItem[0].style.left = "0";
+    slideItem[1].style.left = "0";
+    slideItem[2].style.left = "0";
+    slideItem[3].style.left = "0";
 }
 
 

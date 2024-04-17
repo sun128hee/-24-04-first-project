@@ -231,7 +231,7 @@ function click7() {
 
 function click8() {
     document.querySelector('.picture-h2').textContent = "소주방";
-    document.querySelector('.picture-img').style.backgroundImage = "url(https://royal.cha.go.kr/afile/preview/4810)";
+    document.querySelector('.picture-img').style.backgroundImage = "url(https://royal.cha.go.kr/afile/preview/4814)";
     document.querySelector('.picture-p').textContent = "소주방(燒廚房)은 왕의 수라와 궁중의 잔치 음식 등을 준비하던 궁중 부엌이다. 이곳은 왕의 수라를 만들던 내소주방(內燒廚房), 궁중 잔치나 고사 음식을 차리던 외소주방(外燒廚房), 그리고 간식, 죽, 과일, 떡 등을 차리던 생물방(生物房) 세 구역으로 나뉘어 있다. 현재의 소주방은 2015년에 복원한 것이다.";
 }
 
@@ -248,7 +248,7 @@ function click10() {
 }
 
 function click11() {
-    document.querySelector('.picture-h2').textContent = "흥복전";
+    document.querySelector('.picture-h2').textContent = "향원정";
     document.querySelector('.picture-img').style.backgroundImage = "url(https://royal.cha.go.kr/afile/preview/4823)";
     document.querySelector('.picture-p').textContent = "향원정(香遠亭)은 1873년(고종 10) 고종이 건청궁을 지을 때 그 앞에 연못(향원지)을 파서 연못 가운데 섬을 만들고 2층의 육모지붕의 형태로 지었다. 향원정을 가기 위해 지은 다리는 ‘향기에 취한다’라는 뜻에 취향교(醉香橋)라고 불렀다. 2017년부터 2020년까지 향원정 보수공사 때 취향교는 원래의 자리로 복원하였다.";
 }
@@ -350,71 +350,71 @@ const Item60 = document.querySelectorAll('.item60');
 const Item90 = document.querySelectorAll('.item90');
 
 next[0].addEventListener('click', ()=>{
-    Item40[0].style.transform = "translateX(-1100px)";
-    Item40[1].style.transform = "translateX(-1100px)";
-    Item40[2].style.transform = "translateX(-1100px)";
-    Item40[3].style.transform = "translateX(-1100px)";
-    Item40[4].style.transform = "translateX(-1100px)";
-    Item40[5].style.transform = "translateX(-1100px)";
+    Item40[0].style.left = "-100%";
+    Item40[1].style.left = "-100%";
+    Item40[2].style.left = "-100%";
+    Item40[3].style.left = "-100%";
+    Item40[4].style.left = "-100%";
+    Item40[5].style.left = "-100%";
 });
 
 prev[0].addEventListener('click', ()=>{
-    Item40[0].style.transform = "translateX(0)";
-    Item40[1].style.transform = "translateX(0)";
-    Item40[2].style.transform = "translateX(0)";
-    Item40[3].style.transform = "translateX(0)";
-    Item40[4].style.transform = "translateX(0)";
-    Item40[5].style.transform = "translateX(0)";
+    Item40[0].style.left = "0%";
+    Item40[1].style.left = "0%";
+    Item40[2].style.left = "0%";
+    Item40[3].style.left = "0%";
+    Item40[4].style.left = "0%";
+    Item40[5].style.left = "0%";
 });
 
 next[1].addEventListener('click', ()=>{
-    Item60[0].style.transform = "translateX(-1100px)";
-    Item60[1].style.transform = "translateX(-1100px)";
-    Item60[2].style.transform = "translateX(-1100px)";
-    Item60[3].style.transform = "translateX(-1100px)";
-    Item60[4].style.transform = "translateX(-1100px)";
-    Item60[5].style.transform = "translateX(-1100px)";
-    Item60[6].style.transform = "translateX(-1100px)";
-    Item60[7].style.transform = "translateX(-1100px)";
-    Item60[8].style.transform = "translateX(-1100px)";
+    Item60[0].style.left = "-100%";
+    Item60[1].style.left = "-100%";
+    Item60[2].style.left = "-100%";
+    Item60[3].style.left = "-100%";
+    Item60[4].style.left = "-100%";
+    Item60[5].style.left = "-100%";
+    Item60[6].style.left = "-100%";
+    Item60[7].style.left = "-100%";
+    Item60[8].style.left = "-100%";
 });
 
 prev[1].addEventListener('click', ()=>{
-    Item60[0].style.transform = "translateX(0)";
-    Item60[1].style.transform = "translateX(0)";
-    Item60[2].style.transform = "translateX(0)";
-    Item60[3].style.transform = "translateX(0)";
-    Item60[4].style.transform = "translateX(0)";
-    Item60[5].style.transform = "translateX(0)";
-    Item60[6].style.transform = "translateX(0)";
-    Item60[7].style.transform = "translateX(0)";
-    Item60[8].style.transform = "translateX(0)";
+    Item60[0].style.left = "0%";
+    Item60[1].style.left = "0%";
+    Item60[2].style.left = "0%";
+    Item60[3].style.left = "0%";
+    Item60[4].style.left = "0%";
+    Item60[5].style.left = "0%";
+    Item60[6].style.left = "0%";
+    Item60[7].style.left = "0%";
+    Item60[8].style.left = "0%";
 });
 
 next[2].addEventListener('click', ()=>{
-    Item90[0].style.transform = "translateX(-1100px)";
-    Item90[1].style.transform = "translateX(-1100px)";
-    Item90[2].style.transform = "translateX(-1100px)";
-    Item90[3].style.transform = "translateX(-1100px)";
-    Item90[4].style.transform = "translateX(-1100px)";
-    Item90[5].style.transform = "translateX(-1100px)";
-    Item90[6].style.transform = "translateX(-1100px)";
-    Item90[7].style.transform = "translateX(-1100px)";
-    Item90[8].style.transform = "translateX(-1100px)";
-    Item90[9].style.transform = "translateX(-1100px)";
+    Item90[0].style.left = "-100%";
+    Item90[1].style.left = "-100%";
+    Item90[2].style.left = "-100%";
+    Item90[3].style.left = "-100%";
+    Item90[4].style.left = "-100%";
+    Item90[5].style.left = "-100%";
+    Item90[6].style.left = "-100%";
+    Item90[7].style.left = "-100%";
+    Item90[8].style.left = "-100%";
+    Item90[9].style.left = "-100%";
 });
 
 prev[2].addEventListener('click', ()=>{
-    Item90[0].style.transform = "translateX(0)";
-    Item90[1].style.transform = "translateX(0)";
-    Item90[2].style.transform = "translateX(0)";
-    Item90[3].style.transform = "translateX(0)";
-    Item90[4].style.transform = "translateX(0)";
-    Item90[5].style.transform = "translateX(0)";
-    Item90[6].style.transform = "translateX(0)";
-    Item90[7].style.transform = "translateX(0)";
-    Item90[8].style.transform = "translateX(0)";
-    Item90[9].style.transform = "translateX(0)";
+    Item90[0].style.left = "0%";
+    Item90[1].style.left = "0%";
+    Item90[2].style.left = "0%";
+    Item90[3].style.left = "0%";
+    Item90[4].style.left = "0%";
+    Item90[5].style.left = "0%";
+    Item90[6].style.left = "0%";
+    Item90[7].style.left = "0%";
+    Item90[8].style.left = "0%";
+    Item90[9].style.left = "0%";
 });
 
 //설문조사 입력창 

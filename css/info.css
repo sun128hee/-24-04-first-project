@@ -185,58 +185,6 @@ header li {
     display: none;
 }
 
-/*설문조사*/
-fieldset {
-    margin: 0 100px;
-    padding: 30px;
-
-    animation-name: move;
-    animation-duration: 1s;
-    animation-delay: 5.6s;
-    animation-fill-mode: both;
-}
-
-.researchIcon{
-    font-size: 2rem;
-    margin-right: 10px;
-}
-
-fieldset > p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-fieldset > label {
-    padding-right: 60px;
-}
-
-.reserachText {
-    width: 70%;
-    height: 35px;
-
-    margin-top: 10px;
-    margin-right: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-
-    background-color: #dfdfdf;
-
-    border: 0;
-    border-radius: 5px;
-}
-
-.reserachButton {
-    width: 50px;
-    height: 35px;
-
-    background-color: black;
-    color: white;
-
-    border: 0;
-    border-radius: 5px;
-}
-
 /*footer*/
 footer {
     margin-top: 80px;
@@ -345,6 +293,69 @@ footer {
     border-right: 0;
 }
 
+
+/*설문조사*/
+fieldset {
+    margin: 0 100px;
+    padding: 30px;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 5.6s;
+    animation-fill-mode: both;
+
+    font-size: 1.25rem;
+}
+
+.researchIcon{
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+fieldset > p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.radio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.radio > div {
+    width: 8.5vw;
+    margin-right: 4.3vw;
+
+    margin-bottom: 1.8vw;
+}
+
+.reserachText {
+    width: 85%;
+    height: 35px;
+    
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: #dfdfdf;
+
+    border: 0;
+    border-radius: 5px;
+}
+
+.reserachButton {
+    width: 50px;
+    height: 35px;
+
+    background-color: black;
+    color: white;
+
+    border: 0;
+    border-radius: 5px;
+}
+
+
 /*플렉스 센터*/
 .flex-center {
     display: flex;
@@ -388,6 +399,8 @@ footer {
     animation-duration: 2s;
     animation-delay: 2s;
     animation-fill-mode: both;
+
+    font-size: 2.2rem;
 }
 
 /*nav*/
@@ -402,24 +415,28 @@ footer {
     animation-duration: 1s;
     animation-delay: 3s;
     animation-fill-mode: both;
+
+    font-size: 1.2rem;
 }
 
 #navInfo {
     border: 0;
-    font-size: 1rem;
     margin-bottom: 20px;
 
     background: none;
 
     color: gray;
+
+    font-size: 1.2rem;
 }
 
+
+/*경복궁 소개*/
 .info-content {
     padding: 30px 100px;
     margin-top: 30px;
     margin-bottom: 50px;
 
-    font-size: 1rem;
     text-align: center;
 
     animation-name: move;
@@ -439,9 +456,13 @@ footer {
     margin-bottom: 50px;
 }
 
+.info-content > p {
+    font-size: 1.4rem;
+}
+
 .info-content > h4 {
     margin: 40px auto;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
 }
 
 .history {
@@ -470,6 +491,8 @@ footer {
 .history > h2 {
     margin-top: 40px;
     text-align: left;
+
+    font-size: 1.8rem;
 }
 
 .historyTable {
@@ -483,7 +506,7 @@ footer {
     margin: 40px auto;
     margin-top: 30px;
 
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .historyTable td, th {
@@ -522,15 +545,11 @@ footer {
     100%{opacity: 100%;}
 }
 
+
 /*미디어 쿼리*/
 @media screen and (min-width:1840px) {
     html {
         font-size: 0.8vw;
-    }
-
-    .helpItem>a {
-        width: 10vw;
-        height: 10vw;
     }
 
     #telBox {
@@ -542,16 +561,6 @@ footer {
     html {
         font-size: 0.7vw;
     }
-
-    .helpItem>a {
-        width: 8vw;
-        height: 8vw;
-    }
-
-    .storybox {
-        width: 18vw;
-        height: 18vw;
-    }
 }
 
 @media screen and (max-width:950px) {
@@ -561,11 +570,6 @@ footer {
 
     .middleText {
         display: none;
-    }
-
-    .middleImg>h2,
-    .middleImg>p {
-        display: block;
     }
 
     #main,
@@ -588,8 +592,12 @@ footer {
     #telBox {
         width: 13vw;
     }
-}
 
+    .radio > div {
+        width: 11vw;
+        margin-right: 4.3vw;
+    }
+}
 
 @media screen and (max-width:750px) {
     html {
@@ -645,6 +653,36 @@ footer {
     .popupmenu-container {
         width: 40vw;
     }
+
+    fieldset {
+        margin: 0 50px;
+        font-size: 1.2rem;
+    }
+
+    .radio > div {
+        width: 20vw;
+        margin-right: 0;
+    }
+
+    .reserachText {
+        width: 85%;
+    }
+
+    .nav {
+        padding: 0 50px;
+    }
+
+    .info-content {
+        padding: 20px 50px;
+    }
+
+    .history {
+        padding: 0 50px;
+    }
+
+    .historyTable th:first-child {
+        width: 30%;
+    }
 }
 
 @media screen and (max-width:650px) {
@@ -653,6 +691,22 @@ footer {
         height: 20vw;
 
         padding: 0;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .reserachText {
+        width: 80%;
+    }
+
+    .historyTable th:first-child {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width:475px) {
+    .reserachText {
+        width: 75%;
     }
 }
 
@@ -667,7 +721,7 @@ footer {
     }
 
     #language {
-        width: 30px;
+        width: 60px;
         font-size: 1rem;
     }
 
@@ -681,5 +735,9 @@ footer {
 
     .telBoxTable {
         width: 450px;
+    }
+
+    .radio > div {
+        width: 90px;
     }
 }
