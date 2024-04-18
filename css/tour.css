@@ -1319,6 +1319,10 @@ fieldset > p {
         width: 22vw;
         height: 7vw;    
     }
+
+    .mapImg > img {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:475px) {
